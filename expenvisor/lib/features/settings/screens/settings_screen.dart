@@ -5,6 +5,14 @@ import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../shared/widgets/custom_card.dart';
 import '../../../shared/widgets/custom_button.dart';
+import '../../../shared/widgets/custom_input.dart';
+import '../../auth/screens/login_screen.dart';
+import '../../profile/screens/security_screen.dart';
+import '../../profile/screens/payment_methods_screen.dart';
+import '../../profile/screens/subscription_management_screen.dart';
+import '../../profile/screens/help_center_screen.dart';
+import '../../profile/screens/about_screen.dart';
+import '../../demo/screens/theme_demo_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -14,12 +22,159 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  // Profile editing
+  final _nameController = TextEditingController(text: 'John Doe');
+  final _emailController = TextEditingController(text: 'john.doe@example.com');
+  final _currencySearchController = TextEditingController();
+
+  // App preferences
   bool _notificationsEnabled = true;
   bool _darkModeEnabled = false;
   bool _biometricEnabled = false;
   bool _analyticsEnabled = true;
-  String _selectedLanguage = 'English (US)';
-  String _selectedCurrency = 'USD (\$)';
+  String _selectedLanguage = 'English';
+  String _selectedCurrency = 'USD';
+  String _currencySearchQuery = '';
+  bool _isEditingProfile = false;
+
+  // Comprehensive list of currencies
+  final List<Map<String, String>> _currencies = [
+    {'code': 'USD', 'name': 'United States Dollar', 'symbol': '\$'},
+    {'code': 'EUR', 'name': 'Euro', 'symbol': '€'},
+    {'code': 'GBP', 'name': 'British Pound Sterling', 'symbol': '£'},
+    {'code': 'JPY', 'name': 'Japanese Yen', 'symbol': '¥'},
+    {'code': 'CAD', 'name': 'Canadian Dollar', 'symbol': 'C\$'},
+    {'code': 'AUD', 'name': 'Australian Dollar', 'symbol': 'A\$'},
+    {'code': 'CHF', 'name': 'Swiss Franc', 'symbol': 'CHF'},
+    {'code': 'CNY', 'name': 'Chinese Yuan', 'symbol': '¥'},
+    {'code': 'INR', 'name': 'Indian Rupee', 'symbol': '₹'},
+    {'code': 'BRL', 'name': 'Brazilian Real', 'symbol': 'R\$'},
+    {'code': 'RUB', 'name': 'Russian Ruble', 'symbol': '₽'},
+    {'code': 'KRW', 'name': 'South Korean Won', 'symbol': '₩'},
+    {'code': 'MXN', 'name': 'Mexican Peso', 'symbol': '\$'},
+    {'code': 'SGD', 'name': 'Singapore Dollar', 'symbol': 'S\$'},
+    {'code': 'HKD', 'name': 'Hong Kong Dollar', 'symbol': 'HK\$'},
+    {'code': 'NZD', 'name': 'New Zealand Dollar', 'symbol': 'NZ\$'},
+    {'code': 'SEK', 'name': 'Swedish Krona', 'symbol': 'kr'},
+    {'code': 'NOK', 'name': 'Norwegian Krone', 'symbol': 'kr'},
+    {'code': 'DKK', 'name': 'Danish Krone', 'symbol': 'kr'},
+    {'code': 'PLN', 'name': 'Polish Złoty', 'symbol': 'zł'},
+    {'code': 'CZK', 'name': 'Czech Koruna', 'symbol': 'Kč'},
+    {'code': 'HUF', 'name': 'Hungarian Forint', 'symbol': 'Ft'},
+    {'code': 'TRY', 'name': 'Turkish Lira', 'symbol': '₺'},
+    {'code': 'ZAR', 'name': 'South African Rand', 'symbol': 'R'},
+    {'code': 'AED', 'name': 'UAE Dirham', 'symbol': 'د.إ'},
+    {'code': 'SAR', 'name': 'Saudi Riyal', 'symbol': 'ر.س'},
+    {'code': 'THB', 'name': 'Thai Baht', 'symbol': '฿'},
+    {'code': 'MYR', 'name': 'Malaysian Ringgit', 'symbol': 'RM'},
+    {'code': 'IDR', 'name': 'Indonesian Rupiah', 'symbol': 'Rp'},
+    {'code': 'PHP', 'name': 'Philippine Peso', 'symbol': '₱'},
+    {'code': 'VND', 'name': 'Vietnamese Dong', 'symbol': '₫'},
+    {'code': 'ILS', 'name': 'Israeli Shekel', 'symbol': '₪'},
+    {'code': 'EGP', 'name': 'Egyptian Pound', 'symbol': '£'},
+    {'code': 'NGN', 'name': 'Nigerian Naira', 'symbol': '₦'},
+    {'code': 'KES', 'name': 'Kenyan Shilling', 'symbol': 'KSh'},
+    {'code': 'GHS', 'name': 'Ghanaian Cedi', 'symbol': '₵'},
+    {'code': 'MAD', 'name': 'Moroccan Dirham', 'symbol': 'د.م.'},
+    {'code': 'TND', 'name': 'Tunisian Dinar', 'symbol': 'د.ت'},
+    {'code': 'DZD', 'name': 'Algerian Dinar', 'symbol': 'د.ج'},
+    {'code': 'LBP', 'name': 'Lebanese Pound', 'symbol': 'ل.ل'},
+    {'code': 'JOD', 'name': 'Jordanian Dinar', 'symbol': 'د.ا'},
+    {'code': 'KWD', 'name': 'Kuwaiti Dinar', 'symbol': 'د.ك'},
+    {'code': 'QAR', 'name': 'Qatari Riyal', 'symbol': 'ر.ق'},
+    {'code': 'BHD', 'name': 'Bahraini Dinar', 'symbol': 'د.ب'},
+    {'code': 'OMR', 'name': 'Omani Rial', 'symbol': 'ر.ع.'},
+    {'code': 'PKR', 'name': 'Pakistani Rupee', 'symbol': '₨'},
+    {'code': 'BDT', 'name': 'Bangladeshi Taka', 'symbol': '৳'},
+    {'code': 'LKR', 'name': 'Sri Lankan Rupee', 'symbol': '₨'},
+    {'code': 'NPR', 'name': 'Nepalese Rupee', 'symbol': '₨'},
+    {'code': 'AFN', 'name': 'Afghan Afghani', 'symbol': '؋'},
+    {'code': 'AMD', 'name': 'Armenian Dram', 'symbol': '֏'},
+    {'code': 'AZN', 'name': 'Azerbaijani Manat', 'symbol': '₼'},
+    {'code': 'GEL', 'name': 'Georgian Lari', 'symbol': '₾'},
+    {'code': 'KZT', 'name': 'Kazakhstani Tenge', 'symbol': '₸'},
+    {'code': 'KGS', 'name': 'Kyrgyzstani Som', 'symbol': 'с'},
+    {'code': 'TJS', 'name': 'Tajikistani Somoni', 'symbol': 'SM'},
+    {'code': 'TMT', 'name': 'Turkmenistani Manat', 'symbol': 'T'},
+    {'code': 'UZS', 'name': 'Uzbekistani Som', 'symbol': 'лв'},
+    {'code': 'MNT', 'name': 'Mongolian Tugrik', 'symbol': '₮'},
+    {'code': 'LAK', 'name': 'Lao Kip', 'symbol': '₭'},
+    {'code': 'KHR', 'name': 'Cambodian Riel', 'symbol': '៛'},
+    {'code': 'MMK', 'name': 'Myanmar Kyat', 'symbol': 'K'},
+    {'code': 'BND', 'name': 'Brunei Dollar', 'symbol': 'B\$'},
+    {'code': 'FJD', 'name': 'Fijian Dollar', 'symbol': 'FJ\$'},
+    {'code': 'PGK', 'name': 'Papua New Guinean Kina', 'symbol': 'K'},
+    {'code': 'SBD', 'name': 'Solomon Islands Dollar', 'symbol': 'SI\$'},
+    {'code': 'TOP', 'name': 'Tongan Paʻanga', 'symbol': 'T\$'},
+    {'code': 'VUV', 'name': 'Vanuatu Vatu', 'symbol': 'Vt'},
+    {'code': 'WST', 'name': 'Samoan Tala', 'symbol': 'WS\$'},
+    {'code': 'XPF', 'name': 'CFP Franc', 'symbol': '₣'},
+    {'code': 'ARS', 'name': 'Argentine Peso', 'symbol': '\$'},
+    {'code': 'BOB', 'name': 'Bolivian Boliviano', 'symbol': 'Bs'},
+    {'code': 'CLP', 'name': 'Chilean Peso', 'symbol': '\$'},
+    {'code': 'COP', 'name': 'Colombian Peso', 'symbol': '\$'},
+    {'code': 'PEN', 'name': 'Peruvian Sol', 'symbol': 'S/'},
+    {'code': 'UYU', 'name': 'Uruguayan Peso', 'symbol': '\$U'},
+    {'code': 'VES', 'name': 'Venezuelan Bolívar', 'symbol': 'Bs.S'},
+    {'code': 'GYD', 'name': 'Guyanese Dollar', 'symbol': 'G\$'},
+    {'code': 'SRD', 'name': 'Surinamese Dollar', 'symbol': 'Sr\$'},
+    {'code': 'TTD', 'name': 'Trinidad and Tobago Dollar', 'symbol': 'TT\$'},
+    {'code': 'BBD', 'name': 'Barbadian Dollar', 'symbol': 'Bds\$'},
+    {'code': 'JMD', 'name': 'Jamaican Dollar', 'symbol': 'J\$'},
+    {'code': 'BZD', 'name': 'Belize Dollar', 'symbol': 'BZ\$'},
+    {'code': 'BMD', 'name': 'Bermudian Dollar', 'symbol': 'BD\$'},
+    {'code': 'KYD', 'name': 'Cayman Islands Dollar', 'symbol': 'CI\$'},
+    {'code': 'XCD', 'name': 'East Caribbean Dollar', 'symbol': 'EC\$'},
+    {'code': 'AWG', 'name': 'Aruban Florin', 'symbol': 'ƒ'},
+    {'code': 'ANG', 'name': 'Netherlands Antillean Guilder', 'symbol': 'ƒ'},
+    {'code': 'DOP', 'name': 'Dominican Peso', 'symbol': 'RD\$'},
+    {'code': 'HTG', 'name': 'Haitian Gourde', 'symbol': 'G'},
+    {'code': 'CUP', 'name': 'Cuban Peso', 'symbol': '\$'},
+    {'code': 'CRC', 'name': 'Costa Rican Colón', 'symbol': '₡'},
+    {'code': 'GTQ', 'name': 'Guatemalan Quetzal', 'symbol': 'Q'},
+    {'code': 'HNL', 'name': 'Honduran Lempira', 'symbol': 'L'},
+    {'code': 'NIO', 'name': 'Nicaraguan Córdoba', 'symbol': 'C\$'},
+    {'code': 'PAB', 'name': 'Panamanian Balboa', 'symbol': 'B/.'},
+    {'code': 'PYG', 'name': 'Paraguayan Guarani', 'symbol': '₲'},
+    {'code': 'SVC', 'name': 'Salvadoran Colón', 'symbol': '₡'},
+    {'code': 'BWP', 'name': 'Botswana Pula', 'symbol': 'P'},
+    {'code': 'ETB', 'name': 'Ethiopian Birr', 'symbol': 'Br'},
+    {'code': 'MWK', 'name': 'Malawian Kwacha', 'symbol': 'MK'},
+    {'code': 'MUR', 'name': 'Mauritian Rupee', 'symbol': '₨'},
+    {'code': 'MZN', 'name': 'Mozambican Metical', 'symbol': 'MT'},
+    {'code': 'NAD', 'name': 'Namibian Dollar', 'symbol': 'N\$'},
+    {'code': 'RWF', 'name': 'Rwandan Franc', 'symbol': 'RF'},
+    {'code': 'SZL', 'name': 'Swazi Lilangeni', 'symbol': 'E'},
+    {'code': 'TZS', 'name': 'Tanzanian Shilling', 'symbol': 'TSh'},
+    {'code': 'UGX', 'name': 'Ugandan Shilling', 'symbol': 'USh'},
+    {'code': 'ZMW', 'name': 'Zambian Kwacha', 'symbol': 'ZK'},
+    {'code': 'ZWL', 'name': 'Zimbabwean Dollar', 'symbol': 'Z\$'},
+    {'code': 'AOA', 'name': 'Angolan Kwanza', 'symbol': 'Kz'},
+    {'code': 'CDF', 'name': 'Congolese Franc', 'symbol': 'FC'},
+    {'code': 'XAF', 'name': 'Central African CFA Franc', 'symbol': 'FCFA'},
+    {'code': 'XOF', 'name': 'West African CFA Franc', 'symbol': 'CFA'},
+    {'code': 'KMF', 'name': 'Comorian Franc', 'symbol': 'CF'},
+    {'code': 'DJF', 'name': 'Djiboutian Franc', 'symbol': 'Fdj'},
+    {'code': 'ERN', 'name': 'Eritrean Nakfa', 'symbol': 'Nfk'},
+    {'code': 'SLL', 'name': 'Sierra Leonean Leone', 'symbol': 'Le'},
+    {'code': 'SOS', 'name': 'Somali Shilling', 'symbol': 'S'},
+    {'code': 'SSP', 'name': 'South Sudanese Pound', 'symbol': '£'},
+    {'code': 'STN', 'name': 'São Tomé and Príncipe Dobra', 'symbol': 'Db'},
+    {'code': 'SYP', 'name': 'Syrian Pound', 'symbol': '£'},
+    {'code': 'TND', 'name': 'Tunisian Dinar', 'symbol': 'د.ت'},
+    {'code': 'UAH', 'name': 'Ukrainian Hryvnia', 'symbol': '₴'},
+    {'code': 'UZS', 'name': 'Uzbekistani Som', 'symbol': 'лв'},
+    {'code': 'YER', 'name': 'Yemeni Rial', 'symbol': '﷼'},
+    {'code': 'ZAR', 'name': 'South African Rand', 'symbol': 'R'},
+  ];
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _currencySearchController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,171 +191,626 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
           ),
         ),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.pop(context),
-        ),
+        backgroundColor:
+            isDark ? AppColors.surfaceDark : AppColors.surfaceLight,
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(AppSpacing.lg),
         child: Column(
           children: [
-            // App Preferences
-            _buildSection(
-              title: 'App Preferences',
-              children: [
-                _buildSwitchTile(
-                  icon: Icons.notifications_outlined,
-                  title: 'Push Notifications',
-                  subtitle: 'Receive notifications about your spending',
-                  value: _notificationsEnabled,
-                  onChanged: (value) {
-                    setState(() {
-                      _notificationsEnabled = value;
-                    });
-                  },
-                  isDark: isDark,
-                ),
-                _buildSwitchTile(
-                  icon: Icons.dark_mode_outlined,
-                  title: 'Dark Mode',
-                  subtitle: 'Use dark theme throughout the app',
-                  value: _darkModeEnabled,
-                  onChanged: (value) {
-                    setState(() {
-                      _darkModeEnabled = value;
-                    });
-                  },
-                  isDark: isDark,
-                ),
-                _buildSwitchTile(
-                  icon: Icons.fingerprint,
-                  title: 'Biometric Login',
-                  subtitle: 'Use fingerprint or face ID to unlock',
-                  value: _biometricEnabled,
-                  onChanged: (value) {
-                    setState(() {
-                      _biometricEnabled = value;
-                    });
-                  },
-                  isDark: isDark,
-                ),
-                _buildSwitchTile(
-                  icon: Icons.analytics_outlined,
-                  title: 'Analytics',
-                  subtitle: 'Help improve the app with usage data',
-                  value: _analyticsEnabled,
-                  onChanged: (value) {
-                    setState(() {
-                      _analyticsEnabled = value;
-                    });
-                  },
-                  isDark: isDark,
-                ),
-              ],
-            ),
-
-            const SizedBox(height: AppSpacing.lg),
-
-            // Localization
-            _buildSection(
-              title: 'Localization',
-              children: [
-                _buildListTile(
-                  icon: Icons.language_outlined,
-                  title: 'Language',
-                  subtitle: _selectedLanguage,
-                  onTap: () => _showLanguagePicker(),
-                  isDark: isDark,
-                ),
-                _buildListTile(
-                  icon: Icons.currency_exchange_outlined,
-                  title: 'Currency',
-                  subtitle: _selectedCurrency,
-                  onTap: () => _showCurrencyPicker(),
-                  isDark: isDark,
-                ),
-              ],
-            ),
-
-            const SizedBox(height: AppSpacing.lg),
-
-            // Data & Privacy
-            _buildSection(
-              title: 'Data & Privacy',
-              children: [
-                _buildListTile(
-                  icon: Icons.download_outlined,
-                  title: 'Export Data',
-                  subtitle: 'Download your expense data',
-                  onTap: () => _exportData(),
-                  isDark: isDark,
-                ),
-                _buildListTile(
-                  icon: Icons.delete_outline,
-                  title: 'Clear Cache',
-                  subtitle: 'Free up storage space',
-                  onTap: () => _clearCache(),
-                  isDark: isDark,
-                ),
-                _buildListTile(
-                  icon: Icons.privacy_tip_outlined,
-                  title: 'Privacy Policy',
-                  subtitle: 'Read our privacy policy',
-                  onTap: () => _showPrivacyPolicy(),
-                  isDark: isDark,
-                ),
-              ],
-            ),
+            // Profile Section
+            _buildProfileSection(isDark),
 
             const SizedBox(height: AppSpacing.xl),
 
-            // Reset Button
-            CustomButton(
-              text: 'Reset to Defaults',
-              onPressed: () => _resetToDefaults(),
-              variant: ButtonVariant.outline,
-              customColor: AppColors.warning,
-              size: ButtonSize.large,
-              isFullWidth: true,
-            ).animate().fadeIn(
-                  duration: 600.ms,
-                  delay: 200.ms,
-                ),
+            // App Preferences
+            _buildAppPreferencesSection(isDark),
+
+            const SizedBox(height: AppSpacing.lg),
+
+            // Account Security
+            _buildAccountSecuritySection(isDark),
+
+            const SizedBox(height: AppSpacing.lg),
+
+            // Subscription & Billing
+            _buildSubscriptionBillingSection(isDark),
+
+            const SizedBox(height: AppSpacing.lg),
+
+            // Support & Info
+            _buildSupportInfoSection(isDark),
+
+            const SizedBox(height: AppSpacing.xl),
+
+            // Sign Out Button
+            _buildSignOutButton(),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildSection({
-    required String title,
-    required List<Widget> children,
-  }) {
+  Widget _buildProfileSection(bool isDark) {
+    return CustomCard(
+      child: Column(
+        children: [
+          // Avatar
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              gradient: AppColors.heroGradient,
+              borderRadius: BorderRadius.circular(AppSpacing.radiusXLarge),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.primary.withOpacity(0.3),
+                  blurRadius: 20,
+                  offset: const Offset(0, 10),
+                ),
+              ],
+            ),
+            child: const Icon(
+              Icons.person,
+              size: 50,
+              color: Colors.white,
+            ),
+          ).animate().scale(
+                duration: 600.ms,
+                curve: Curves.elasticOut,
+              ),
+
+          const SizedBox(height: AppSpacing.lg),
+
+          // Name and Email
+          if (!_isEditingProfile) ...[
+            Text(
+              _nameController.text,
+              style: AppTypography.headlineSmall(
+                color: isDark
+                    ? AppColors.textPrimaryDark
+                    : AppColors.textPrimaryLight,
+              ),
+            ).animate().fadeIn(
+                  duration: 800.ms,
+                  delay: 200.ms,
+                ),
+
+            const SizedBox(height: AppSpacing.xs),
+
+            Text(
+              _emailController.text,
+              style: AppTypography.bodyMedium(
+                color: isDark
+                    ? AppColors.textSecondaryDark
+                    : AppColors.textSecondaryLight,
+              ),
+            ).animate().fadeIn(
+                  duration: 800.ms,
+                  delay: 400.ms,
+                ),
+
+            const SizedBox(height: AppSpacing.lg),
+
+            // Edit Profile Button
+            CustomButton(
+              text: 'Edit Profile',
+              onPressed: () {
+                setState(() {
+                  _isEditingProfile = true;
+                });
+              },
+              variant: ButtonVariant.outline,
+              size: ButtonSize.medium,
+            ).animate().fadeIn(
+                  duration: 800.ms,
+                  delay: 600.ms,
+                ),
+          ] else ...[
+            // Edit Profile Form
+            CustomInput(
+              controller: _nameController,
+              label: 'Full Name',
+              hint: 'Enter your full name',
+              prefixIcon: Icons.person_outline,
+            ),
+
+            const SizedBox(height: AppSpacing.md),
+
+            CustomInput(
+              controller: _emailController,
+              label: 'Email Address',
+              hint: 'Enter your email',
+              prefixIcon: Icons.email_outlined,
+              keyboardType: TextInputType.emailAddress,
+            ),
+
+            const SizedBox(height: AppSpacing.lg),
+
+            Row(
+              children: [
+                Expanded(
+                  child: CustomButton(
+                    text: 'Cancel',
+                    onPressed: () {
+                      setState(() {
+                        _isEditingProfile = false;
+                      });
+                    },
+                    variant: ButtonVariant.outline,
+                    size: ButtonSize.medium,
+                  ),
+                ),
+                const SizedBox(width: AppSpacing.md),
+                Expanded(
+                  child: CustomButton(
+                    text: 'Save',
+                    onPressed: () {
+                      setState(() {
+                        _isEditingProfile = false;
+                      });
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('Profile updated successfully!'),
+                          backgroundColor: AppColors.success,
+                        ),
+                      );
+                    },
+                    variant: ButtonVariant.primary,
+                    size: ButtonSize.medium,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildAppPreferencesSection(bool isDark) {
     return CustomCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            title,
+            'App Preferences',
             style: AppTypography.titleMedium(
-              color: Theme.of(context).textTheme.titleMedium?.color,
+              color: isDark
+                  ? AppColors.textPrimaryDark
+                  : AppColors.textPrimaryLight,
             ),
           ),
           const SizedBox(height: AppSpacing.lg),
-          ...children,
+          _buildSwitchTile(
+            icon: Icons.notifications_outlined,
+            title: 'Push Notifications',
+            subtitle: 'Receive notifications about your spending',
+            value: _notificationsEnabled,
+            onChanged: (value) {
+              setState(() {
+                _notificationsEnabled = value;
+              });
+            },
+            isDark: isDark,
+          ),
+          _buildSwitchTile(
+            icon: Icons.dark_mode_outlined,
+            title: 'Dark Mode',
+            subtitle: 'Use dark theme throughout the app',
+            value: _darkModeEnabled,
+            onChanged: (value) {
+              setState(() {
+                _darkModeEnabled = value;
+              });
+            },
+            isDark: isDark,
+          ),
+          _buildSwitchTile(
+            icon: Icons.fingerprint,
+            title: 'Biometric Login',
+            subtitle: 'Use fingerprint or face ID to unlock',
+            value: _biometricEnabled,
+            onChanged: (value) {
+              setState(() {
+                _biometricEnabled = value;
+              });
+            },
+            isDark: isDark,
+          ),
+          _buildSwitchTile(
+            icon: Icons.analytics_outlined,
+            title: 'Analytics',
+            subtitle: 'Help improve the app with usage data',
+            value: _analyticsEnabled,
+            onChanged: (value) {
+              setState(() {
+                _analyticsEnabled = value;
+              });
+            },
+            isDark: isDark,
+          ),
+          const SizedBox(height: AppSpacing.lg),
+          _buildDemoButton(isDark),
+          const SizedBox(height: AppSpacing.lg),
+          _buildCurrencySelector(isDark),
+          const SizedBox(height: AppSpacing.md),
+          _buildLanguageSelector(isDark),
         ],
       ),
-    )
-        .animate()
-        .fadeIn(
-          duration: 600.ms,
-        )
-        .slideY(
-          begin: 0.3,
-          end: 0,
-          duration: 600.ms,
+    );
+  }
+
+  Widget _buildCurrencySelector(bool isDark) {
+    final filteredCurrencies = _currencies.where((currency) {
+      final query = _currencySearchQuery.toLowerCase();
+      return currency['code']!.toLowerCase().contains(query) ||
+          currency['name']!.toLowerCase().contains(query);
+    }).toList();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Currency',
+          style: AppTypography.labelMedium(
+            color:
+                isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        CustomInput(
+          controller: _currencySearchController,
+          hint: 'Search currencies...',
+          prefixIcon: Icons.search,
+          onChanged: (value) {
+            setState(() {
+              _currencySearchQuery = value;
+            });
+          },
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        Container(
+          height: 150,
+          decoration: BoxDecoration(
+            color: isDark ? AppColors.surfaceDark : AppColors.surfaceLight,
+            borderRadius: BorderRadius.circular(AppSpacing.radiusRound),
+            border: Border.all(
+              color: isDark ? AppColors.borderDark : AppColors.borderLight,
+            ),
+          ),
+          child: ListView.builder(
+            padding: const EdgeInsets.all(AppSpacing.sm),
+            itemCount: filteredCurrencies.length,
+            itemBuilder: (context, index) {
+              final currency = filteredCurrencies[index];
+              final isSelected = _selectedCurrency == currency['code'];
+
+              return ListTile(
+                title: Text(
+                  '${currency['code']} - ${currency['name']}',
+                  style: AppTypography.bodyMedium(
+                    color: isDark
+                        ? AppColors.textPrimaryDark
+                        : AppColors.textPrimaryLight,
+                  ),
+                ),
+                subtitle: Text(
+                  currency['symbol']!,
+                  style: AppTypography.bodySmall(
+                    color: isDark
+                        ? AppColors.textSecondaryDark
+                        : AppColors.textSecondaryLight,
+                  ),
+                ),
+                trailing: isSelected
+                    ? Icon(
+                        Icons.check_circle,
+                        color: AppColors.getPrimaryColor(isDark),
+                      )
+                    : null,
+                onTap: () {
+                  setState(() {
+                    _selectedCurrency = currency['code']!;
+                  });
+                },
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(AppSpacing.radiusSmall),
+                ),
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildLanguageSelector(bool isDark) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Language',
+          style: AppTypography.labelMedium(
+            color:
+                isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        Container(
+          decoration: BoxDecoration(
+            color: isDark ? AppColors.surfaceDark : AppColors.surfaceLight,
+            borderRadius: BorderRadius.circular(AppSpacing.radiusRound),
+            border: Border.all(
+              color: isDark ? AppColors.borderDark : AppColors.borderLight,
+            ),
+          ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton<String>(
+              value: _selectedLanguage,
+              isExpanded: true,
+              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
+              items: [
+                'English',
+                'Spanish',
+                'French',
+                'German',
+                'Italian',
+                'Portuguese',
+                'Chinese',
+                'Japanese',
+                'Korean',
+                'Arabic'
+              ].map((String item) {
+                return DropdownMenuItem<String>(
+                  value: item,
+                  child: Text(
+                    item,
+                    style: AppTypography.bodyMedium(
+                      color: isDark
+                          ? AppColors.textPrimaryDark
+                          : AppColors.textPrimaryLight,
+                    ),
+                  ),
+                );
+              }).toList(),
+              onChanged: (value) => setState(() => _selectedLanguage = value!),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildAccountSecuritySection(bool isDark) {
+    return CustomCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Account Security',
+            style: AppTypography.titleMedium(
+              color: isDark
+                  ? AppColors.textPrimaryDark
+                  : AppColors.textPrimaryLight,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.lg),
+          _buildListTile(
+            icon: Icons.security_outlined,
+            title: 'Security Settings',
+            subtitle: 'Password, 2FA, and security settings',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SecurityScreen(),
+                ),
+              );
+            },
+            isDark: isDark,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSubscriptionBillingSection(bool isDark) {
+    return CustomCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Subscription & Billing',
+            style: AppTypography.titleMedium(
+              color: isDark
+                  ? AppColors.textPrimaryDark
+                  : AppColors.textPrimaryLight,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.lg),
+          _buildListTile(
+            icon: Icons.subscriptions_outlined,
+            title: 'Subscription',
+            subtitle: 'Manage your subscription plan',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SubscriptionManagementScreen(),
+                ),
+              );
+            },
+            isDark: isDark,
+            trailing: Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.sm,
+                vertical: AppSpacing.xs,
+              ),
+              decoration: BoxDecoration(
+                color: AppColors.primary.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(AppSpacing.radiusSmall),
+              ),
+              child: Text(
+                'Premium',
+                style: AppTypography.captionSmall(
+                  color: AppColors.primary,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          _buildListTile(
+            icon: Icons.credit_card_outlined,
+            title: 'Payment Methods',
+            subtitle: 'Manage your payment methods',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const PaymentMethodsScreen(),
+                ),
+              );
+            },
+            isDark: isDark,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSupportInfoSection(bool isDark) {
+    return CustomCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Support & Info',
+            style: AppTypography.titleMedium(
+              color: isDark
+                  ? AppColors.textPrimaryDark
+                  : AppColors.textPrimaryLight,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.lg),
+          _buildListTile(
+            icon: Icons.help_outline,
+            title: 'Help Center',
+            subtitle: 'Get help and support',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const HelpCenterScreen(),
+                ),
+              );
+            },
+            isDark: isDark,
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+          ),
+          _buildListTile(
+            icon: Icons.info_outline,
+            title: 'About',
+            subtitle: 'Version 1.0.0',
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const AboutScreen(),
+                ),
+              );
+            },
+            isDark: isDark,
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+          ),
+          _buildListTile(
+            icon: Icons.feedback_outlined,
+            title: 'Send Feedback',
+            subtitle: 'Share your thoughts with us',
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Feedback functionality coming soon!'),
+                  backgroundColor: AppColors.info,
+                ),
+              );
+            },
+            isDark: isDark,
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSignOutButton() {
+    return CustomButton(
+      text: 'Sign Out',
+      onPressed: () {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Sign Out'),
+            content: const Text('Are you sure you want to sign out?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                    (route) => false,
+                  );
+                },
+                child: const Text('Sign Out'),
+              ),
+            ],
+          ),
         );
+      },
+      variant: ButtonVariant.outline,
+      customColor: AppColors.error,
+      size: ButtonSize.large,
+      isFullWidth: true,
+    ).animate().fadeIn(
+          duration: 600.ms,
+          delay: 800.ms,
+        );
+  }
+
+  Widget _buildListTile({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required VoidCallback onTap,
+    required bool isDark,
+    Widget? trailing,
+  }) {
+    return ListTile(
+      leading: Icon(
+        icon,
+        color: AppColors.primary,
+      ),
+      title: Text(
+        title,
+        style: AppTypography.bodyLarge(
+          color:
+              isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
+        ),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: AppTypography.bodySmall(
+          color: isDark
+              ? AppColors.textSecondaryDark
+              : AppColors.textSecondaryLight,
+        ),
+      ),
+      trailing: trailing,
+      onTap: onTap,
+      contentPadding: EdgeInsets.zero,
+    );
   }
 
   Widget _buildSwitchTile({
@@ -240,187 +850,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  Widget _buildListTile({
-    required IconData icon,
-    required String title,
-    required String subtitle,
-    required VoidCallback onTap,
-    required bool isDark,
-  }) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        color: AppColors.primary,
-      ),
-      title: Text(
-        title,
-        style: AppTypography.bodyLarge(
-          color:
-              isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
-        ),
-      ),
-      subtitle: Text(
-        subtitle,
-        style: AppTypography.bodySmall(
-          color: isDark
-              ? AppColors.textSecondaryDark
-              : AppColors.textSecondaryLight,
-        ),
-      ),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-      onTap: onTap,
-      contentPadding: EdgeInsets.zero,
-    );
-  }
-
-  void _showLanguagePicker() {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(AppSpacing.lg),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Select Language',
-              style: AppTypography.titleLarge(),
-            ),
-            const SizedBox(height: AppSpacing.lg),
-            ...['English (US)', 'Spanish', 'French', 'German', 'Chinese']
-                .map((language) {
-              return ListTile(
-                title: Text(language),
-                trailing: _selectedLanguage == language
-                    ? const Icon(Icons.check)
-                    : null,
-                onTap: () {
-                  setState(() {
-                    _selectedLanguage = language;
-                  });
-                  Navigator.pop(context);
-                },
-              );
-            }).toList(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _showCurrencyPicker() {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(AppSpacing.lg),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Select Currency',
-              style: AppTypography.titleLarge(),
-            ),
-            const SizedBox(height: AppSpacing.lg),
-            ...['USD (\$)', 'EUR (€)', 'GBP (£)', 'JPY (¥)', 'CAD (C\$)']
-                .map((currency) {
-              return ListTile(
-                title: Text(currency),
-                trailing: _selectedCurrency == currency
-                    ? const Icon(Icons.check)
-                    : null,
-                onTap: () {
-                  setState(() {
-                    _selectedCurrency = currency;
-                  });
-                  Navigator.pop(context);
-                },
-              );
-            }).toList(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _exportData() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Exporting data...'),
-        backgroundColor: AppColors.primary,
-      ),
-    );
-  }
-
-  void _clearCache() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Clear Cache'),
-        content: const Text('This will free up storage space. Are you sure?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+  Widget _buildDemoButton(bool isDark) {
+    return CustomButton(
+      text: 'View Theme Demo',
+      onPressed: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const ThemeDemoScreen(),
           ),
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Cache cleared successfully'),
-                  backgroundColor: AppColors.success,
-                ),
-              );
-            },
-            child: const Text('Clear'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _showPrivacyPolicy() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Opening privacy policy...'),
-        backgroundColor: AppColors.primary,
-      ),
-    );
-  }
-
-  void _resetToDefaults() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Reset to Defaults'),
-        content: const Text(
-            'This will reset all settings to their default values. Are you sure?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
-          ),
-          TextButton(
-            onPressed: () {
-              setState(() {
-                _notificationsEnabled = true;
-                _darkModeEnabled = false;
-                _biometricEnabled = false;
-                _analyticsEnabled = true;
-                _selectedLanguage = 'English (US)';
-                _selectedCurrency = 'USD (\$)';
-              });
-              Navigator.pop(context);
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Settings reset to defaults'),
-                  backgroundColor: AppColors.success,
-                ),
-              );
-            },
-            child: const Text('Reset'),
-          ),
-        ],
-      ),
+        );
+      },
+      variant: ButtonVariant.outline,
+      size: ButtonSize.medium,
     );
   }
 }

@@ -1,0 +1,357 @@
+{
+  "timestamp": "2025-10-14T03:33:53.335Z",
+  "stats": {
+    "filesScanned": 18,
+    "issuesFound": 10,
+    "warningsFound": 30,
+    "suggestionsFound": 2
+  },
+  "issues": [
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/layout.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.320Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/page.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.320Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Features.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.321Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Footer.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.322Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Hero.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.323Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Navbar.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.324Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Pricing.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.324Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/ui/GlassContainer.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.324Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/ui/HexagonContainer.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.325Z"
+    },
+    {
+      "severity": "error",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/ui/HolographicCard.tsx",
+      "line": 0,
+      "message": "Missing viewport meta tag",
+      "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to <head>",
+      "timestamp": "2025-10-14T03:33:53.325Z"
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 62,
+      "message": "Fixed width in pixels without responsive alternative: width: 6px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.315Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 79,
+      "message": "Fixed width in pixels without responsive alternative: width: 768px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.317Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 81,
+      "message": "Fixed width in pixels without responsive alternative: width: 0px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.317Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 262,
+      "message": "Fixed width in pixels without responsive alternative: width: 640px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.317Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 268,
+      "message": "Fixed width in pixels without responsive alternative: width: 1024px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.317Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 262,
+      "message": "Fixed min-width may break on small screens: min-width: 640px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.317Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 268,
+      "message": "Fixed min-width may break on small screens: min-width: 1024px",
+      "suggestion": "Consider using responsive units (rem, %, or responsive breakpoints)",
+      "timestamp": "2025-10-14T03:33:53.317Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 217,
+      "message": "overflow: hidden may hide important content",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.318Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 34,
+      "message": "overflow-x: hidden may indicate layout issues",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.318Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 42,
+      "message": "overflow-x: hidden may indicate layout issues",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.318Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 235,
+      "message": "overflow-x: hidden may indicate layout issues",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.319Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 243,
+      "message": "overflow-x: hidden may indicate layout issues",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.319Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 259,
+      "message": "overflow-x: hidden may indicate layout issues",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.319Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 146,
+      "message": "Padding may be too small for touch targets: padding: 2px (2px < 44px minimum)",
+      "suggestion": "Ensure touch targets are at least 44px for accessibility",
+      "timestamp": "2025-10-14T03:33:53.319Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 199,
+      "message": "Padding may be too small for touch targets: padding: 8px (8px < 44px minimum)",
+      "suggestion": "Ensure touch targets are at least 44px for accessibility",
+      "timestamp": "2025-10-14T03:33:53.319Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/layout.tsx",
+      "line": 49,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.320Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/layout.tsx",
+      "line": 0,
+      "message": "No responsive breakpoints found",
+      "suggestion": "Consider adding media queries or responsive utility classes",
+      "timestamp": "2025-10-14T03:33:53.320Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/page.tsx",
+      "line": 0,
+      "message": "No responsive breakpoints found",
+      "suggestion": "Consider adding media queries or responsive utility classes",
+      "timestamp": "2025-10-14T03:33:53.320Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Features.tsx",
+      "line": 228,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.321Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Features.tsx",
+      "line": 236,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.321Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Footer.tsx",
+      "line": 54,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.322Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Footer.tsx",
+      "line": 127,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.322Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Hero.tsx",
+      "line": 106,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.323Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Hero.tsx",
+      "line": 114,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.323Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Navbar.tsx",
+      "line": 66,
+      "message": "Button without aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.324Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Pricing.tsx",
+      "line": 174,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.324Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/Pricing.tsx",
+      "line": 246,
+      "message": "Link without descriptive text or aria-label",
+      "suggestion": "",
+      "timestamp": "2025-10-14T03:33:53.324Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/ui/GlassContainer.tsx",
+      "line": 0,
+      "message": "No responsive breakpoints found",
+      "suggestion": "Consider adding media queries or responsive utility classes",
+      "timestamp": "2025-10-14T03:33:53.325Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/ui/HexagonContainer.tsx",
+      "line": 0,
+      "message": "No responsive breakpoints found",
+      "suggestion": "Consider adding media queries or responsive utility classes",
+      "timestamp": "2025-10-14T03:33:53.325Z"
+    },
+    {
+      "severity": "warning",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/components/ui/HolographicCard.tsx",
+      "line": 0,
+      "message": "No responsive breakpoints found",
+      "suggestion": "Consider adding media queries or responsive utility classes",
+      "timestamp": "2025-10-14T03:33:53.325Z"
+    }
+  ],
+  "suggestions": [
+    {
+      "severity": "suggestion",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 0,
+      "message": "Found 1 max-width media queries",
+      "suggestion": "Consider using mobile-first approach with min-width queries",
+      "timestamp": "2025-10-14T03:33:53.318Z"
+    },
+    {
+      "severity": "suggestion",
+      "file": "/Users/mac/Documents/Personal/apps/flutter/ai-expense-tracker/expenvisor-website/src/app/globals.css",
+      "line": 0,
+      "message": "Found 2 min-width media queries",
+      "suggestion": "Consider using mobile-first approach with min-width queries",
+      "timestamp": "2025-10-14T03:33:53.318Z"
+    }
+  ],
+  "summary": {
+    "totalIssues": 42,
+    "criticalIssues": 10,
+    "warnings": 30,
+    "suggestions": 2
+  }
+}

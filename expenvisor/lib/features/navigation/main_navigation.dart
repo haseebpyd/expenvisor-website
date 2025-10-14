@@ -3,7 +3,7 @@ import '../dashboard/screens/dashboard_screen.dart';
 import '../history/screens/history_screen.dart';
 import '../analytics/screens/analytics_screen.dart';
 import '../ai_chat/screens/ai_chat_screen.dart';
-import '../profile/screens/profile_screen.dart';
+import '../settings/screens/settings_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -20,7 +20,7 @@ class _MainNavigationState extends State<MainNavigation> {
     const HistoryScreen(),
     const AnalyticsScreen(),
     const AiChatScreen(),
-    const ProfileScreen(),
+    const SettingsScreen(),
   ];
 
   @override
@@ -60,9 +60,9 @@ class _MainNavigationState extends State<MainNavigation> {
             label: 'AI Chat',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            activeIcon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.settings_outlined),
+            activeIcon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
       ),

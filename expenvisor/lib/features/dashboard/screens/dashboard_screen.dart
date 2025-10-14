@@ -6,6 +6,8 @@ import '../../../core/theme/app_spacing.dart';
 import '../../../shared/widgets/custom_card.dart';
 import '../../../shared/widgets/custom_button.dart';
 import '../../../shared/widgets/add_transaction_fab.dart';
+import '../../../shared/widgets/feature_card.dart';
+import '../../../shared/widgets/glass_container.dart';
 import '../../expense/screens/add_expense_screen.dart';
 import '../../income/screens/add_income_screen.dart';
 import '../../history/screens/history_screen.dart';
@@ -449,7 +451,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
-            
+
             // Header
             Padding(
               padding: const EdgeInsets.all(AppSpacing.lg),
@@ -476,7 +478,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
             ),
-            
+
             // Voice recording area
             Expanded(
               child: Container(
@@ -518,7 +520,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
               ),
             ),
-            
+
             // Action buttons
             Padding(
               padding: const EdgeInsets.all(AppSpacing.lg),
@@ -584,7 +586,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
-            
+
             // Header
             Padding(
               padding: const EdgeInsets.all(AppSpacing.lg),
@@ -611,7 +613,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
             ),
-            
+
             // Camera area
             Expanded(
               child: Container(
@@ -653,7 +655,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
               ),
             ),
-            
+
             // Action buttons
             Padding(
               padding: const EdgeInsets.all(AppSpacing.lg),
@@ -675,7 +677,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         Navigator.pop(context);
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                            content: Text('Receipt scanning feature coming soon!'),
+                            content:
+                                Text('Receipt scanning feature coming soon!'),
                             backgroundColor: AppColors.secondary,
                           ),
                         );

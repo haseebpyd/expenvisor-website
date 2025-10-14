@@ -6,8 +6,9 @@ import 'app_spacing.dart';
 
 /// Expenvisor App Theme
 ///
-/// Implements Midnight Aurora design system with Material 3
+/// Implements Emerald design system with Material 3
 /// Supports both light and dark modes with OLED optimization
+/// Features glassmorphism effects and modern fintech aesthetics
 class AppTheme {
   // Private constructor to prevent instantiation
   AppTheme._();
@@ -95,34 +96,36 @@ class AppTheme {
   // Dark Color Scheme
   static ColorScheme get _darkColorScheme {
     return const ColorScheme.dark(
-      primary: AppColors.primaryHighContrastDark, // High contrast blue for dark mode
-      onPrimary: AppColors.primary,
-      primaryContainer: AppColors.primaryHighContrastDark,
-      onPrimaryContainer: AppColors.primary,
-      secondary: AppColors.secondaryHighContrastDark, // High contrast purple for dark mode
-      onSecondary: AppColors.primary,
-      secondaryContainer: AppColors.secondaryContainerDarkMode, // Medium purple for containers
-      onSecondaryContainer: AppColors.primary,
-      tertiary: AppColors.accentHighContrastDark, // High contrast mint for dark mode
-      onTertiary: AppColors.primary,
-      tertiaryContainer: AppColors.accentHighContrastDark,
-      onTertiaryContainer: AppColors.primary,
-      error: AppColors.errorLight,
-      onError: AppColors.primary,
-      errorContainer: AppColors.errorBackgroundDark,
-      onErrorContainer: AppColors.errorLight,
-      surface: AppColors.surfaceDark,
-      onSurface: AppColors.textPrimaryDark,
-      surfaceContainerHighest: AppColors.surfaceElevatedDark,
-      onSurfaceVariant: AppColors.textSecondaryDark,
-      outline: AppColors.borderDark,
-      outlineVariant: AppColors.dividerDark,
+      primary: AppColors.primaryHighContrastDark, // Emerald 400 for dark mode
+      onPrimary: AppColors.backgroundDark, // Gray 950
+      primaryContainer: AppColors.primaryHighContrastDark, // Emerald 400
+      onPrimaryContainer: AppColors.backgroundDark, // Gray 950
+      secondary:
+          AppColors.secondaryHighContrastDark, // Violet 400 for dark mode
+      onSecondary: AppColors.backgroundDark, // Gray 950
+      secondaryContainer:
+          AppColors.secondaryContainerDarkMode, // Violet 500 for containers
+      onSecondaryContainer: AppColors.backgroundDark, // Gray 950
+      tertiary: AppColors.accentHighContrastDark, // Emerald 400 for dark mode
+      onTertiary: AppColors.backgroundDark, // Gray 950
+      tertiaryContainer: AppColors.accentHighContrastDark, // Emerald 400
+      onTertiaryContainer: AppColors.backgroundDark, // Gray 950
+      error: AppColors.errorLight, // Red 400
+      onError: AppColors.backgroundDark, // Gray 950
+      errorContainer: AppColors.errorBackgroundDark, // Red 900
+      onErrorContainer: AppColors.errorLight, // Red 400
+      surface: AppColors.surfaceDark, // Gray 900
+      onSurface: AppColors.textPrimaryDark, // Gray 300
+      surfaceContainerHighest: AppColors.surfaceElevatedDark, // Gray 800
+      onSurfaceVariant: AppColors.textSecondaryDark, // Gray 400
+      outline: AppColors.borderDark, // Gray 700
+      outlineVariant: AppColors.dividerDark, // Gray 700
       shadow: Colors.black87,
       scrim: Colors.black87,
-      inverseSurface: AppColors.accentHighContrastDark,
-      onInverseSurface: AppColors.primary,
-      inversePrimary: AppColors.primary,
-      surfaceTint: AppColors.accentHighContrastDark,
+      inverseSurface: AppColors.accentHighContrastDark, // Emerald 400
+      onInverseSurface: AppColors.backgroundDark, // Gray 950
+      inversePrimary: AppColors.primary, // Emerald 500
+      surfaceTint: AppColors.accentHighContrastDark, // Emerald 400
     );
   }
 
