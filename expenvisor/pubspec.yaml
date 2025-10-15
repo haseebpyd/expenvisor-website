@@ -40,23 +40,22 @@ dependencies:
   # State Management
   flutter_riverpod: ^2.4.9
 
-  # Firebase (will add later when we connect backend)
-  # firebase_core: ^2.24.0
-  # firebase_auth: ^4.15.0
-  # cloud_firestore: ^4.13.0
-  # firebase_storage: ^11.5.0
-  # firebase_analytics: ^10.7.0
-  # firebase_crashlytics: ^3.4.0
+  # Firebase (Phase 5)
+  firebase_core: ^2.24.0
+  firebase_auth: ^4.15.0
+  cloud_firestore: ^4.13.0
+  firebase_storage: ^11.5.0
+  firebase_analytics: ^10.7.0
+  firebase_crashlytics: ^3.4.0
 
-  # AI & ML (will add later)
-  # google_mlkit_text_recognition: ^0.11.0
-  # speech_to_text: ^6.5.1
-  # http: ^1.1.0
+  # AI & ML (Phase 2-4)
+  http: ^1.1.0
+  dio: ^5.3.2
 
-  # Features (will add later)
-  # flutter_local_notifications: ^16.3.0
-  # purchases_flutter: ^6.15.0
-  # image_picker: ^1.0.7
+  # Features (Phase 6)
+  flutter_local_notifications: ^16.3.0
+  purchases_flutter: ^6.15.0
+  in_app_purchase: ^3.1.11
 
   # Utilities
   shared_preferences: ^2.2.2

@@ -7,6 +7,8 @@ import '../../../shared/widgets/custom_input.dart';
 import '../../../shared/widgets/custom_button.dart';
 import '../../ai_agent/services/speech_service.dart';
 import '../../ai_agent/services/ocr_service.dart';
+import '../../ai_agent/services/contextual_actions_service.dart';
+import '../../ai_agent/models/parsed_transaction.dart';
 
 class InputComposer extends StatefulWidget {
   final TextEditingController controller;
@@ -14,6 +16,8 @@ class InputComposer extends StatefulWidget {
   final Function(String) onVoiceResult;
   final Function(Map<String, dynamic>) onReceiptScanned;
   final List<String> quickActions;
+  final List<ParsedTransaction>? recentTransactions;
+  final String? currentIntent;
 
   const InputComposer({
     super.key,
@@ -22,6 +26,8 @@ class InputComposer extends StatefulWidget {
     required this.onVoiceResult,
     required this.onReceiptScanned,
     this.quickActions = const [],
+    this.recentTransactions,
+    this.currentIntent,
   });
 
   @override
@@ -31,12 +37,24 @@ class InputComposer extends StatefulWidget {
 class _InputComposerState extends State<InputComposer> {
   final SpeechService _speechService = SpeechService();
   final OCRService _ocrService = OCRService();
+  final ContextualActionsService _contextualActions = ContextualActionsService();
   bool _isInitialized = false;
+  List<QuickAction> _contextualQuickActions = [];
 
   @override
   void initState() {
     super.initState();
     _initializeServices();
+    _updateContextualActions();
+  }
+
+  @override
+  void didUpdateWidget(InputComposer oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.recentTransactions != widget.recentTransactions ||
+        oldWidget.currentIntent != widget.currentIntent) {
+      _updateContextualActions();
+    }
   }
 
   Future<void> _initializeServices() async {
@@ -44,6 +62,16 @@ class _InputComposerState extends State<InputComposer> {
     setState(() {
       _isInitialized = true;
     });
+  }
+
+  void _updateContextualActions() {
+    if (widget.currentIntent != null) {
+      _contextualQuickActions = _contextualActions.getQuickActionsForIntent(widget.currentIntent!);
+    } else {
+      _contextualQuickActions = _contextualActions.getContextualActions(
+        recentTransactions: widget.recentTransactions,
+      );
+    }
   }
 
   @override
@@ -63,7 +91,13 @@ class _InputComposerState extends State<InputComposer> {
       ),
       child: Column(
         children: [
-          // Quick Actions
+          // Contextual Quick Actions
+          if (_contextualQuickActions.isNotEmpty) ...[
+            _buildContextualActions(isDark),
+            const SizedBox(height: AppSpacing.md),
+          ],
+          
+          // Static Quick Actions
           if (widget.quickActions.isNotEmpty) ...[
             _buildQuickActions(isDark),
             const SizedBox(height: AppSpacing.md),
@@ -117,6 +151,55 @@ class _InputComposerState extends State<InputComposer> {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildContextualActions(bool isDark) {
+    return SizedBox(
+      height: 40,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: _contextualQuickActions.length,
+        itemBuilder: (context, index) {
+          final action = _contextualQuickActions[index];
+          return Padding(
+            padding: const EdgeInsets.only(right: AppSpacing.sm),
+            child: GestureDetector(
+              onTap: () => widget.onSend(action.text),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.md,
+                  vertical: AppSpacing.sm,
+                ),
+                decoration: BoxDecoration(
+                  color: AppColors.accent.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(AppSpacing.radiusRound),
+                  border: Border.all(
+                    color: AppColors.accent.withOpacity(0.3),
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      action.icon,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                    const SizedBox(width: AppSpacing.xs),
+                    Text(
+                      action.text,
+                      style: AppTypography.labelSmall(
+                        color: AppColors.accent,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }
