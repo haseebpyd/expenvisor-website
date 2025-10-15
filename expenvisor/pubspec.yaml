@@ -66,6 +66,19 @@ dependencies:
   # Icons
   cupertino_icons: ^1.0.8
 
+  # Local Database (Drift)
+  drift: ^2.14.0
+  drift_flutter: ^0.2.1
+  sqlite3_flutter_libs: ^0.5.0
+
+  # ML/AI & Media (Phase 2)
+  speech_to_text: ^6.5.1
+  google_ml_kit: ^0.16.0
+  image_picker: ^1.0.7
+  permission_handler: ^11.0.1
+  path_provider: ^2.1.1
+  path: ^1.8.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -76,6 +89,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  build_runner: ^2.4.9
+  drift_dev: ^2.14.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
