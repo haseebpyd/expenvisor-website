@@ -131,3 +131,31 @@ a {
     box-shadow: 0 20px 40px rgba(167, 139, 250, 0.2);
   }
 }
+
+/* Mobile-optimized gradients */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .gradient-text {
+    background: linear-gradient(135deg, #191970 0%, #A78BFA 50%, #00FFA3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 640px) {
+  button, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Fix gradient buttons on iOS Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+  .gradient-button {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
