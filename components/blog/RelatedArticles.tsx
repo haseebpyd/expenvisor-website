@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
-import { BlogPost } from '@/lib/blog';
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { BlogPost } from "@/lib/blog";
 
 interface RelatedArticlesProps {
   posts: BlogPost[];
@@ -24,7 +24,7 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-      
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (
           <article
@@ -41,16 +41,16 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-lg font-bold text-text-primary-light dark:text-text-primary-dark mb-3 group-hover:text-accent transition-colors duration-200 line-clamp-2">
                   {post.title}
                 </h3>
-                
+
                 <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4 line-clamp-2">
                   {post.description}
                 </p>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex flex-wrap gap-2">
                     {post.tags.slice(0, 2).map((tag) => (
@@ -62,7 +62,7 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center gap-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
                     <span>{post.readingTime} min</span>
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />

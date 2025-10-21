@@ -1,7 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Share2, Twitter, Facebook, Linkedin, Link as LinkIcon, Check } from 'lucide-react';
+import { useState } from "react";
+import {
+  Share2,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Link as LinkIcon,
+  Check,
+} from "lucide-react";
 
 interface ShareButtonsProps {
   title: string;
@@ -9,7 +16,11 @@ interface ShareButtonsProps {
   description: string;
 }
 
-export default function ShareButtons({ title, url, description }: ShareButtonsProps) {
+export default function ShareButtons({
+  title,
+  url,
+  description,
+}: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);
   const fullUrl = `https://expenvisor.com${url}`;
 
@@ -24,7 +35,7 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
       try {
         await navigator.share(shareData);
       } catch (err) {
-        console.log('Error sharing:', err);
+        console.log("Error sharing:", err);
       }
     } else {
       // Fallback to copy to clipboard
@@ -38,14 +49,20 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.log('Error copying:', err);
+      console.log("Error copying:", err);
     }
   };
 
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(fullUrl)}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`,
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(fullUrl)}`,
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      title
+    )}&url=${encodeURIComponent(fullUrl)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      fullUrl
+    )}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      fullUrl
+    )}`,
   };
 
   return (
@@ -53,7 +70,7 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
       <span className="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">
         Share this article:
       </span>
-      
+
       <div className="flex items-center gap-3">
         <button
           onClick={handleShare}
@@ -62,7 +79,7 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
           <Share2 className="w-4 h-4" />
           <span className="text-sm font-medium">Share</span>
         </button>
-        
+
         <a
           href={shareLinks.twitter}
           target="_blank"
@@ -72,7 +89,7 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
         >
           <Twitter className="w-5 h-5" />
         </a>
-        
+
         <a
           href={shareLinks.facebook}
           target="_blank"
@@ -82,7 +99,7 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
         >
           <Facebook className="w-5 h-5" />
         </a>
-        
+
         <a
           href={shareLinks.linkedin}
           target="_blank"
@@ -92,7 +109,7 @@ export default function ShareButtons({ title, url, description }: ShareButtonsPr
         >
           <Linkedin className="w-5 h-5" />
         </a>
-        
+
         <button
           onClick={handleCopyLink}
           className="p-2 text-gray-600 dark:text-gray-400 hover:text-accent transition-colors duration-200"

@@ -1,14 +1,21 @@
-import { Metadata } from 'next';
-import { getAllBlogPosts } from '@/lib/blog';
-import { generateMetadata as generateSEOMetadata } from '@/lib/metadata';
-import BlogCard from '@/components/blog/BlogCard';
-import BlogLayout from '@/components/blog/BlogLayout';
+import { Metadata } from "next";
+import { getAllBlogPosts } from "@/lib/blog";
+import { generateMetadata as generateSEOMetadata } from "@/lib/metadata";
+import BlogCard from "@/components/blog/BlogCard";
+import BlogLayout from "@/components/blog/BlogLayout";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Expenvisor Blog - AI Finance Tips & Expense Tracking Guides',
-  description: 'Discover expert insights on AI-powered expense tracking, personal finance management, and smart budgeting strategies. Stay updated with the latest fintech trends.',
-  keywords: ['expense tracking blog', 'AI finance tips', 'personal finance guides', 'budgeting advice', 'fintech insights'],
-  canonical: '/blog',
+  title: "Expenvisor Blog - AI Finance Tips & Expense Tracking Guides",
+  description:
+    "Discover expert insights on AI-powered expense tracking, personal finance management, and smart budgeting strategies. Stay updated with the latest fintech trends.",
+  keywords: [
+    "expense tracking blog",
+    "AI finance tips",
+    "personal finance guides",
+    "budgeting advice",
+    "fintech insights",
+  ],
+  canonical: "/blog",
 });
 
 export default function BlogPage() {
@@ -24,8 +31,9 @@ export default function BlogPage() {
               Expenvisor <span className="gradient-text">Blog</span>
             </h1>
             <p className="text-xl text-text-secondary-light max-w-3xl mx-auto">
-              Expert insights on AI-powered expense tracking, personal finance management, 
-              and smart budgeting strategies to help you take control of your finances.
+              Expert insights on AI-powered expense tracking, personal finance
+              management, and smart budgeting strategies to help you take
+              control of your finances.
             </p>
           </div>
 
@@ -43,8 +51,8 @@ export default function BlogPage() {
                 Ready to Transform Your Financial Management?
               </h2>
               <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-8 max-w-2xl mx-auto">
-                Join thousands of users who are already using AI-powered expense tracking 
-                to take control of their finances with Expenvisor.
+                Join thousands of users who are already using AI-powered expense
+                tracking to take control of their finances with Expenvisor.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

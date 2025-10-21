@@ -1,30 +1,30 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Menu, X, Download } from 'lucide-react'
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Menu, X, Download } from "lucide-react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
+      setIsScrolled(window.scrollY > 20);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
-    { name: 'Features', href: '/features' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: "Features", href: "/features" },
+    { name: "Blog", href: "/blog" },
+    { name: "About", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <motion.nav
@@ -32,9 +32,9 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-surface-dark/90 backdrop-blur-md border-b border-accent/20' 
-          : 'bg-transparent'
+        isScrolled
+          ? "bg-surface-dark/90 backdrop-blur-md border-b border-accent/20"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,11 +58,8 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="#download"
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent to-secondary text-white rounded-lg hover:shadow-lg transition-all duration-200 btn-hover"
@@ -79,7 +76,11 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="text-text-secondary-light hover:text-accent transition-colors duration-200"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -88,7 +89,7 @@ export default function Navbar() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden py-4 border-t border-accent/20"
           >
@@ -103,7 +104,7 @@ export default function Navbar() {
                   {item.name}
                 </Link>
               ))}
-              
+
               <Link
                 href="#download"
                 className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-secondary text-white rounded-lg hover:shadow-lg transition-all duration-200 mx-4"
@@ -117,5 +118,5 @@ export default function Navbar() {
         )}
       </div>
     </motion.nav>
-  )
+  );
 }
