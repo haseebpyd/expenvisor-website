@@ -28,6 +28,7 @@ export default function FeaturesPage() {
         "Automatic categorization",
         "Multi-language support",
       ],
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Camera,
@@ -40,6 +41,7 @@ export default function FeaturesPage() {
         "Smart categorization",
         "Tax-ready reports",
       ],
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: Brain,
@@ -52,6 +54,7 @@ export default function FeaturesPage() {
         "Expense predictions",
         "Smart alerts",
       ],
+      color: "from-purple-500 to-pink-500",
     },
     {
       icon: BarChart3,
@@ -64,6 +67,7 @@ export default function FeaturesPage() {
         "Trend analysis",
         "Export capabilities",
       ],
+      color: "from-indigo-500 to-purple-500",
     },
     {
       icon: Shield,
@@ -76,6 +80,7 @@ export default function FeaturesPage() {
         "Privacy protection",
         "Regular security audits",
       ],
+      color: "from-orange-500 to-red-500",
     },
     {
       icon: Smartphone,
@@ -88,6 +93,7 @@ export default function FeaturesPage() {
         "Multi-device access",
         "Automatic backups",
       ],
+      color: "from-gray-500 to-slate-500",
     },
   ];
 
@@ -132,31 +138,38 @@ export default function FeaturesPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                    className="group"
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-accent to-secondary rounded-xl flex items-center justify-center mb-6">
-                      <feature.icon className="w-8 h-8 text-white" />
+                    <div className="relative p-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl border border-border-light dark:border-border-dark hover:border-accent/50 transition-all duration-300 card-hover">
+                      {/* Icon with gradient background */}
+                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </div>
+
+                      {/* Content */}
+                      <h3 className="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-4">
+                        {feature.title}
+                      </h3>
+                      <p className="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed mb-6">
+                        {feature.description}
+                      </p>
+
+                      {/* Benefits list with checkmarks */}
+                      <ul className="space-y-2">
+                        {feature.benefits.map((benefit, benefitIndex) => (
+                          <li
+                            key={benefitIndex}
+                            className="flex items-center gap-2 text-sm text-text-secondary-light dark:text-text-secondary-dark"
+                          >
+                            <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Hover Effect Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-
-                    <h3 className="text-xl font-bold text-text-primary-light dark:text-text-primary-dark mb-4">
-                      {feature.title}
-                    </h3>
-
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6">
-                      {feature.description}
-                    </p>
-
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li
-                          key={benefitIndex}
-                          className="flex items-center gap-2 text-sm text-text-secondary-light dark:text-text-secondary-dark"
-                        >
-                          <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </motion.div>
                 ))}
               </div>

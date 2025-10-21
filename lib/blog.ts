@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Discover how artificial intelligence is transforming personal finance management with voice tracking, OCR scanning, and predictive analytics.",
     content: "",
-    author: "Expenvisor Team",
+    author: "MrHaseeb",
     publishedAt: "2025-01-16",
     updatedAt: "2025-01-16",
     readingTime: 8,
@@ -31,8 +31,8 @@ export const blogPosts: BlogPost[] = [
       "personal finance AI",
       "smart budgeting",
     ],
-    featuredImage: "/blog/ai-finance-2025.jpg",
-    ogImage: "/blog/og-ai-finance-2025.jpg",
+    featuredImage: "/blog/ai-finance-2025.png",
+    ogImage: "/blog/ai-finance-2025.png",
   },
   {
     slug: "voice-expense-tracking-guide",
@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Learn how voice-activated expense tracking can save you time and improve accuracy in your financial management.",
     content: "",
-    author: "Expenvisor Team",
+    author: "MrHaseeb",
     publishedAt: "2025-01-16",
     updatedAt: "2025-01-16",
     readingTime: 7,
@@ -56,8 +56,8 @@ export const blogPosts: BlogPost[] = [
       "hands-free budgeting",
       "voice-activated finance app",
     ],
-    featuredImage: "/blog/voice-tracking-guide.jpg",
-    ogImage: "/blog/og-voice-tracking.jpg",
+    featuredImage: "/blog/voice-tracking-guide.png",
+    ogImage: "/blog/voice-tracking-guide.png",
   },
   {
     slug: "ocr-receipt-scanning-guide",
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Master automated receipt scanning with OCR technology for effortless expense tracking and better financial organization.",
     content: "",
-    author: "Expenvisor Team",
+    author: "MrHaseeb",
     publishedAt: "2025-01-16",
     updatedAt: "2025-01-16",
     readingTime: 7,
@@ -76,8 +76,8 @@ export const blogPosts: BlogPost[] = [
       "automated expense management",
       "receipt organization",
     ],
-    featuredImage: "/blog/ocr-receipt-guide.jpg",
-    ogImage: "/blog/og-ocr-receipt.jpg",
+    featuredImage: "/blog/ocr-receipt-guide.png",
+    ogImage: "/blog/ocr-receipt-guide.png",
   },
   {
     slug: "budgeting-mistakes-ai-solutions",
@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Avoid common budgeting pitfalls and learn how AI-powered tools can help you create and maintain a successful budget.",
     content: "",
-    author: "Expenvisor Team",
+    author: "MrHaseeb",
     publishedAt: "2025-01-16",
     updatedAt: "2025-01-16",
     readingTime: 9,
@@ -96,8 +96,8 @@ export const blogPosts: BlogPost[] = [
       "smart budgeting",
       "AI budgeting assistant",
     ],
-    featuredImage: "/blog/budgeting-mistakes.jpg",
-    ogImage: "/blog/og-budgeting-mistakes.jpg",
+    featuredImage: "/blog/budgeting-mistakes.png",
+    ogImage: "/blog/budgeting-mistakes.png",
   },
   {
     slug: "expense-tracker-comparison-2025",
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Find the best expense tracker app for your needs with our comprehensive comparison of features, security, and value.",
     content: "",
-    author: "Expenvisor Team",
+    author: "MrHaseeb",
     publishedAt: "2025-01-16",
     updatedAt: "2025-01-16",
     readingTime: 8,
@@ -117,8 +117,8 @@ export const blogPosts: BlogPost[] = [
       "finance app features",
       "budgeting app review",
     ],
-    featuredImage: "/blog/app-comparison-2025.jpg",
-    ogImage: "/blog/og-app-comparison.jpg",
+    featuredImage: "/blog/app-comparison-2025.png",
+    ogImage: "/blog/app-comparison-2025.png",
   },
 ];
 
