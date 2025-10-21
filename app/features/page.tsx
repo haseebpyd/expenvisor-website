@@ -1,8 +1,5 @@
-import { Metadata } from "next";
-import {
-  generateMetadata as generateSEOMetadata,
-  generateStructuredData,
-} from "@/lib/metadata";
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -18,25 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export const metadata: Metadata = generateSEOMetadata({
-  title:
-    "Expenvisor Features - AI-Powered Expense Tracking & Financial Management",
-  description:
-    "Discover Expenvisor's powerful features including voice expense tracking, OCR receipt scanning, AI insights, and smart budgeting tools. See how our app revolutionizes personal finance management.",
-  keywords: [
-    "expense tracker features",
-    "AI expense tracking",
-    "voice expense logging",
-    "receipt scanner",
-    "smart budgeting",
-    "financial insights",
-  ],
-  canonical: "/features",
-});
-
 export default function FeaturesPage() {
-  const structuredData = generateStructuredData("software", {});
-
   const features = [
     {
       icon: Mic,
@@ -113,12 +92,7 @@ export default function FeaturesPage() {
   ];
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary to-secondary-dark">
+    <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary to-secondary-dark">
         <Navbar />
 
         <main className="relative z-10">
@@ -414,6 +388,5 @@ export default function FeaturesPage() {
 
         <Footer />
       </div>
-    </>
   );
 }

@@ -1,37 +1,13 @@
-import { Metadata } from "next";
-import {
-  generateMetadata as generateSEOMetadata,
-  generateStructuredData,
-} from "@/lib/metadata";
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Users, Target, Lightbulb, Heart } from "lucide-react";
 
-export const metadata: Metadata = generateSEOMetadata({
-  title: "About Expenvisor - AI-Powered Expense Tracking Company",
-  description:
-    "Learn about Expenvisor's mission to revolutionize personal finance management with AI technology. Meet our team and discover our vision for the future of expense tracking.",
-  keywords: [
-    "about expenvisor",
-    "AI finance company",
-    "expense tracking team",
-    "fintech mission",
-    "personal finance technology",
-  ],
-  canonical: "/about",
-});
-
 export default function AboutPage() {
-  const structuredData = generateStructuredData("organization", {});
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary to-secondary-dark">
+    <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary to-secondary-dark">
         <Navbar />
 
         <main className="relative z-10">
@@ -334,6 +310,5 @@ export default function AboutPage() {
 
         <Footer />
       </div>
-    </>
   );
 }
