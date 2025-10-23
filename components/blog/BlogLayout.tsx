@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import "../../styles/blog-styles.css";
 
 interface BlogLayoutProps {
   children: ReactNode;

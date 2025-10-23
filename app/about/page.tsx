@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Users, Target, Lightbulb, Heart } from "lucide-react";
+import { Users, Target, Lightbulb, Heart, ArrowRight } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -202,71 +202,39 @@ export default function AboutPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-white mb-6">
-                  Meet Our Team
+                  Meet the Founder
                 </h2>
                 <p className="text-lg text-text-secondary-light max-w-3xl mx-auto">
-                  We're a passionate group of developers, designers, and
-                  financial experts working together to create the future of
-                  personal finance management.
+                  Driven by a passion for innovation and AI, building the future
+                  of intelligent personal finance management.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="max-w-2xl mx-auto">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl p-6 text-center"
+                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark p-8 rounded-xl shadow-lg border border-primary-light/20 text-center"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-r from-accent to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">JD</span>
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent to-secondary flex items-center justify-center text-4xl font-bold text-white">
+                    MH
                   </div>
-                  <h3 className="text-xl font-bold text-text-primary-light dark:text-text-primary-dark mb-2">
-                    John Doe
+                  <h3 className="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
+                    MrHaseeb
                   </h3>
-                  <p className="text-accent mb-3">CEO & Co-Founder</p>
-                  <p className="text-text-secondary-light dark:text-text-secondary-dark">
-                    Former fintech executive with 10+ years experience in AI and
-                    financial technology.
+                  <p className="text-accent mb-4">Founder & Full Stack AI Engineer</p>
+                  <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6">
+                    Visionary full-stack AI engineer passionate about revolutionizing personal finance with intelligent automation.
                   </p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl p-6 text-center"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-r from-secondary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">JS</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-text-primary-light dark:text-text-primary-dark mb-2">
-                    Jane Smith
-                  </h3>
-                  <p className="text-accent mb-3">CTO & Co-Founder</p>
-                  <p className="text-text-secondary-light dark:text-text-secondary-dark">
-                    AI researcher and software architect specializing in machine
-                    learning applications.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl p-6 text-center"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-r from-accent to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">MJ</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-text-primary-light dark:text-text-primary-dark mb-2">
-                    Mike Johnson
-                  </h3>
-                  <p className="text-accent mb-3">Head of Product</p>
-                  <p className="text-text-secondary-light dark:text-text-secondary-dark">
-                    UX designer and product strategist focused on creating
-                    intuitive financial tools.
-                  </p>
+                  <a 
+                    href="https://mrhaseeb.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-accent hover:text-secondary transition-colors"
+                  >
+                    Visit Website <ArrowRight className="w-4 h-4" />
+                  </a>
                 </motion.div>
               </div>
             </div>
