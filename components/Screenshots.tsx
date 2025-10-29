@@ -160,7 +160,7 @@ export default function Screenshots() {
             </button>
 
             {/* Responsive Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
               {getVisibleScreens().map((screenshot, idx) => {
                 const actualIndex = (currentIndex + idx) % screenshots.length;
                 return (
@@ -169,29 +169,29 @@ export default function Screenshots() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="relative"
+                    className="relative flex flex-col items-center text-center"
                   >
+                    {/* Heading + Description */}
+                    <div className="mb-6 max-w-md mx-auto">
+                      <h3 className="text-2xl font-semibold text-white mb-2">
+                        {screenshot.title}
+                      </h3>
+                      <p className="text-base text-text-secondary-light">
+                        {screenshot.description}
+                      </p>
+                    </div>
+
                     {/* Phone Frame */}
-                    <div className="relative w-full h-[600px] bg-surface-dark rounded-3xl p-2 shadow-2xl">
+                    <div className="relative mx-auto w-[220px] h-[440px] sm:w-[260px] sm:h-[520px] lg:w-[300px] lg:h-[600px] bg-surface-dark rounded-3xl p-2 shadow-2xl">
                       <div className="w-full h-full bg-gradient-to-b from-primary to-secondary rounded-2xl overflow-hidden relative">
                         <Image
                           src={screenshot.image}
                           alt={screenshot.alt}
                           fill
                           className="object-cover"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          sizes="(max-width: 640px) 220px, (max-width: 1024px) 260px, 300px"
                         />
                       </div>
-                    </div>
-
-                    {/* Screenshot Info */}
-                    <div className="text-center mt-4">
-                      <h3 className="text-xl font-semibold text-white mb-1">
-                        {screenshot.title}
-                      </h3>
-                      <p className="text-sm text-text-secondary-light">
-                        {screenshot.description}
-                      </p>
                     </div>
                   </motion.div>
                 );
