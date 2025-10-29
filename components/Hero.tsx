@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -159,19 +160,15 @@ export default function Hero() {
             >
               {/* Phone Frame */}
               <div className="w-64 sm:w-72 lg:w-80 h-[480px] sm:h-[540px] lg:h-[600px] bg-surface-dark rounded-[3rem] p-2 shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-b from-primary to-secondary rounded-[2.5rem] flex items-center justify-center">
-                  <div className="text-center text-white p-8">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold">E</span>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Expenvisor</h3>
-                    <p className="text-sm opacity-80">AI Expense Tracker</p>
-                    <div className="mt-6 space-y-2">
-                      <div className="w-full h-2 bg-white/20 rounded-full" />
-                      <div className="w-3/4 h-2 bg-white/20 rounded-full mx-auto" />
-                      <div className="w-1/2 h-2 bg-white/20 rounded-full mx-auto" />
-                    </div>
-                  </div>
+                <div className="w-full h-full bg-gradient-to-b from-primary to-secondary rounded-[2.5rem] overflow-hidden relative">
+                  <Image
+                    src="/screenshots/hero.PNG"
+                    alt="Expenvisor App Hero"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
+                  />
                 </div>
               </div>
 
