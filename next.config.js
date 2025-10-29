@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     domains: ['expenvisor.com'],
     formats: ['image/webp', 'image/avif'],
+    unoptimized: false,
   },
   async headers() {
     return [

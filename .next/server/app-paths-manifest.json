@@ -1,8 +1,4 @@
 {
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/blog/ocr-receipt-scanning-guide/page": "app/blog/ocr-receipt-scanning-guide/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/blog/expense-tracker-comparison-2025/page": "app/blog/expense-tracker-comparison-2025/page.js",
-  "/page": "app/page.js",
-  "/features/page": "app/features/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js"
 }
