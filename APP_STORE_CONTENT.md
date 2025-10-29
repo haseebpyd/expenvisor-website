@@ -1,6 +1,5 @@
 # App Name
 
-Expenvisor AI Expense Tracker
 
 # Subtitle
 
