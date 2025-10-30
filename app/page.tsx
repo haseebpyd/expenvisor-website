@@ -1,11 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Hero from '@/components/Hero'
-import Features from '@/components/Features'
-import Screenshots from '@/components/Screenshots'
-import Pricing from '@/components/Pricing'
-import FAQ from '@/components/FAQ'
+import ComingSoon from '@/components/ComingSoon'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
@@ -19,11 +15,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Hero />
-        <Features />
-        <Screenshots />
-        <Pricing />
-        <FAQ />
+        <ComingSoon />
         <Footer />
       </motion.div>
     </main>
