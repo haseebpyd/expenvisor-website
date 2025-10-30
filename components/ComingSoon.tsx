@@ -54,8 +54,10 @@ export default function ComingSoon() {
 
   const handleDownload = (platform: "ios" | "android") => {
     if (platform === "ios") {
-      // Replace with actual App Store URL when available
-      window.open("https://apps.apple.com/app/expenvisor", "_blank");
+      window.open(
+        "https://apps.apple.com/pk/app/expenvisor-ai-expense-tracker/id6754627757",
+        "_blank"
+      );
     } else {
       // Replace with actual Play Store URL when available
       window.open(
