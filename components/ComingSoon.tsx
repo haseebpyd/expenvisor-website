@@ -1,13 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Bell,
-  Smartphone,
-  Sparkles,
-  Clock,
-} from "lucide-react";
+import { Mail, Bell, Smartphone, Sparkles, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function ComingSoon() {
@@ -21,7 +15,7 @@ export default function ComingSoon() {
   });
 
   // Set launch date (adjust as needed)
-  const launchDate = new Date("2025-03-01T00:00:00").getTime();
+  const launchDate = new Date("2024-11-05T00:00:00").getTime();
 
   useEffect(() => {
     const timer = setInterval(() => {

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -87,31 +88,35 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gradient-button"
-                style={{
-                  background: "linear-gradient(to right, #00FFA3, #A78BFA)",
-                  WebkitBackgroundClip: "padding-box",
-                }}
-              >
-                <Download className="w-5 h-5 mr-2 flex-shrink-0" />
-                <span>Download for iOS</span>
-              </motion.button>
+              <Link href="/coming-soon">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gradient-button"
+                  style={{
+                    background: "linear-gradient(to right, #00FFA3, #A78BFA)",
+                    WebkitBackgroundClip: "padding-box",
+                  }}
+                >
+                  <Download className="w-5 h-5 mr-2 flex-shrink-0" />
+                  <span>Download for iOS</span>
+                </motion.button>
+              </Link>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-secondary to-accent text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gradient-button"
-                style={{
-                  background: "linear-gradient(to right, #A78BFA, #00FFA3)",
-                  WebkitBackgroundClip: "padding-box",
-                }}
-              >
-                <Download className="w-5 h-5 mr-2 flex-shrink-0" />
-                <span>Download for Android</span>
-              </motion.button>
+              <Link href="/coming-soon">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-secondary to-accent text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gradient-button"
+                  style={{
+                    background: "linear-gradient(to right, #A78BFA, #00FFA3)",
+                    WebkitBackgroundClip: "padding-box",
+                  }}
+                >
+                  <Download className="w-5 h-5 mr-2 flex-shrink-0" />
+                  <span>Download for Android</span>
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Social Proof */}
