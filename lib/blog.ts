@@ -35,6 +35,26 @@ export const blogPosts: BlogPost[] = [
     ogImage: "/blog/ai-finance-2025.png",
   },
   {
+    slug: "best-ai-expense-tracker-iphone-2025",
+    title: "Best AI Expense Tracker Apps for iPhone (2025 Guide)",
+    description:
+      "Top AI expense tracker apps for iPhone compared. See why Expenvisor wins on value with unlimited chat, 30 free voice entries, and $4.99 Pro.",
+    content: "",
+    author: "MrHaseeb",
+    publishedAt: "2025-11-03",
+    updatedAt: "2025-11-03",
+    readingTime: 10,
+    tags: ["iPhone", "AI", "Expense Tracking", "Comparison"],
+    keywords: [
+      "best ai expense tracker app for iphone",
+      "ai finance app for iphone",
+      "iphone expense tracker ai",
+      "expenvisor vs monarch",
+    ],
+    featuredImage: "/blog/iphone-ai-expense-trackers-2025.png",
+    ogImage: "/blog/iphone-ai-expense-trackers-2025.png",
+  },
+  {
     slug: "voice-expense-tracking-guide",
     title:
       "Voice-First Expense Tracking: Why Speaking Your Expenses is Faster Than Typing",
