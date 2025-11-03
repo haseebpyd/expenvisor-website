@@ -140,6 +140,27 @@ export const blogPosts: BlogPost[] = [
     featuredImage: "/blog/app-comparison-2025.png",
     ogImage: "/blog/app-comparison-2025.png",
   },
+  {
+    slug: "expenvisor-vs-monarch-ynab-comparison-2025",
+    title: "Expenvisor vs Monarch Money vs YNAB: Complete Comparison 2025",
+    description:
+      "Head-to-head comparison of Expenvisor, Monarch Money, and YNAB. See why Expenvisor wins with unlimited free AI chat, $4.99 pricing, and voice features.",
+    content: "",
+    author: "MrHaseeb",
+    publishedAt: "2025-11-03",
+    updatedAt: "2025-11-03",
+    readingTime: 12,
+    tags: ["Comparison", "AI", "Expense Tracking", "Pricing"],
+    keywords: [
+      "ai expense tracker comparison",
+      "expenvisor vs monarch money",
+      "expenvisor vs ynab",
+      "best ai expense tracker",
+      "expenvisor review",
+    ],
+    featuredImage: "/blog/expenvisor-monarch-ynab-comparison-2025.png",
+    ogImage: "/blog/expenvisor-monarch-ynab-comparison-2025.png",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
