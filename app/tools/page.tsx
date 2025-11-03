@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ToolLayout from "./ToolLayout";
+import ToolCard from "./ToolCard";
 
 export const metadata: Metadata = {
   title: "Free Financial Tools | Expenvisor",
