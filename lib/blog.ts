@@ -161,6 +161,27 @@ export const blogPosts: BlogPost[] = [
     featuredImage: "/blog/expenvisor-monarch-ynab-comparison-2025.png",
     ogImage: "/blog/expenvisor-monarch-ynab-comparison-2025.png",
   },
+  {
+    slug: "how-expenvisor-voice-saves-time-2025",
+    title: "How Expenvisor Voice Feature Saves You 10+ Hours Monthly",
+    description:
+      "Learn how Expenvisor's voice expense tracking saves 10+ hours monthly. Multi-language support, accessibility features, and 30 free entries included.",
+    content: "",
+    author: "MrHaseeb",
+    publishedAt: "2025-11-03",
+    updatedAt: "2025-11-03",
+    readingTime: 9,
+    tags: ["Voice Technology", "Productivity", "Time Saving", "Expenvisor"],
+    keywords: [
+      "voice expense tracking",
+      "hands-free expense tracker",
+      "expenvisor voice feature",
+      "voice-activated finance app",
+      "how to save time expense tracking",
+    ],
+    featuredImage: "/blog/expenvisor-voice-time-savings-2025.png",
+    ogImage: "/blog/expenvisor-voice-time-savings-2025.png",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
