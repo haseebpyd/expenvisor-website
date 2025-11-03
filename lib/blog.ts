@@ -203,6 +203,27 @@ export const blogPosts: BlogPost[] = [
     featuredImage: "/blog/unlimited-vs-limited-trackers-2025.png",
     ogImage: "/blog/unlimited-vs-limited-trackers-2025.png",
   },
+  {
+    slug: "ai-expense-tracker-freelancers-business-2025",
+    title: "AI Expense Tracking for Freelancers & Small Business (2025 Guide)",
+    description:
+      "Complete guide to AI expense tracking for freelancers and small businesses. Tax deductions, receipt management, voice entry, and privacy benefits.",
+    content: "",
+    author: "MrHaseeb",
+    publishedAt: "2025-11-03",
+    updatedAt: "2025-11-03",
+    readingTime: 12,
+    tags: ["Business", "Freelancers", "Tax", "Small Business"],
+    keywords: [
+      "ai expense tracker for business",
+      "freelancer expense app",
+      "small business finance app",
+      "business expense tracking",
+      "freelancer tax deductions",
+    ],
+    featuredImage: "/blog/freelancers-business-expense-tracking-2025.png",
+    ogImage: "/blog/freelancers-business-expense-tracking-2025.png",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
