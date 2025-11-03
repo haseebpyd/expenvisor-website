@@ -1,22 +1,8 @@
 "use client";
 
-import type { Metadata } from "next";
 import ToolLayout from "../ToolLayout";
 import { useMemo, useState } from "react";
 import { NumberInput, ResultCard } from "@/components/tools/inputs";
-
-export const metadata: Metadata = {
-  title: "Loan Calculator | Expenvisor Free Tools",
-  description:
-    "Estimate monthly payment and total interest with an amortization schedule. Fast, private, no sign-up.",
-  alternates: { canonical: "/tools/loan-calculator" },
-  keywords: [
-    "loan calculator",
-    "amortization schedule",
-    "monthly payment",
-    "interest calculator",
-  ],
-};
 
 type Row = { month: number; interest: number; principal: number; balance: number };
 

@@ -4,14 +4,6 @@ import ToolLayout from "../ToolLayout";
 import { useMemo, useState } from "react";
 import { NumberInput, ResultCard } from "@/components/tools/inputs";
 
-export const metadata = {
-  title: "Compound Interest Calculator | Expenvisor Free Tools",
-  description:
-    "Calculate compound interest growth with regular contributions. See how time and compounding accelerate your savings.",
-  alternates: { canonical: "/tools/compound-interest" },
-  keywords: ["compound interest calculator", "investment growth", "savings calculator", "interest calculator"],
-};
-
 function toCurrency(n: number) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }

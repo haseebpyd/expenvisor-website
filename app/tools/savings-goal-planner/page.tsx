@@ -4,14 +4,6 @@ import ToolLayout from "../ToolLayout";
 import { useMemo, useState } from "react";
 import { NumberInput, ResultCard } from "@/components/tools/inputs";
 
-export const metadata = {
-  title: "Savings Goal Planner | Expenvisor Free Tools",
-  description:
-    "Calculate how much to save monthly to reach your goal, or how long it will take with your current savings rate.",
-  alternates: { canonical: "/tools/savings-goal-planner" },
-  keywords: ["savings goal calculator", "monthly savings", "financial goal planner", "savings planner"],
-};
-
 function toCurrency(n: number) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }

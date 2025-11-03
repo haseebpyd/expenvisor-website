@@ -51,8 +51,10 @@ export const blogPosts: BlogPost[] = [
       "iphone expense tracker ai",
       "expenvisor vs monarch",
     ],
-    featuredImage: "/blog/Best%20AI%20Expense%20Tracker%20Apps%20for%20iPhone%202025.png",
-    ogImage: "/blog/Best%20AI%20Expense%20Tracker%20Apps%20for%20iPhone%202025.png",
+    featuredImage:
+      "/blog/Best%20AI%20Expense%20Tracker%20Apps%20for%20iPhone%202025.png",
+    ogImage:
+      "/blog/Best%20AI%20Expense%20Tracker%20Apps%20for%20iPhone%202025.png",
   },
   {
     slug: "voice-expense-tracking-guide",
@@ -158,7 +160,8 @@ export const blogPosts: BlogPost[] = [
       "best ai expense tracker",
       "expenvisor review",
     ],
-    featuredImage: "/blog/Expenvisor%20vs%20Monarch%20vs%20YNAB%20Comparison.png",
+    featuredImage:
+      "/blog/Expenvisor%20vs%20Monarch%20vs%20YNAB%20Comparison.png",
     ogImage: "/blog/Expenvisor%20vs%20Monarch%20vs%20YNAB%20Comparison.png",
   },
   {
@@ -179,7 +182,8 @@ export const blogPosts: BlogPost[] = [
       "voice-activated finance app",
       "how to save time expense tracking",
     ],
-    featuredImage: "/blog/How%20Expenvisor%20Voice%20Feature%20Saves%20Time.png",
+    featuredImage:
+      "/blog/How%20Expenvisor%20Voice%20Feature%20Saves%20Time.png",
     ogImage: "/blog/How%20Expenvisor%20Voice%20Feature%20Saves%20Time.png",
   },
   {
@@ -221,8 +225,10 @@ export const blogPosts: BlogPost[] = [
       "business expense tracking",
       "freelancer tax deductions",
     ],
-    featuredImage: "/blog/AI%20Expense%20Tracking%20for%20Freelancers%20%26%20Small%20Business.png",
-    ogImage: "/blog/AI%20Expense%20Tracking%20for%20Freelancers%20%26%20Small%20Business.png",
+    featuredImage:
+      "/blog/AI%20Expense%20Tracking%20for%20Freelancers%20%26%20Small%20Business.png",
+    ogImage:
+      "/blog/AI%20Expense%20Tracking%20for%20Freelancers%20%26%20Small%20Business.png",
   },
 ];
 

@@ -4,14 +4,6 @@ import ToolLayout from "../ToolLayout";
 import { useMemo, useState } from "react";
 import { NumberInput, ResultCard } from "@/components/tools/inputs";
 
-export const metadata = {
-  title: "Budget Planner | Expenvisor Free Tools",
-  description:
-    "Create a budget using the 50/30/20 rule or custom categories. Plan spending, savings, and track your financial goals.",
-  alternates: { canonical: "/tools/budget-planner" },
-  keywords: ["budget planner", "50 30 20 rule", "budget calculator", "financial planning"],
-};
-
 function toCurrency(n: number) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }

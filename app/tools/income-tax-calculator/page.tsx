@@ -4,14 +4,6 @@ import ToolLayout from "../ToolLayout";
 import { useMemo, useState } from "react";
 import { NumberInput, ResultCard } from "@/components/tools/inputs";
 
-export const metadata = {
-  title: "Income Tax Calculator | Expenvisor Free Tools",
-  description:
-    "Estimate federal income tax using 2024 brackets. Simple calculation for educational purposes with standard deduction.",
-  alternates: { canonical: "/tools/income-tax-calculator" },
-  keywords: ["income tax calculator", "tax estimator", "tax bracket calculator", "federal tax calculator"],
-};
-
 function toCurrency(n: number) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }

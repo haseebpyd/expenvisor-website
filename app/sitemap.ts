@@ -81,5 +81,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  const toolPages = [
+    { url: `${baseUrl}/tools`, priority: 0.9 },
+    { url: `${baseUrl}/tools/loan-calculator`, priority: 0.8 },
+    { url: `${baseUrl}/tools/mortgage-affordability`, priority: 0.8 },
+    { url: `${baseUrl}/tools/compound-interest`, priority: 0.8 },
+    { url: `${baseUrl}/tools/savings-goal-planner`, priority: 0.8 },
+    { url: `${baseUrl}/tools/income-tax-calculator`, priority: 0.8 },
+    { url: `${baseUrl}/tools/budget-planner`, priority: 0.8 },
+  ].map((tool) => ({
+    url: tool.url,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: tool.priority,
+  }));
+
+  return [...staticPages, ...blogPages, ...toolPages];
 }

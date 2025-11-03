@@ -4,19 +4,6 @@ import ToolLayout from "../ToolLayout";
 import { useMemo, useState } from "react";
 import { NumberInput, ResultCard } from "@/components/tools/inputs";
 
-export const metadata = {
-  title: "Mortgage Affordability Calculator | Expenvisor Free Tools",
-  description:
-    "Estimate how much home you can afford based on income, expenses, and DTI. Includes down payment, monthly payment estimates.",
-  alternates: { canonical: "/tools/mortgage-affordability" },
-  keywords: [
-    "mortgage affordability calculator",
-    "how much house can I afford",
-    "DTI calculator",
-    "home buying calculator",
-  ],
-};
-
 function toCurrency(n: number) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 }

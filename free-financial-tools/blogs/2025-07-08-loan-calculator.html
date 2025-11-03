@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator - Free Financial Education | FreeFinTools</title>
+    <meta name="description" content="Learn how to use our Loan Calculator tool to improve your financial literacy and decision making">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Include your existing CSS styles here */
+        :root { /* ... existing root variables ... */ }
+        body { /* ... existing body styles ... */ }
+        /* Add any additional blog-specific styles */
+        .blog-content { max-width: 800px; margin: 40px auto; }
+        .blog-hero { text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+    <?php include '../navbar.php' ?>
+    
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Loan Calculator: Master Your Financial Strategy</h1>
+            <p>Published on: <?= date('F j, Y') ?></p>
+        </div>
+    </section>
+
+    <div class="container blog-content">
+        
+    </div>
+
+    <?php include '../footer.php' ?>
+    
+    <script>
+        // Initialize any charts in the blog content
+        document.querySelectorAll('.chart-container').forEach(container => {
+            const ctx = container.querySelector('canvas').getContext('2d');
+            const config = JSON.parse(container.dataset.config);
+            new Chart(ctx, config);
+        });
+    </script>
+</body>
+</html>
