@@ -51,8 +51,8 @@ export const blogPosts: BlogPost[] = [
       "iphone expense tracker ai",
       "expenvisor vs monarch",
     ],
-    featuredImage: "/blog/iphone-ai-expense-trackers-2025.png",
-    ogImage: "/blog/iphone-ai-expense-trackers-2025.png",
+    featuredImage: "/blog/Best%20AI%20Expense%20Tracker%20Apps%20for%20iPhone%202025.png",
+    ogImage: "/blog/Best%20AI%20Expense%20Tracker%20Apps%20for%20iPhone%202025.png",
   },
   {
     slug: "voice-expense-tracking-guide",
@@ -158,8 +158,8 @@ export const blogPosts: BlogPost[] = [
       "best ai expense tracker",
       "expenvisor review",
     ],
-    featuredImage: "/blog/expenvisor-monarch-ynab-comparison-2025.png",
-    ogImage: "/blog/expenvisor-monarch-ynab-comparison-2025.png",
+    featuredImage: "/blog/Expenvisor%20vs%20Monarch%20vs%20YNAB%20Comparison.png",
+    ogImage: "/blog/Expenvisor%20vs%20Monarch%20vs%20YNAB%20Comparison.png",
   },
   {
     slug: "how-expenvisor-voice-saves-time-2025",
@@ -179,8 +179,8 @@ export const blogPosts: BlogPost[] = [
       "voice-activated finance app",
       "how to save time expense tracking",
     ],
-    featuredImage: "/blog/expenvisor-voice-time-savings-2025.png",
-    ogImage: "/blog/expenvisor-voice-time-savings-2025.png",
+    featuredImage: "/blog/How%20Expenvisor%20Voice%20Feature%20Saves%20Time.png",
+    ogImage: "/blog/How%20Expenvisor%20Voice%20Feature%20Saves%20Time.png",
   },
   {
     slug: "unlimited-vs-limited-expense-trackers-2025",
@@ -200,8 +200,8 @@ export const blogPosts: BlogPost[] = [
       "unlimited ai chat expense tracker",
       "expenvisor free tier",
     ],
-    featuredImage: "/blog/unlimited-vs-limited-trackers-2025.png",
-    ogImage: "/blog/unlimited-vs-limited-trackers-2025.png",
+    featuredImage: "/blog/Unlimited%20vs%20Limited%20Expense%20Trackers.png",
+    ogImage: "/blog/Unlimited%20vs%20Limited%20Expense%20Trackers.png",
   },
   {
     slug: "ai-expense-tracker-freelancers-business-2025",
@@ -221,8 +221,8 @@ export const blogPosts: BlogPost[] = [
       "business expense tracking",
       "freelancer tax deductions",
     ],
-    featuredImage: "/blog/freelancers-business-expense-tracking-2025.png",
-    ogImage: "/blog/freelancers-business-expense-tracking-2025.png",
+    featuredImage: "/blog/AI%20Expense%20Tracking%20for%20Freelancers%20%26%20Small%20Business.png",
+    ogImage: "/blog/AI%20Expense%20Tracking%20for%20Freelancers%20%26%20Small%20Business.png",
   },
 ];
 
