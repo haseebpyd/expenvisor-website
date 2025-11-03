@@ -449,6 +449,40 @@ export default function BlogPostPage() {
                 </a>
               </p>
 
+              <h2>Use Our Free Financial Tools</h2>
+              <p>
+                Need to calculate loan payments, estimate taxes, or plan your budget?
+                Try our free financial calculators:
+              </p>
+              <ul>
+                <li>
+                  <a href="/tools/income-tax-calculator" className="text-accent hover:underline">
+                    Income Tax Calculator
+                  </a>{" "}
+                  - Estimate your tax liability for the year
+                </li>
+                <li>
+                  <a href="/tools/loan-calculator" className="text-accent hover:underline">
+                    Loan Calculator
+                  </a>{" "}
+                  - Calculate monthly payments and amortization
+                </li>
+                <li>
+                  <a href="/tools/budget-planner" className="text-accent hover:underline">
+                    Budget Planner
+                  </a>{" "}
+                  - Plan your budget with 50/30/20 rule or custom categories
+                </li>
+              </ul>
+              <p>
+                <a
+                  href="/tools"
+                  className="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold hover:shadow-lg transition-all"
+                >
+                  Explore All Free Tools →
+                </a>
+              </p>
+
               <h2>Conclusion: AI-Powered Expense Tracking for Modern Freelancers</h2>
               <p>
                 Freelancers and small business owners need expense tracking that

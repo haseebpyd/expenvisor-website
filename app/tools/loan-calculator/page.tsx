@@ -109,6 +109,33 @@ export default function LoanCalculatorPage() {
                 </table>
               </div>
 
+              <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+                <h3 className="text-lg font-semibold text-white mb-3">Frequently Asked Questions</h3>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">How is the monthly payment calculated?</h4>
+                    <p className="text-text-secondary-light">
+                      We use the standard amortization formula: P = [r × PV × (1 + r)^n] / [(1 + r)^n - 1], where P is
+                      payment, r is monthly rate, PV is loan amount, and n is number of months.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">What is an amortization schedule?</h4>
+                    <p className="text-text-secondary-light">
+                      An amortization schedule shows how each payment is split between principal and interest, and how
+                      the loan balance decreases over time.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">Can I export the schedule?</h4>
+                    <p className="text-text-secondary-light">
+                      Yes, click "Download CSV" to export the complete amortization schedule for use in Excel or other
+                      spreadsheet software.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <p className="text-xs text-text-secondary-light">
                 Disclaimer: Results are estimates for educational purposes and may not reflect your lender's terms.
               </p>
