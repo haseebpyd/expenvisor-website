@@ -61,13 +61,15 @@ export default function Navbar() {
             ))}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="#download"
+              <a
+                href="https://apps.apple.com/pk/app/expenvisor-ai-expense-tracker/id6754627757"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent to-secondary text-white rounded-lg hover:shadow-lg transition-all duration-200 btn-hover"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download
-              </Link>
+              </a>
             </motion.div>
           </div>
 
@@ -106,14 +108,16 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <Link
-                href="#download"
+              <a
+                href="https://apps.apple.com/pk/app/expenvisor-ai-expense-tracker/id6754627757"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-secondary text-white rounded-lg hover:shadow-lg transition-all duration-200 mx-4"
                 onClick={() => setIsOpen(false)}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}
