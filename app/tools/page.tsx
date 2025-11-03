@@ -43,17 +43,7 @@ export default function ToolsHubPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {tools.map((t) => (
-              <Link key={t.slug} href={`/tools/${t.slug}`} className="group">
-                <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl card-hover h-full flex flex-col justify-between">
-                  <div>
-                    <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-accent transition-colors">
-                      {t.title}
-                    </h2>
-                    <p className="text-text-secondary-light text-sm">{t.desc}</p>
-                  </div>
-                  <div className="mt-6 text-accent text-sm">Open →</div>
-                </div>
-              </Link>
+              <ToolCard key={t.slug} title={t.title} slug={t.slug} desc={t.desc} />
             ))}
           </div>
 
