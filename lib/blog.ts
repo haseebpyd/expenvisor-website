@@ -182,6 +182,27 @@ export const blogPosts: BlogPost[] = [
     featuredImage: "/blog/expenvisor-voice-time-savings-2025.png",
     ogImage: "/blog/expenvisor-voice-time-savings-2025.png",
   },
+  {
+    slug: "unlimited-vs-limited-expense-trackers-2025",
+    title: "Unlimited vs Limited Expense Trackers: Why Free Tier Matters",
+    description:
+      "Compare unlimited free tiers vs limited expense trackers. See why Expenvisor's unlimited chat, entries, and history beat artificial restrictions.",
+    content: "",
+    author: "MrHaseeb",
+    publishedAt: "2025-11-03",
+    updatedAt: "2025-11-03",
+    readingTime: 11,
+    tags: ["Pricing", "Value", "Free Tier", "Comparison"],
+    keywords: [
+      "unlimited expense tracker",
+      "free expense tracker limitations",
+      "best value expense app",
+      "unlimited ai chat expense tracker",
+      "expenvisor free tier",
+    ],
+    featuredImage: "/blog/unlimited-vs-limited-trackers-2025.png",
+    ogImage: "/blog/unlimited-vs-limited-trackers-2025.png",
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
