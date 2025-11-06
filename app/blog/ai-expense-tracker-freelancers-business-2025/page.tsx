@@ -449,7 +449,7 @@ export default function BlogPostPage() {
                 </a>
               </p>
 
-              <h2>Use Our Free Financial Tools</h2>
+              <h2>Use Our Financial Tools</h2>
               <p>
                 Need to calculate loan payments, estimate taxes, or plan your budget?
                 Try our free financial calculators:

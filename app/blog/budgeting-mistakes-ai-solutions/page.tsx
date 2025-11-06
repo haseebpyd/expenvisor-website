@@ -475,7 +475,7 @@ export default function BlogPostPage() {
                   href="/tools"
                   className="inline-block mt-4 px-6 py-3 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold hover:shadow-lg transition-all"
                 >
-                  Try Free Financial Tools →
+                  Try Financial Tools →
                 </a>
               </p>
             </div>
