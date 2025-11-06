@@ -3,7 +3,7 @@ import ToolLayout from "./ToolLayout";
 import ToolCard from "./ToolCard";
 
 export const metadata: Metadata = {
-  title: "Free Financial Tools | Expenvisor",
+  title: "Financial Tools | Expenvisor",
   description:
     "Free, privacy-first calculators: loan payments, mortgage affordability, compound interest, savings goals, taxes, and budgets.",
   alternates: { canonical: "/tools" },
@@ -34,10 +34,10 @@ export default function ToolsHubPage() {
         <div className="max-w-7xl mx-auto">
           <header className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-              Free <span className="gradient-text">Financial Tools</span>
+              <span className="gradient-text">Financial Tools</span>
             </h1>
             <p className="text-text-secondary-light max-w-2xl mx-auto">
-              Calculate payments, plan savings, and explore scenarios. No sign-up. No tracking. Just answers.
+              Free, privacy-first calculators. Calculate payments, plan savings, and explore scenarios. No sign-up. No tracking. Just answers.
             </p>
           </header>
 

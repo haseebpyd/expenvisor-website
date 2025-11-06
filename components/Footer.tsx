@@ -7,7 +7,7 @@ import { Mail, Twitter, Instagram, Linkedin, Github } from 'lucide-react'
 const footerLinks = {
   product: [
     { name: 'Features', href: '/features' },
-    { name: 'Free Financial Tools', href: '/tools' },
+    { name: 'Tools', href: '/tools' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Download', href: '#download' },
     { name: 'Updates', href: '/updates' },

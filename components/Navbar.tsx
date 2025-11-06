@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Features", href: "/features" },
-    { name: "Free Financial Tools", href: "/tools" },
+    { name: "Tools", href: "/tools" },
     { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "Pricing", href: "/pricing" },
