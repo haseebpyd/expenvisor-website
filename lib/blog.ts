@@ -15,6 +15,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "expenvisor-version-1-2-release-notes",
+    title:
+      "Expenvisor 1.2 Release: Import/Export, Smarter Analytics & Lightning Performance",
+    description:
+      "Discover everything packed into Expenvisor 1.2—from data import/export and redesigned analytics to faster performance and customizable reminders.",
+    content: "",
+    author: "MrHaseeb",
+    publishedAt: "2025-11-08",
+    updatedAt: "2025-11-08",
+    readingTime: 9,
+    tags: ["Product Updates", "Release Notes", "Expenvisor", "AI", "Expense Tracking"],
+    keywords: [
+      "expenvisor 1.2 update",
+      "expenvisor release notes",
+      "expense tracker import export",
+      "expense analytics update",
+      "ai expense tracker app"
+    ],
+    featuredImage: "/blog/ai-finance-2025.png",
+    ogImage: "/blog/ai-finance-2025.png",
+  },
+  {
     slug: "ai-revolutionizing-personal-finance-2025",
     title: "How AI is Revolutionizing Personal Finance Management in 2025",
     description:
