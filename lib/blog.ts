@@ -33,8 +33,8 @@ export const blogPosts: BlogPost[] = [
       "expense analytics update",
       "ai expense tracker app"
     ],
-    featuredImage: "/blog/ai-finance-2025.png",
-    ogImage: "/blog/ai-finance-2025.png",
+    featuredImage: "/blog/expenvisor-1-2-release.png",
+    ogImage: "/blog/expenvisor-1-2-release.png",
   },
   {
     slug: "ai-revolutionizing-personal-finance-2025",
