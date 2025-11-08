@@ -375,7 +375,7 @@ export default function BlogPostPage() {
                   href="https://apps.apple.com/pk/app/expenvisor-ai-expense-tracker/id6754627757"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+                  className="blog-button inline-flex items-center gap-2 mt-4 px-8 py-4 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
                   Download Expenvisor on App Store →
                 </a>

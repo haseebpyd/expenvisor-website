@@ -125,7 +125,7 @@
 }
 
 /* Links */
-.blog-content a {
+.blog-content a:not(.blog-button) {
   color: #10b981;
   text-decoration: underline;
   text-decoration-color: rgba(16, 185, 129, 0.3);
@@ -133,9 +133,20 @@
   transition: all 0.2s ease;
 }
 
-.blog-content a:hover {
+.blog-content a:not(.blog-button):hover {
   color: #059669;
   text-decoration-color: #059669;
+}
+
+.blog-content a.blog-button {
+  color: #f8fafc !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-content a.blog-button:hover {
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
 /* Images */
