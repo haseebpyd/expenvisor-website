@@ -139,13 +139,13 @@
 }
 
 .blog-content a.blog-button {
-  color: #f8fafc !important;
+  color: #0f172a !important;
   text-decoration: none;
   font-weight: 600;
 }
 
 .blog-content a.blog-button:hover {
-  color: #ffffff !important;
+  color: #0f172a !important;
   text-decoration: none;
 }
 

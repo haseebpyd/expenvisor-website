@@ -480,7 +480,7 @@ export default function BlogPostPage() {
               <p>
                 <a
                   href="/tools"
-                  className="blog-button inline-flex items-center gap-2 mt-4 px-6 py-3 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold hover:shadow-lg transition-all"
+                  className="blog-button inline-flex items-center gap-2 mt-4 px-6 py-3 bg-gradient-to-r from-accent to-secondary text-slate-900 rounded-xl font-semibold hover:shadow-lg transition-all"
                 >
                   Try Financial Tools →
                 </a>
