@@ -101,7 +101,7 @@ export default function TeamPage() {
     <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary to-secondary-dark">
       <Navbar />
 
-      <main className="relative z-10 pt-16">
+      <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-16 sm:py-20 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

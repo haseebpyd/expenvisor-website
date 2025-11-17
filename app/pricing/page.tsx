@@ -16,7 +16,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-surface-light dark:bg-surface-dark">
       <Navbar />
-      <main>
+      <main className="pt-20">
         <Pricing />
       </main>
       <Footer />

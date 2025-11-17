@@ -16,7 +16,7 @@ export default function TermsOfService() {
     <div className="min-h-screen bg-surface-light dark:bg-surface-dark">
       <Navbar />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         <div className="prose prose-lg max-w-none">
           <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
           

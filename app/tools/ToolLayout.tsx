@@ -8,7 +8,7 @@ export default function ToolLayout({ children }: { children: ReactNode }) {
   return (
     <main className="min-h-screen bg-gradient-to-br from-primary-dark via-primary to-secondary-dark">
       <Navbar />
-      <div className="relative">
+      <div className="relative pt-20">
         <div className="absolute inset-0 pointer-events-none">
           <div className="w-full h-full animate-gradient" />
         </div>
