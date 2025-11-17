@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
+import Video from '@/components/Video'
 import Features from '@/components/Features'
 import Screenshots from '@/components/Screenshots'
 import Pricing from '@/components/Pricing'
@@ -20,6 +21,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
       >
         <Hero />
+        <Video />
         <Features />
         <Screenshots />
         <Pricing />
