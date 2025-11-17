@@ -243,12 +243,14 @@ export default function LoanCalculatorPage() {
                 </table>
               </div>
 
-            <FAQ items={faqItems} />
-
             <p className="text-xs text-text-secondary-light mt-4">
               Disclaimer: Results are estimates for educational purposes and may not reflect your lender's terms.
             </p>
           </div>
+        </div>
+
+        <div className="mt-12 max-w-4xl mx-auto">
+          <FAQ items={faqItems} />
         </div>
 
         <div className="mt-12 max-w-4xl mx-auto">

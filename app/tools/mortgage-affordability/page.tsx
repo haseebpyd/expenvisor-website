@@ -264,13 +264,15 @@ export default function MortgageAffordabilityPage() {
                 </div>
               </ResultCard>
 
-            <FAQ items={faqItems} />
-
             <p className="text-xs text-text-secondary-light mt-4">
                 Disclaimer: Results are estimates for educational purposes only. Actual affordability may vary based on
                 credit score, property taxes, insurance, and lender requirements.
             </p>
           </div>
+        </div>
+
+        <div className="mt-12 max-w-4xl mx-auto">
+          <FAQ items={faqItems} />
         </div>
 
         <div className="mt-12 max-w-4xl mx-auto">

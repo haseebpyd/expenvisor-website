@@ -274,13 +274,15 @@ export default function IncomeTaxCalculatorPage() {
                 </div>
               )}
 
-            <FAQ items={faqItems} />
-
             <p className="text-xs text-text-secondary-light mt-4">
               Disclaimer: This is a simplified estimate for educational purposes only. Does not include state/local taxes,
               FICA, itemized deductions, or credits. Consult a tax professional for accurate calculations.
             </p>
           </div>
+        </div>
+
+        <div className="mt-12 max-w-4xl mx-auto">
+          <FAQ items={faqItems} />
         </div>
 
         <div className="mt-12 max-w-4xl mx-auto">

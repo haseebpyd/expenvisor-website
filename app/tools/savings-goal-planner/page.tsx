@@ -265,13 +265,15 @@ export default function SavingsGoalPlannerPage() {
                 </div>
               </ResultCard>
 
-            <FAQ items={faqItems} />
-
             <p className="text-xs text-text-secondary-light mt-4">
                 Disclaimer: Results are estimates. Actual savings growth depends on interest rates, fees, and market
                 conditions.
             </p>
           </div>
+        </div>
+
+        <div className="mt-12 max-w-4xl mx-auto">
+          <FAQ items={faqItems} />
         </div>
 
         <div className="mt-12 max-w-4xl mx-auto">

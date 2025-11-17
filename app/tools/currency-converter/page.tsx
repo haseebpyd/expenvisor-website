@@ -217,9 +217,11 @@ export default function CurrencyConverterPage() {
                     </div>
                   </div>
                 </ResultCard>
-
-                <FAQ items={faqItems} />
               </div>
+            </div>
+
+            <div className="mt-12 max-w-4xl mx-auto">
+              <FAQ items={faqItems} />
             </div>
 
             <div className="mt-12 max-w-4xl mx-auto">
