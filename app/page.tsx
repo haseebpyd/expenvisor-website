@@ -20,6 +20,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
+        className="pt-10"
       >
         <Hero />
         <Video />

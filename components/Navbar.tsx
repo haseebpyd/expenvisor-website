@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Menu, X, Download } from "lucide-react";
+import SocialBar from "./SocialBar";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,16 +30,18 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-surface-dark/90 backdrop-blur-md border-b border-accent/20"
-          : "bg-transparent"
-      }`}
-    >
+    <>
+      <SocialBar />
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className={`fixed top-10 left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled
+            ? "bg-surface-dark/90 backdrop-blur-md border-b border-accent/20"
+            : "bg-transparent"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -124,5 +127,6 @@ export default function Navbar() {
         )}
       </div>
     </motion.nav>
+    </>
   );
 }

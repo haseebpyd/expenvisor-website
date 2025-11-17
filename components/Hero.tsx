@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-10">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-secondary-dark animate-gradient" />
 

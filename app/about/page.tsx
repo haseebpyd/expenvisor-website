@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Users, Target, Lightbulb, Heart, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -217,8 +218,14 @@ export default function AboutPage() {
                   transition={{ duration: 0.8 }}
                   className="bg-surface-elevated-light dark:bg-surface-elevated-dark p-8 rounded-xl shadow-lg border border-primary-light/20 text-center"
                 >
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent to-secondary flex items-center justify-center text-4xl font-bold text-white">
-                    MH
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-accent/50 shadow-lg">
+                    <Image
+                      src="/team_photos/Muhammad_Haseeb.jpeg"
+                      alt="MrHaseeb - Founder & Full Stack AI Engineer"
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
                     MrHaseeb
