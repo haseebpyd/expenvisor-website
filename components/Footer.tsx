@@ -1,43 +1,51 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Mail, Twitter, Instagram, Linkedin, Github } from 'lucide-react'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Mail, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 const footerLinks = {
   product: [
-    { name: 'Features', href: '/features' },
-    { name: 'Tools', href: '/tools' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Download', href: '#download' },
-    { name: 'Updates', href: '/updates' },
+    { name: "Features", href: "/features" },
+    { name: "Tools", href: "/tools" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Download", href: "#download" },
+    { name: "Updates", href: "/updates" },
   ],
   company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Press', href: '/press' },
-    { name: 'Blog', href: '/blog' },
+    { name: "About Us", href: "/about" },
+    { name: "Careers", href: "/careers" },
+    { name: "Press", href: "/press" },
+    { name: "Blog", href: "/blog" },
   ],
   support: [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Status', href: '/status' },
-    { name: 'Community', href: '/community' },
+    { name: "Help Center", href: "/help" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Status", href: "/status" },
+    { name: "Community", href: "/community" },
   ],
   legal: [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms of Service', href: '/terms-of-service' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "GDPR", href: "/gdpr" },
   ],
-}
+};
 
 const socialLinks = [
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/expenvisor' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/expenvisor' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/expenvisor' },
-  { name: 'GitHub', icon: Github, href: 'https://github.com/expenvisor' },
-]
+  { name: "Twitter", icon: Twitter, href: "https://twitter.com/expenvisor" },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://instagram.com/expenvisor",
+  },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://linkedin.com/company/expenvisor",
+  },
+  { name: "GitHub", icon: Github, href: "https://github.com/expenvisor" },
+];
 
 export default function Footer() {
   return (
@@ -56,13 +64,16 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-r from-accent to-secondary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">E</span>
               </div>
-              <span className="text-xl font-bold gradient-text">Expenvisor</span>
+              <span className="text-xl font-bold gradient-text">
+                Expenvisor
+              </span>
             </Link>
-            
+
             <p className="text-text-secondary-light mb-6 max-w-md">
-              Your finances, flowing seamlessly. The smartest way to track expenses with AI-powered insights.
+              Your finances, flowing seamlessly. The smartest way to track
+              expenses with AI-powered insights.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -182,7 +193,7 @@ export default function Footer() {
             <p className="text-text-secondary-light text-sm">
               © 2024 Expenvisor. All rights reserved.
             </p>
-            
+
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacy-policy"
@@ -201,5 +212,5 @@ export default function Footer() {
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

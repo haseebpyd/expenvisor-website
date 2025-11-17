@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Hero from '@/components/Hero'
 import Video from '@/components/Video'
+import Team from '@/components/Team'
 import Features from '@/components/Features'
 import Screenshots from '@/components/Screenshots'
 import Pricing from '@/components/Pricing'
@@ -22,6 +23,7 @@ export default function Home() {
       >
         <Hero />
         <Video />
+        <Team />
         <Features />
         <Screenshots />
         <Pricing />
