@@ -1,51 +1,30 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from "@/lib/tools/metadata";
 
-export const metadata: Metadata = {
-  title: "Mortgage Affordability Calculator | Expenvisor Free Tools",
+export const metadata: Metadata = generateToolMetadata({
+  name: "Mortgage Affordability Calculator",
   description:
-    "Estimate how much home you can afford based on income, expenses, and DTI. Includes down payment and monthly payment estimates.",
-  alternates: { canonical: "/tools/mortgage-affordability" },
+    "Free mortgage affordability calculator to estimate how much home you can afford based on income, debt-to-income ratio, and down payment. Calculate your maximum home price instantly.",
   keywords: [
     "mortgage affordability calculator",
     "how much house can I afford",
+    "home affordability calculator",
     "DTI calculator",
-    "home buying calculator",
     "mortgage calculator",
+    "home buying calculator",
+    "house affordability",
+    "mortgage pre-approval calculator",
+    "home price calculator",
+    "affordable home calculator",
   ],
-  openGraph: {
-    title: "Free Mortgage Affordability Calculator | Expenvisor",
-    description: "Calculate how much home you can afford based on income and debt-to-income ratio.",
-    url: "/tools/mortgage-affordability",
-  },
-};
+  slug: "mortgage-affordability",
+});
 
 export default function MortgageAffordabilityLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Mortgage Affordability Calculator",
-            applicationCategory: "FinanceApplication",
-            description: "Free calculator to estimate how much home you can afford",
-            url: "https://expenvisor.com/tools/mortgage-affordability",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-          }),
-        }}
-      />
-      {children}
-    </>
-  );
+  return children;
 }
 

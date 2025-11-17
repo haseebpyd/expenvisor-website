@@ -1,51 +1,29 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from "@/lib/tools/metadata";
 
-export const metadata: Metadata = {
-  title: "Loan Calculator | Expenvisor Free Tools",
+export const metadata: Metadata = generateToolMetadata({
+  name: "Loan Calculator",
   description:
-    "Estimate monthly payment and total interest with an amortization schedule. Fast, private, no sign-up. Download CSV schedule.",
-  alternates: { canonical: "/tools/loan-calculator" },
+    "Free loan calculator to estimate monthly payments, total interest, and view complete amortization schedule. Calculate any loan payment instantly with our easy-to-use calculator.",
   keywords: [
     "loan calculator",
-    "amortization schedule",
+    "loan payment calculator",
+    "amortization calculator",
     "monthly payment calculator",
-    "interest calculator",
+    "loan interest calculator",
     "mortgage calculator",
+    "auto loan calculator",
+    "personal loan calculator",
+    "loan amortization schedule",
+    "calculate loan payment",
   ],
-  openGraph: {
-    title: "Free Loan Calculator - Amortization Schedule | Expenvisor",
-    description: "Calculate loan payments and view complete amortization schedule. Export to CSV.",
-    url: "/tools/loan-calculator",
-  },
-};
+  slug: "loan-calculator",
+});
 
 export default function LoanCalculatorLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Loan Calculator",
-            applicationCategory: "FinanceApplication",
-            description: "Free loan calculator with amortization schedule and CSV export",
-            url: "https://expenvisor.com/tools/loan-calculator",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-          }),
-        }}
-      />
-      {children}
-    </>
-  );
+  return children;
 }
-

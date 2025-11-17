@@ -1,51 +1,30 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from "@/lib/tools/metadata";
 
-export const metadata: Metadata = {
-  title: "Compound Interest Calculator | Expenvisor Free Tools",
+export const metadata: Metadata = generateToolMetadata({
+  name: "Compound Interest Calculator",
   description:
-    "Calculate compound interest growth with regular contributions. See how time and compounding accelerate your savings.",
-  alternates: { canonical: "/tools/compound-interest" },
+    "Free compound interest calculator to see how your investments grow with compounding and regular contributions. Calculate future value, total interest, and growth projections instantly.",
   keywords: [
     "compound interest calculator",
     "investment growth calculator",
-    "savings calculator",
-    "interest calculator",
+    "compound interest formula",
     "future value calculator",
+    "savings calculator",
+    "investment calculator",
+    "interest calculator",
+    "compound interest with contributions",
+    "investment return calculator",
+    "retirement savings calculator",
   ],
-  openGraph: {
-    title: "Free Compound Interest Calculator | Expenvisor",
-    description: "Calculate how your investments grow with compound interest and regular contributions.",
-    url: "/tools/compound-interest",
-  },
-};
+  slug: "compound-interest",
+});
 
 export default function CompoundInterestLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Compound Interest Calculator",
-            applicationCategory: "FinanceApplication",
-            description: "Free compound interest calculator with contributions and yearly breakdown",
-            url: "https://expenvisor.com/tools/compound-interest",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-          }),
-        }}
-      />
-      {children}
-    </>
-  );
+  return children;
 }
 

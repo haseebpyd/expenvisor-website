@@ -1,51 +1,30 @@
 import type { Metadata } from "next";
+import { generateToolMetadata } from "@/lib/tools/metadata";
 
-export const metadata: Metadata = {
-  title: "Savings Goal Planner | Expenvisor Free Tools",
+export const metadata: Metadata = generateToolMetadata({
+  name: "Savings Goal Planner",
   description:
-    "Calculate how much to save monthly to reach your goal, or how long it will take with your current savings rate.",
-  alternates: { canonical: "/tools/savings-goal-planner" },
+    "Free savings goal planner to calculate monthly savings needed or time to reach your financial goals. Plan for emergencies, purchases, or major expenses with compound interest.",
   keywords: [
     "savings goal calculator",
     "monthly savings calculator",
     "financial goal planner",
     "savings planner",
     "how long to save",
+    "savings target calculator",
+    "goal savings calculator",
+    "monthly savings needed",
+    "time to savings goal",
+    "savings plan calculator",
   ],
-  openGraph: {
-    title: "Free Savings Goal Planner | Expenvisor",
-    description: "Plan your savings goals and calculate monthly contributions needed.",
-    url: "/tools/savings-goal-planner",
-  },
-};
+  slug: "savings-goal-planner",
+});
 
 export default function SavingsGoalPlannerLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Savings Goal Planner",
-            applicationCategory: "FinanceApplication",
-            description: "Free savings goal planner with time-to-goal calculations",
-            url: "https://expenvisor.com/tools/savings-goal-planner",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "USD",
-            },
-          }),
-        }}
-      />
-      {children}
-    </>
-  );
+  return children;
 }
 
