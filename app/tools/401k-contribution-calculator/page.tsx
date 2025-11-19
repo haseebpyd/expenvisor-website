@@ -164,7 +164,7 @@ export default function FourZeroOneKContributionCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">401(k) Contribution Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate retirement savings, employer match, and tax savings. Free and instant.
               </p>
             </header>
@@ -244,28 +244,28 @@ export default function FourZeroOneKContributionCalculatorPage() {
                 <ResultCard title="401(k) Projection">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Retirement Balance</span>
+                      <span className="text-text-secondary-dark">Retirement Balance</span>
                       <span className="text-2xl font-bold text-white">{toCurrency(calc.futureValue)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Your Annual Contribution</span>
+                      <span className="text-text-secondary-dark">Your Annual Contribution</span>
                       <span className="text-white">{toCurrency(calc.annualContribution)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Employer Match (Annual)</span>
+                      <span className="text-text-secondary-dark">Employer Match (Annual)</span>
                       <span className="text-accent font-semibold">{toCurrency(calc.employerMatchAmount)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Annual Contribution</span>
+                      <span className="text-text-secondary-dark">Total Annual Contribution</span>
                       <span className="text-white">{toCurrency(calc.totalAnnualContribution)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Interest Earned</span>
+                      <span className="text-text-secondary-dark">Total Interest Earned</span>
                       <span className="text-white">{toCurrency(calc.totalInterest)}</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20">
                       <div className="flex justify-between">
-                        <span className="text-text-secondary-light">Annual Tax Savings (22% bracket)</span>
+                        <span className="text-text-secondary-dark">Annual Tax Savings (22% bracket)</span>
                         <span className="text-accent font-semibold">{toCurrency(calc.taxSavings)}</span>
                       </div>
                     </div>
@@ -370,7 +370,7 @@ export default function FourZeroOneKContributionCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -380,7 +380,7 @@ export default function FourZeroOneKContributionCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -388,7 +388,7 @@ export default function FourZeroOneKContributionCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Retirement Savings with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Planning your 401(k)? Track all your expenses, savings, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

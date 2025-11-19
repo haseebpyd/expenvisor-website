@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-surface-light dark:bg-surface-dark">
+    <div className="min-h-screen bg-surface-dark">
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         <div className="prose prose-lg max-w-none">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
 
-          <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-8">
+          <p className="text-lg text-text-secondary-dark mb-8">
             <strong>Last updated:</strong> January 2025
           </p>
 
@@ -293,7 +293,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please
                 contact us at:
               </p>
-              <div className="mt-4 p-4 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-lg">
+              <div className="mt-4 p-4 bg-surface-elevated-dark rounded-lg">
                 <p className="mb-2">
                   <strong>Email:</strong> privacy@expenvisor.com
                 </p>

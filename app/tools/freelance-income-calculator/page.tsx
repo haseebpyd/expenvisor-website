@@ -135,7 +135,7 @@ export default function FreelanceIncomeCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Freelance Income Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate taxes, quarterly payments, and after-tax income for self-employed individuals. Free and instant.
               </p>
             </header>
@@ -159,11 +159,11 @@ export default function FreelanceIncomeCalculatorPage() {
                   suffix="$"
                 />
                 <label className="block">
-                  <span className="block text-sm text-text-secondary-light mb-2">Payment Schedule</span>
+                  <span className="block text-sm text-text-secondary-dark mb-2">Payment Schedule</span>
                   <select
                     value={quarterlyPayments ? "quarterly" : "annual"}
                     onChange={(e) => setQuarterlyPayments(e.target.value === "quarterly")}
-                    className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+                    className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
                   >
                     <option value="quarterly">Quarterly Estimated Payments</option>
                     <option value="annual">Annual Payment</option>
@@ -175,33 +175,33 @@ export default function FreelanceIncomeCalculatorPage() {
                 <ResultCard title="Tax Estimate">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Net Income</span>
+                      <span className="text-text-secondary-dark">Net Income</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc.netIncome)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Self-Employment Tax</span>
+                      <span className="text-text-secondary-dark">Self-Employment Tax</span>
                       <span className="text-white">{toCurrency(calc.selfEmploymentTax)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Estimated Income Tax</span>
+                      <span className="text-text-secondary-dark">Estimated Income Tax</span>
                       <span className="text-white">{toCurrency(calc.estimatedIncomeTax)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Total Tax</span>
+                      <span className="text-text-secondary-dark">Total Tax</span>
                       <span className="text-2xl font-bold text-white">{toCurrency(calc.totalTax)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">After-Tax Income</span>
+                      <span className="text-text-secondary-dark">After-Tax Income</span>
                       <span className="text-accent font-semibold">{toCurrency(calc.afterTaxIncome)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Effective Tax Rate</span>
+                      <span className="text-text-secondary-dark">Effective Tax Rate</span>
                       <span className="text-white">{calc.effectiveTaxRate.toFixed(1)}%</span>
                     </div>
                     {quarterlyPayments && (
                       <div className="pt-3 border-t border-secondary/20">
                         <div className="flex justify-between">
-                          <span className="text-text-secondary-light">Quarterly Payment</span>
+                          <span className="text-text-secondary-dark">Quarterly Payment</span>
                           <span className="text-white font-semibold">{toCurrency(calc.quarterlyTax)}</span>
                         </div>
                       </div>
@@ -305,7 +305,7 @@ export default function FreelanceIncomeCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -315,7 +315,7 @@ export default function FreelanceIncomeCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -323,7 +323,7 @@ export default function FreelanceIncomeCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Freelance Expenses with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Calculating freelance taxes? Track all your business expenses automatically with Expenvisor's
                   AI-powered expense tracker.
                 </p>

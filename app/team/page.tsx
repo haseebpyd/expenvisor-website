@@ -124,7 +124,7 @@ export default function TeamPage() {
                 <br />
                 <span className="gradient-text">Expenvisor Team</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary-light max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary-dark max-w-3xl mx-auto">
                 A diverse, passionate team of developers, designers, and
                 innovators working together to revolutionize how people track
                 expenses and manage their finances.
@@ -153,7 +153,7 @@ export default function TeamPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     {value.description}
                   </p>
                 </motion.div>

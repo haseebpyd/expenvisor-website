@@ -74,7 +74,7 @@ export default function SocialBar() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-7 h-7 flex items-center justify-center text-text-secondary-light hover:text-accent transition-colors duration-200"
+                className="w-7 h-7 flex items-center justify-center text-text-secondary-dark hover:text-accent transition-colors duration-200"
                 aria-label={social.name}
               >
                 {social.name === "X (Twitter)" || social.name === "TikTok" ? (

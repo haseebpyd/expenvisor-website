@@ -34,7 +34,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <p>
                 Expenvisor 1.2 is live—and it is the biggest update we&apos;ve
                 shipped since launch. We listened to power users who asked for

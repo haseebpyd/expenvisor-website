@@ -118,7 +118,7 @@ export default function FeaturesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-xl text-text-secondary-light max-w-3xl mx-auto"
+                  className="text-xl text-text-secondary-dark max-w-3xl mx-auto"
                 >
                   Discover how Expenvisor's AI-powered features can transform
                   your personal finance management and make expense tracking
@@ -140,17 +140,17 @@ export default function FeaturesPage() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="group"
                   >
-                    <div className="relative p-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl border border-border-light dark:border-border-dark hover:border-accent/50 transition-all duration-300 card-hover">
+                    <div className="relative p-8 bg-surface-elevated-dark rounded-2xl border border-border-dark hover:border-accent/50 transition-all duration-300 card-hover">
                       {/* Icon with gradient background */}
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
 
                       {/* Content */}
-                      <h3 className="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-4">
+                      <h3 className="text-xl font-semibold text-text-primary-dark mb-4">
                         {feature.title}
                       </h3>
-                      <p className="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed mb-6">
+                      <p className="text-text-secondary-dark leading-relaxed mb-6">
                         {feature.description}
                       </p>
 
@@ -159,7 +159,7 @@ export default function FeaturesPage() {
                         {feature.benefits.map((benefit, benefitIndex) => (
                           <li
                             key={benefitIndex}
-                            className="flex items-center gap-2 text-sm text-text-secondary-light dark:text-text-secondary-dark"
+                            className="flex items-center gap-2 text-sm text-text-secondary-dark"
                           >
                             <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
                             <span>{benefit}</span>
@@ -183,7 +183,7 @@ export default function FeaturesPage() {
                 <h2 className="text-3xl font-bold text-white mb-6">
                   How It Works
                 </h2>
-                <p className="text-lg text-text-secondary-light max-w-3xl mx-auto">
+                <p className="text-lg text-text-secondary-dark max-w-3xl mx-auto">
                   Getting started with Expenvisor is simple. Follow these three
                   easy steps to begin your journey toward smarter financial
                   management.
@@ -203,7 +203,7 @@ export default function FeaturesPage() {
                   <h3 className="text-xl font-bold text-white mb-4">
                     Download & Setup
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     Download Expenvisor from the App Store or Google Play.
                     Create your account in seconds with our simple onboarding
                     process.
@@ -222,7 +222,7 @@ export default function FeaturesPage() {
                   <h3 className="text-xl font-bold text-white mb-4">
                     Start Tracking
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     Use voice commands, scan receipts, or manually add expenses.
                     Our AI learns from your patterns and gets smarter over time.
                   </p>
@@ -240,7 +240,7 @@ export default function FeaturesPage() {
                   <h3 className="text-xl font-bold text-white mb-4">
                     Get Insights
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     View detailed analytics, receive smart recommendations, and
                     make informed financial decisions with AI-powered insights.
                   </p>
@@ -261,7 +261,7 @@ export default function FeaturesPage() {
                   <h2 className="text-3xl font-bold text-white mb-6">
                     Why Choose Expenvisor?
                   </h2>
-                  <p className="text-lg text-text-secondary-light mb-8">
+                  <p className="text-lg text-text-secondary-dark mb-8">
                     Expenvisor isn't just another expense tracker. It's an
                     intelligent financial assistant that learns from your
                     behavior and adapts to your unique needs, making money
@@ -275,7 +275,7 @@ export default function FeaturesPage() {
                         <h3 className="font-semibold text-white mb-2">
                           Lightning Fast
                         </h3>
-                        <p className="text-text-secondary-light">
+                        <p className="text-text-secondary-dark">
                           Log expenses in seconds with voice commands or receipt
                           scanning. No more tedious manual entry.
                         </p>
@@ -288,7 +288,7 @@ export default function FeaturesPage() {
                         <h3 className="font-semibold text-white mb-2">
                           AI-Powered
                         </h3>
-                        <p className="text-text-secondary-light">
+                        <p className="text-text-secondary-dark">
                           Our advanced AI learns from your spending patterns to
                           provide personalized insights and recommendations.
                         </p>
@@ -301,7 +301,7 @@ export default function FeaturesPage() {
                         <h3 className="font-semibold text-white mb-2">
                           Secure & Private
                         </h3>
-                        <p className="text-text-secondary-light">
+                        <p className="text-text-secondary-dark">
                           Bank-level security protects your financial data. We
                           never share your information with third parties.
                         </p>
@@ -314,15 +314,15 @@ export default function FeaturesPage() {
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl"
+                  className="bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl"
                 >
-                  <h3 className="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary-dark mb-6">
                     Key Statistics
                   </h3>
 
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
-                      <span className="text-text-secondary-light dark:text-text-secondary-dark">
+                      <span className="text-text-secondary-dark">
                         Time Saved per Month
                       </span>
                       <span className="text-2xl font-bold text-accent">
@@ -331,7 +331,7 @@ export default function FeaturesPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-text-secondary-light dark:text-text-secondary-dark">
+                      <span className="text-text-secondary-dark">
                         Accuracy Rate
                       </span>
                       <span className="text-2xl font-bold text-accent">
@@ -340,7 +340,7 @@ export default function FeaturesPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-text-secondary-light dark:text-text-secondary-dark">
+                      <span className="text-text-secondary-dark">
                         User Satisfaction
                       </span>
                       <span className="text-2xl font-bold text-accent">
@@ -349,7 +349,7 @@ export default function FeaturesPage() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-text-secondary-light dark:text-text-secondary-dark">
+                      <span className="text-text-secondary-dark">
                         Active Users
                       </span>
                       <span className="text-2xl font-bold text-accent">
@@ -369,12 +369,12 @@ export default function FeaturesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-12 text-center shadow-2xl"
+                className="bg-surface-elevated-dark rounded-2xl p-12 text-center shadow-2xl"
               >
-                <h2 className="text-3xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+                <h2 className="text-3xl font-bold text-text-primary-dark mb-6">
                   Ready to Experience the Future of Expense Tracking?
                 </h2>
-                <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-8 max-w-2xl mx-auto">
+                <p className="text-lg text-text-secondary-dark mb-8 max-w-2xl mx-auto">
                   Join thousands of users who are already using Expenvisor to
                   take control of their finances with AI-powered expense
                   tracking.

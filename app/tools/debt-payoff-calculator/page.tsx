@@ -215,14 +215,14 @@ export default function DebtPayoffCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Debt Payoff Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Compare Snowball vs. Avalanche methods and calculate time to debt-free. Free and instant.
               </p>
             </header>
 
             <div className="grid gap-6 lg:grid-cols-2">
               <div className="space-y-4">
-                <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl">
+                <div className="bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl">
                   <h3 className="text-lg font-semibold text-white mb-3">Your Debts</h3>
                   {debts.map((debt) => (
                     <div key={debt.id} className="mb-4 p-3 bg-surface-dark rounded-lg">
@@ -284,11 +284,11 @@ export default function DebtPayoffCalculatorPage() {
                 />
 
                 <label className="block">
-                  <span className="block text-sm text-text-secondary-light mb-2">Payoff Method</span>
+                  <span className="block text-sm text-text-secondary-dark mb-2">Payoff Method</span>
                   <select
                     value={method}
                     onChange={(e) => setMethod(e.target.value as "snowball" | "avalanche")}
-                    className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+                    className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
                   >
                     <option value="avalanche">Avalanche (Highest Interest First)</option>
                     <option value="snowball">Snowball (Smallest Balance First)</option>
@@ -300,13 +300,13 @@ export default function DebtPayoffCalculatorPage() {
                 <ResultCard title="Payoff Results">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Time to Debt-Free</span>
+                      <span className="text-text-secondary-dark">Time to Debt-Free</span>
                       <span className="text-2xl font-bold text-white">
                         {Math.round(calc.totalMonths / 12)} years {calc.totalMonths % 12} months
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Interest Paid</span>
+                      <span className="text-text-secondary-dark">Total Interest Paid</span>
                       <span className="text-white">{toCurrency(calc.totalInterest)}</span>
                     </div>
                   </div>
@@ -316,30 +316,30 @@ export default function DebtPayoffCalculatorPage() {
                   <div className="space-y-3">
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-text-secondary-light">Avalanche Method</span>
+                        <span className="text-text-secondary-dark">Avalanche Method</span>
                         <span className="text-white">
                           {Math.round(calc.avalanche.months / 12)}y {calc.avalanche.months % 12}m
                         </span>
                       </div>
-                      <div className="text-xs text-text-secondary-light">
+                      <div className="text-xs text-text-secondary-dark">
                         Interest: {toCurrency(calc.avalanche.interest)}
                       </div>
                     </div>
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-text-secondary-light">Snowball Method</span>
+                        <span className="text-text-secondary-dark">Snowball Method</span>
                         <span className="text-white">
                           {Math.round(calc.snowball.months / 12)}y {calc.snowball.months % 12}m
                         </span>
                       </div>
-                      <div className="text-xs text-text-secondary-light">
+                      <div className="text-xs text-text-secondary-dark">
                         Interest: {toCurrency(calc.snowball.interest)}
                       </div>
                     </div>
                     {calc.savings > 0 && (
                       <div className="pt-2 border-t border-secondary/20">
                         <div className="flex justify-between">
-                          <span className="text-text-secondary-light">Potential Savings</span>
+                          <span className="text-text-secondary-dark">Potential Savings</span>
                           <span className="text-accent font-semibold">{toCurrency(calc.savings)}</span>
                         </div>
                       </div>
@@ -443,7 +443,7 @@ export default function DebtPayoffCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -453,7 +453,7 @@ export default function DebtPayoffCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -461,7 +461,7 @@ export default function DebtPayoffCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Debt Payoff Progress with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Paying off debt? Track all your expenses, payments, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

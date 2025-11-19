@@ -22,8 +22,8 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
 
       <div className="relative z-10 -mt-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl p-8 shadow-2xl">
-            <div className="flex items-center gap-6 text-sm text-text-secondary-light dark:text-text-secondary-dark mb-6">
+          <div className="bg-surface-elevated-dark rounded-xl p-8 shadow-2xl">
+            <div className="flex items-center gap-6 text-sm text-text-secondary-dark mb-6">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
                 <span>{post.author}</span>
@@ -44,11 +44,11 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
               </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-text-primary-dark mb-6 leading-tight">
               {post.title}
             </h1>
 
-            <p className="text-xl text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+            <p className="text-xl text-text-secondary-dark leading-relaxed">
               {post.description}
             </p>
 

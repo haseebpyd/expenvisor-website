@@ -190,7 +190,7 @@ export default function LoanCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Loan Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Estimate monthly payment and view an amortization schedule. Free, instant, and private.
               </p>
             </header>
@@ -220,10 +220,10 @@ export default function LoanCalculatorPage() {
                 </div>
               </ResultCard>
 
-              <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl overflow-auto max-h-[420px]">
+              <div className="bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl overflow-auto max-h-[420px]">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="text-left text-text-secondary-light">
+                    <tr className="text-left text-text-secondary-dark">
                       <th className="py-2 pr-4">Month</th>
                       <th className="py-2 pr-4">Interest</th>
                       <th className="py-2 pr-4">Principal</th>
@@ -232,7 +232,7 @@ export default function LoanCalculatorPage() {
                   </thead>
                   <tbody>
                     {calc.rows.map((r) => (
-                      <tr key={r.month} className="border-t border-secondary/10 text-text-secondary-light">
+                      <tr key={r.month} className="border-t border-secondary/10 text-text-secondary-dark">
                         <td className="py-2 pr-4">{r.month}</td>
                         <td className="py-2 pr-4">{toCurrency(r.interest)}</td>
                         <td className="py-2 pr-4">{toCurrency(r.principal)}</td>
@@ -243,7 +243,7 @@ export default function LoanCalculatorPage() {
                 </table>
               </div>
 
-            <p className="text-xs text-text-secondary-light mt-4">
+            <p className="text-xs text-text-secondary-dark mt-4">
               Disclaimer: Results are estimates for educational purposes and may not reflect your lender's terms.
             </p>
           </div>
@@ -283,7 +283,7 @@ export default function LoanCalculatorPage() {
             </p>
             <div className="bg-surface-dark rounded-lg p-4 my-4 font-mono text-sm">
               <p className="text-white mb-2">P = [r × PV × (1 + r)^n] / [(1 + r)^n - 1]</p>
-              <div className="text-text-secondary-light space-y-1 text-xs">
+              <div className="text-text-secondary-dark space-y-1 text-xs">
                 <p>Where:</p>
                 <p>P = Monthly Payment</p>
                 <p>r = Monthly Interest Rate (Annual Rate ÷ 12)</p>
@@ -344,7 +344,7 @@ export default function LoanCalculatorPage() {
             />
           </div>
 
-          <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+          <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedTools.map((tool) => (
@@ -354,7 +354,7 @@ export default function LoanCalculatorPage() {
                   className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                 >
                   <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                  <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                  <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                 </Link>
               ))}
             </div>
@@ -362,7 +362,7 @@ export default function LoanCalculatorPage() {
 
           <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Track Your Loan Payments with Expenvisor</h3>
-            <p className="text-text-secondary-light mb-4">
+            <p className="text-text-secondary-dark mb-4">
               Calculated your loan payment? Track it and all your expenses effortlessly with Expenvisor's AI-powered
               expense tracker.
             </p>

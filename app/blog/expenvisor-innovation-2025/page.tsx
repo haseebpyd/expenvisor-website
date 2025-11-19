@@ -35,7 +35,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <div className="mb-8">
                 <Image
                   src="/team_photos/Group_of_810_202511171149.jpeg"

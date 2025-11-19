@@ -62,7 +62,7 @@ export default function Video() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg lg:text-xl text-text-secondary-light max-w-2xl mx-auto"
+            className="text-base sm:text-lg lg:text-xl text-text-secondary-dark max-w-2xl mx-auto"
           >
             Watch how people around the world use Expenvisor to track expenses,
             scan receipts, and get AI-powered financial insights.
@@ -121,7 +121,7 @@ export default function Video() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-8 sm:mt-12 text-center"
         >
-          <p className="text-sm sm:text-base text-text-secondary-light mb-4">
+          <p className="text-sm sm:text-base text-text-secondary-dark mb-4">
             Ready to transform your expense tracking?
           </p>
           <motion.div

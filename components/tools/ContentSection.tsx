@@ -8,9 +8,9 @@ interface ContentSectionProps {
 
 export function ContentSection({ title, children, className = "" }: ContentSectionProps) {
   return (
-    <div className={`bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl mb-6 ${className}`}>
+    <div className={`bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl mb-6 ${className}`}>
       <h2 className="text-2xl font-bold text-white mb-6">{title}</h2>
-      <div className="text-text-secondary-light text-base leading-relaxed space-y-4 [&>p]:text-base [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-white [&>h3]:mb-3 [&>h3]:mt-4">{children}</div>
+      <div className="text-text-secondary-dark text-base leading-relaxed space-y-4 [&>p]:text-base [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:text-white [&>h3]:mb-3 [&>h3]:mt-4">{children}</div>
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function DownloadPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl text-text-secondary-light max-w-3xl mx-auto mb-12"
+                className="text-xl text-text-secondary-dark max-w-3xl mx-auto mb-12"
               >
                 Get started with the smartest AI-powered expense tracker. Available on iOS and Android.
               </motion.p>
@@ -90,7 +90,7 @@ export default function DownloadPage() {
               <h2 className="text-3xl font-bold text-white mb-4">
                 Why Download Expenvisor?
               </h2>
-              <p className="text-lg text-text-secondary-light max-w-3xl mx-auto">
+              <p className="text-lg text-text-secondary-dark max-w-3xl mx-auto">
                 Join thousands of users who are already using Expenvisor to take control of their finances.
               </p>
             </div>
@@ -118,13 +118,13 @@ export default function DownloadPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 text-center"
+                  className="bg-surface-elevated-dark rounded-2xl p-8 text-center"
                 >
                   <div className="inline-flex p-4 bg-gradient-to-r from-accent to-secondary rounded-2xl mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-text-secondary-light">{feature.description}</p>
+                  <p className="text-text-secondary-dark">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -134,7 +134,7 @@ export default function DownloadPage() {
         {/* What's Included Section */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-12">
+            <div className="bg-surface-elevated-dark rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 What&apos;s Included
               </h2>
@@ -153,7 +153,7 @@ export default function DownloadPage() {
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="text-text-secondary-light text-lg">{feature}</span>
+                    <span className="text-text-secondary-dark text-lg">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -171,12 +171,12 @@ export default function DownloadPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8">
+              <div className="bg-surface-elevated-dark rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <Apple className="w-10 h-10 text-white" />
                   <h3 className="text-2xl font-bold text-white">iOS</h3>
                 </div>
-                <ul className="space-y-3 text-text-secondary-light">
+                <ul className="space-y-3 text-text-secondary-dark">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-accent" />
                     <span>iOS 15.0 or later</span>
@@ -192,12 +192,12 @@ export default function DownloadPage() {
                 </ul>
               </div>
 
-              <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8">
+              <div className="bg-surface-elevated-dark rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <Play className="w-10 h-10 text-white" />
                   <h3 className="text-2xl font-bold text-white">Android</h3>
                 </div>
-                <ul className="space-y-3 text-text-secondary-light">
+                <ul className="space-y-3 text-text-secondary-dark">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-accent" />
                     <span>Android 8.0 (API level 26) or later</span>
@@ -228,7 +228,7 @@ export default function DownloadPage() {
               <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-lg text-text-secondary-light mb-8">
+              <p className="text-lg text-text-secondary-dark mb-8">
                 Download Expenvisor now and start tracking your expenses smarter, faster, and easier.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

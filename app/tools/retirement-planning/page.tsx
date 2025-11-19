@@ -50,7 +50,7 @@ export default function RetirementPlanningPage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               <span className="gradient-text">Retirement Planning Tools</span>
             </h1>
-            <p className="text-text-secondary-light max-w-3xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-3xl mx-auto text-lg">
               Free calculators to plan your retirement, project savings growth, and ensure you're on track for financial security. No sign-up required.
             </p>
           </header>
@@ -61,9 +61,9 @@ export default function RetirementPlanningPage() {
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">About Retirement Planning</h2>
-            <div className="text-text-secondary-light text-base leading-relaxed space-y-4">
+            <div className="text-text-secondary-dark text-base leading-relaxed space-y-4">
               <p>
                 Planning for retirement is one of the most important financial goals you'll ever set. With pensions becoming
                 rare and Social Security uncertain, your retirement security depends largely on how much you save and invest

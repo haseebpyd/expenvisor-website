@@ -62,7 +62,7 @@ export default function FAQ() {
             <br />
             <span className="gradient-text">Questions</span>
           </h2>
-          <p className="text-xl text-text-secondary-light max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary-dark max-w-3xl mx-auto">
             Got questions? We've got answers. If you don't see your question here, feel free to contact us.
           </p>
         </motion.div>
@@ -103,7 +103,7 @@ export default function FAQ() {
                 className="overflow-hidden"
               >
                 <div className="px-6 pb-4">
-                  <p className="text-text-secondary-light leading-relaxed">
+                  <p className="text-text-secondary-dark leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function FAQ() {
             <h3 className="text-2xl font-bold text-white mb-4">
               Still have questions?
             </h3>
-            <p className="text-text-secondary-light mb-6">
+            <p className="text-text-secondary-dark mb-6">
               Our support team is here to help you get the most out of Expenvisor.
             </p>
             <motion.button

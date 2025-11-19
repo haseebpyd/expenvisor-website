@@ -50,7 +50,7 @@ export default function BusinessFinancePage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               <span className="gradient-text">Business Finance Tools</span>
             </h1>
-            <p className="text-text-secondary-light max-w-3xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-3xl mx-auto text-lg">
               Free calculators for freelancers, self-employed individuals, and business owners. Calculate taxes, deductions, and plan your business finances.
             </p>
           </header>
@@ -61,9 +61,9 @@ export default function BusinessFinancePage() {
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">About Business Finance</h2>
-            <div className="text-text-secondary-light text-base leading-relaxed space-y-4">
+            <div className="text-text-secondary-dark text-base leading-relaxed space-y-4">
               <p>
                 Managing business finances as a freelancer or self-employed individual comes with unique challenges. You're
                 responsible for your own taxes, tracking business expenses, and understanding deductions that can save you

@@ -50,7 +50,7 @@ export default function BudgetingPage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               <span className="gradient-text">Budgeting Tools</span>
             </h1>
-            <p className="text-text-secondary-light max-w-3xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-3xl mx-auto text-lg">
               Free budgeting calculators to plan your spending, track expenses, set savings goals, and build financial security. No sign-up required.
             </p>
           </header>
@@ -61,9 +61,9 @@ export default function BudgetingPage() {
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">About Budgeting</h2>
-            <div className="text-text-secondary-light text-base leading-relaxed space-y-4">
+            <div className="text-text-secondary-dark text-base leading-relaxed space-y-4">
               <p>
                 Creating and sticking to a budget is one of the most important financial habits you can develop. A budget
                 gives you control over your money, helps you achieve financial goals, reduces stress, and prevents

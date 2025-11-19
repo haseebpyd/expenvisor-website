@@ -184,7 +184,7 @@ export default function MortgageAffordabilityPage() {
         <div className="max-w-5xl mx-auto">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-bold text-white mb-3">Mortgage Affordability Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Estimate how much home you can afford based on income, DTI ratio, and down payment. Free and instant.
               </p>
           </header>
@@ -240,31 +240,31 @@ export default function MortgageAffordabilityPage() {
               <ResultCard title="Affordability Estimate">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-text-secondary-light">Affordable Home Price</span>
+                    <span className="text-text-secondary-dark">Affordable Home Price</span>
                     <span className="text-2xl font-bold text-white">{toCurrency(calc.affordablePrice)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Down Payment</span>
+                    <span className="text-text-secondary-dark">Down Payment</span>
                     <span className="text-white">{toCurrency(calc.downPayment)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Loan Amount</span>
+                    <span className="text-text-secondary-dark">Loan Amount</span>
                     <span className="text-white">
                       {toCurrency(calc.affordablePrice - calc.downPayment)}
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Estimated Monthly Payment</span>
+                    <span className="text-text-secondary-dark">Estimated Monthly Payment</span>
                     <span className="text-white">{toCurrency(calc.monthlyPayment)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Total Interest (estimated)</span>
+                    <span className="text-text-secondary-dark">Total Interest (estimated)</span>
                     <span className="text-white">{toCurrency(calc.totalInterest)}</span>
                   </div>
                 </div>
               </ResultCard>
 
-            <p className="text-xs text-text-secondary-light mt-4">
+            <p className="text-xs text-text-secondary-dark mt-4">
                 Disclaimer: Results are estimates for educational purposes only. Actual affordability may vary based on
                 credit score, property taxes, insurance, and lender requirements.
             </p>
@@ -375,7 +375,7 @@ export default function MortgageAffordabilityPage() {
             />
           </div>
 
-          <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+          <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedTools.map((tool) => (
@@ -385,7 +385,7 @@ export default function MortgageAffordabilityPage() {
                   className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                 >
                   <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                  <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                  <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                 </Link>
               ))}
             </div>
@@ -393,7 +393,7 @@ export default function MortgageAffordabilityPage() {
 
           <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Track Your Home Buying Journey with Expenvisor</h3>
-            <p className="text-text-secondary-light mb-4">
+            <p className="text-text-secondary-dark mb-4">
               Planning to buy a home? Track all your expenses, savings goals, and financial progress with Expenvisor's
               AI-powered expense tracker.
             </p>

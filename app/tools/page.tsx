@@ -99,7 +99,7 @@ export default function ToolsHubPage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               <span className="gradient-text">Financial Tools</span>
             </h1>
-            <p className="text-text-secondary-light max-w-2xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-2xl mx-auto text-lg">
               Free, privacy-first calculators. Calculate payments, plan savings, and explore scenarios. No sign-up. No tracking. Just answers.
             </p>
           </header>
@@ -107,13 +107,13 @@ export default function ToolsHubPage() {
           {/* Search Bar */}
           <div className="mb-8 max-w-2xl mx-auto">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-secondary-light" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-secondary-dark" />
               <input
                 type="text"
                 placeholder="Search tools..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 text-white placeholder-text-secondary-light focus:outline-none focus:ring-2 focus:ring-accent/30 text-base"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-surface-elevated-dark border border-secondary/20 text-white placeholder-text-secondary-light focus:outline-none focus:ring-2 focus:ring-accent/30 text-base"
               />
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function ToolsHubPage() {
                 className={`px-6 py-2 rounded-lg font-semibold transition-all duration-200 ${
                   selectedCategory === category
                     ? "bg-gradient-to-r from-accent to-secondary text-white shadow-lg"
-                    : "bg-surface-elevated-light dark:bg-surface-elevated-dark text-text-secondary-light hover:bg-surface-dark"
+                    : "bg-surface-elevated-dark text-text-secondary-dark hover:bg-surface-dark"
                 }`}
               >
                 {category}
@@ -186,7 +186,7 @@ export default function ToolsHubPage() {
 
           {filteredTools.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-text-secondary-light text-lg mb-4">No tools found matching your search.</p>
+              <p className="text-text-secondary-dark text-lg mb-4">No tools found matching your search.</p>
               <button
                 onClick={() => {
                   setSearchQuery("");
@@ -199,7 +199,7 @@ export default function ToolsHubPage() {
             </div>
           )}
 
-          <div className="mt-12 text-center text-text-secondary-light text-sm">
+          <div className="mt-12 text-center text-text-secondary-dark text-sm">
             Results are estimates for educational purposes. Consult a professional for advice.
           </div>
         </div>

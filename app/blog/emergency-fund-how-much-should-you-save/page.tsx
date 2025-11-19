@@ -35,7 +35,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <p>
                 An emergency fund is your financial safety net—money set aside to cover unexpected expenses or income loss.
                 It&apos;s one of the most important foundations of financial security, protecting you from going into debt

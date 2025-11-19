@@ -191,7 +191,7 @@ export default function CompoundInterestPage() {
         <div className="max-w-5xl mx-auto">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-bold text-white mb-3">Compound Interest Calculator</h1>
-            <p className="text-text-secondary-light">
+            <p className="text-text-secondary-dark">
                 See how your investments grow with compound interest and regular contributions. Free and instant.
             </p>
           </header>
@@ -236,19 +236,19 @@ export default function CompoundInterestPage() {
               <ResultCard title="Results">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-text-secondary-light">Future Value</span>
+                    <span className="text-text-secondary-dark">Future Value</span>
                     <span className="text-2xl font-bold text-white">{toCurrency(calc.futureValue)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Total Contributions</span>
+                    <span className="text-text-secondary-dark">Total Contributions</span>
                     <span className="text-white">{toCurrency(calc.totalContributions)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Total Interest Earned</span>
+                    <span className="text-text-secondary-dark">Total Interest Earned</span>
                     <span className="text-white">{toCurrency(calc.totalInterest)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Growth Multiple</span>
+                    <span className="text-text-secondary-dark">Growth Multiple</span>
                     <span className="text-white">
                       {(calc.futureValue / calc.totalContributions).toFixed(2)}x
                     </span>
@@ -256,10 +256,10 @@ export default function CompoundInterestPage() {
                 </div>
               </ResultCard>
 
-              <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl overflow-auto max-h-[420px]">
+              <div className="bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl overflow-auto max-h-[420px]">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="text-left text-text-secondary-light">
+                    <tr className="text-left text-text-secondary-dark">
                       <th className="py-2 pr-4">Year</th>
                       <th className="py-2 pr-4">Value</th>
                       <th className="py-2 pr-4">Contributions</th>
@@ -268,7 +268,7 @@ export default function CompoundInterestPage() {
                   </thead>
                   <tbody>
                     {calc.yearlyData.map((d) => (
-                      <tr key={d.year} className="border-t border-secondary/10 text-text-secondary-light">
+                      <tr key={d.year} className="border-t border-secondary/10 text-text-secondary-dark">
                         <td className="py-2 pr-4">{d.year}</td>
                         <td className="py-2 pr-4">{toCurrency(d.value)}</td>
                         <td className="py-2 pr-4">{toCurrency(d.contributions)}</td>
@@ -279,7 +279,7 @@ export default function CompoundInterestPage() {
                 </table>
               </div>
 
-            <p className="text-xs text-text-secondary-light mt-4">
+            <p className="text-xs text-text-secondary-dark mt-4">
                 Disclaimer: Results are estimates. Actual returns depend on market conditions, fees, and taxes. Past
                 performance does not guarantee future results.
             </p>
@@ -325,7 +325,7 @@ export default function CompoundInterestPage() {
               <p className="text-white mb-2">
                 FV = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) - 1) / (r/n)]
               </p>
-              <div className="text-text-secondary-light space-y-1 text-xs">
+              <div className="text-text-secondary-dark space-y-1 text-xs">
                 <p>Where:</p>
                 <p>FV = Future Value</p>
                 <p>P = Principal (initial investment)</p>
@@ -393,7 +393,7 @@ export default function CompoundInterestPage() {
             />
           </div>
 
-          <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+          <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedTools.map((tool) => (
@@ -403,7 +403,7 @@ export default function CompoundInterestPage() {
                   className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                 >
                   <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                  <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                  <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                 </Link>
               ))}
             </div>
@@ -411,7 +411,7 @@ export default function CompoundInterestPage() {
 
           <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Track Your Investment Growth with Expenvisor</h3>
-            <p className="text-text-secondary-light mb-4">
+            <p className="text-text-secondary-dark mb-4">
               Planning your investments? Track all your expenses, savings, and financial progress with Expenvisor's
               AI-powered expense tracker.
             </p>

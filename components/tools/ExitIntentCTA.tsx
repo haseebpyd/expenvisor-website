@@ -31,16 +31,16 @@ export default function ExitIntentCTA() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
-          className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 max-w-md mx-4 shadow-2xl relative"
+          className="bg-surface-elevated-dark rounded-2xl p-8 max-w-md mx-4 shadow-2xl relative"
         >
           <button
             onClick={() => setShowPopup(false)}
-            className="absolute top-4 right-4 text-text-secondary-light hover:text-white transition-colors"
+            className="absolute top-4 right-4 text-text-secondary-dark hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
           <h3 className="text-2xl font-bold text-white mb-3">Before you go...</h3>
-          <p className="text-text-secondary-light mb-6">
+          <p className="text-text-secondary-dark mb-6">
             Download Expenvisor for free and track your expenses effortlessly with AI-powered insights.
           </p>
           <a

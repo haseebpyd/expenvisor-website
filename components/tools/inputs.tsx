@@ -26,11 +26,13 @@ export function NumberInput({
 
   return (
     <label className="block">
-      <span className="block text-sm text-text-secondary-light mb-2">{label}</span>
+      <span className="block text-sm text-text-secondary-dark mb-2">
+        {label}
+      </span>
       <div className="relative">
         <input
           type="number"
-          className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+          className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
           value={value}
           onChange={handle}
           min={min}
@@ -38,20 +40,26 @@ export function NumberInput({
           step={step}
         />
         {suffix ? (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary-light text-sm">{suffix}</span>
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary-dark text-sm">
+            {suffix}
+          </span>
         ) : null}
       </div>
     </label>
   );
 }
 
-export function ResultCard({ title, children }: { title: string; children: React.ReactNode }) {
+export function ResultCard({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+    <div className="bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
       <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
-      <div className="text-text-secondary-light">{children}</div>
+      <div className="text-text-secondary-dark">{children}</div>
     </div>
   );
 }
-
-

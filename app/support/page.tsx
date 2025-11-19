@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-surface-light dark:bg-surface-dark">
+    <div className="min-h-screen bg-surface-dark">
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         <div className="prose prose-lg max-w-none">
           <h1 className="text-4xl font-bold mb-8">Support & Help Center</h1>
 
-          <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-8">
+          <p className="text-lg text-text-secondary-dark mb-8">
             We're here to help you get the most out of Expenvisor. Find answers
             to common questions below or contact our support team.
           </p>
@@ -30,7 +30,7 @@ export default function SupportPage() {
             {/* Contact Section */}
             <section>
               <h2 className="text-2xl font-semibold mb-4">Contact Support</h2>
-              <div className="mt-4 p-6 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-lg">
+              <div className="mt-4 p-6 bg-surface-elevated-dark rounded-lg">
                 <p className="mb-4">
                   <strong>Email:</strong> support@expenvisor.com
                 </p>

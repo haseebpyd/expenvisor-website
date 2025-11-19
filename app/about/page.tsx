@@ -28,7 +28,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-xl text-text-secondary-light max-w-3xl mx-auto"
+                  className="text-xl text-text-secondary-dark max-w-3xl mx-auto"
                 >
                   We're on a mission to revolutionize personal finance
                   management through the power of artificial intelligence,
@@ -51,14 +51,14 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-white mb-6">
                     Our Mission
                   </h2>
-                  <p className="text-lg text-text-secondary-light mb-6">
+                  <p className="text-lg text-text-secondary-dark mb-6">
                     At Expenvisor, we believe that managing personal finances
                     should be simple, intelligent, and accessible to everyone.
                     Our mission is to eliminate the complexity and
                     time-consuming nature of traditional expense tracking by
                     leveraging cutting-edge AI technology.
                   </p>
-                  <p className="text-lg text-text-secondary-light mb-8">
+                  <p className="text-lg text-text-secondary-dark mb-8">
                     We envision a world where financial management is so
                     seamless that it happens naturally in the background,
                     allowing people to focus on what truly matters—achieving
@@ -76,19 +76,19 @@ export default function AboutPage() {
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl"
+                  className="bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl"
                 >
-                  <h3 className="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+                  <h3 className="text-2xl font-bold text-text-primary-dark mb-6">
                     Our Values
                   </h3>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <Lightbulb className="w-6 h-6 text-accent mt-1" />
                       <div>
-                        <h4 className="font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
+                        <h4 className="font-semibold text-text-primary-dark mb-2">
                           Innovation
                         </h4>
-                        <p className="text-text-secondary-light dark:text-text-secondary-dark">
+                        <p className="text-text-secondary-dark">
                           We continuously push the boundaries of what's possible
                           in fintech, always seeking new ways to improve the
                           user experience.
@@ -98,10 +98,10 @@ export default function AboutPage() {
                     <div className="flex items-start gap-4">
                       <Heart className="w-6 h-6 text-accent mt-1" />
                       <div>
-                        <h4 className="font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
+                        <h4 className="font-semibold text-text-primary-dark mb-2">
                           User-Centric
                         </h4>
-                        <p className="text-text-secondary-light dark:text-text-secondary-dark">
+                        <p className="text-text-secondary-dark">
                           Every feature we build is designed with our users'
                           needs in mind, ensuring our solutions are both
                           powerful and intuitive.
@@ -111,10 +111,10 @@ export default function AboutPage() {
                     <div className="flex items-start gap-4">
                       <Users className="w-6 h-6 text-accent mt-1" />
                       <div>
-                        <h4 className="font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
+                        <h4 className="font-semibold text-text-primary-dark mb-2">
                           Accessibility
                         </h4>
-                        <p className="text-text-secondary-light dark:text-text-secondary-dark">
+                        <p className="text-text-secondary-dark">
                           We believe financial management tools should be
                           accessible to everyone, regardless of their technical
                           expertise or financial background.
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-white mb-6">
                   Our Story
                 </h2>
-                <p className="text-lg text-text-secondary-light max-w-3xl mx-auto">
+                <p className="text-lg text-text-secondary-dark max-w-3xl mx-auto">
                   Expenvisor was born from a simple observation: traditional
                   expense tracking was broken, and AI technology could fix it.
                 </p>
@@ -153,7 +153,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     The Beginning
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     Founded with a vision to make expense tracking effortless
                     through AI technology.
                   </p>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     Growing Community
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     Over 10,000 users trust Expenvisor to manage their personal
                     finances.
                   </p>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     User Satisfaction
                   </h3>
-                  <p className="text-text-secondary-light">
+                  <p className="text-text-secondary-dark">
                     Consistently high ratings from users who love our AI-powered
                     approach.
                   </p>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-white mb-6">
                   Meet the Founder
                 </h2>
-                <p className="text-lg text-text-secondary-light max-w-3xl mx-auto">
+                <p className="text-lg text-text-secondary-dark max-w-3xl mx-auto">
                   Driven by a passion for innovation and AI, building the future
                   of intelligent personal finance management.
                 </p>
@@ -216,7 +216,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="bg-surface-elevated-light dark:bg-surface-elevated-dark p-8 rounded-xl shadow-lg border border-primary-light/20 text-center"
+                  className="bg-surface-elevated-dark p-8 rounded-xl shadow-lg border border-primary-light/20 text-center"
                 >
                   <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-accent/50 shadow-lg">
                     <Image
@@ -227,11 +227,11 @@ export default function AboutPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
+                  <h3 className="text-2xl font-semibold text-text-primary-dark mb-2">
                     MrHaseeb
                   </h3>
                   <p className="text-accent mb-4">Founder & Full Stack AI Engineer</p>
-                  <p className="text-text-secondary-light dark:text-text-secondary-dark mb-6">
+                  <p className="text-text-secondary-dark mb-6">
                     Visionary full-stack AI engineer passionate about revolutionizing personal finance with intelligent automation.
                   </p>
                   <a 
@@ -254,12 +254,12 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-12 text-center shadow-2xl"
+                className="bg-surface-elevated-dark rounded-2xl p-12 text-center shadow-2xl"
               >
-                <h2 className="text-3xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+                <h2 className="text-3xl font-bold text-text-primary-dark mb-6">
                   Ready to Join Our Mission?
                 </h2>
-                <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-8 max-w-2xl mx-auto">
+                <p className="text-lg text-text-secondary-dark mb-8 max-w-2xl mx-auto">
                   Experience the future of personal finance management with
                   Expenvisor. Download our app today and discover how AI can
                   transform your financial life.

@@ -324,7 +324,7 @@ export default function CurrencyConverterPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Currency Converter</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Convert between currencies with exchange rates. Free and instant.
               </p>
             </header>
@@ -339,11 +339,11 @@ export default function CurrencyConverterPage() {
                   step={1}
                 />
                 <label className="block">
-                  <span className="block text-sm text-text-secondary-light mb-2">From Currency</span>
+                  <span className="block text-sm text-text-secondary-dark mb-2">From Currency</span>
                   <select
                     value={fromCurrency}
                     onChange={(e) => setFromCurrency(e.target.value)}
-                    className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+                    className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
                   >
                     {currencies.map((c) => (
                       <option key={c.code} value={c.code}>
@@ -353,11 +353,11 @@ export default function CurrencyConverterPage() {
                   </select>
                 </label>
                 <label className="block">
-                  <span className="block text-sm text-text-secondary-light mb-2">To Currency</span>
+                  <span className="block text-sm text-text-secondary-dark mb-2">To Currency</span>
                   <select
                     value={toCurrency}
                     onChange={(e) => setToCurrency(e.target.value)}
-                    className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+                    className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
                   >
                     {currencies.map((c) => (
                       <option key={c.code} value={c.code}>
@@ -372,18 +372,18 @@ export default function CurrencyConverterPage() {
                 <ResultCard title="Conversion Result">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Converted Amount</span>
+                      <span className="text-text-secondary-dark">Converted Amount</span>
                       <span className="text-2xl font-bold text-white">
                         {formatCurrency(calc.converted, toCurrency)}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Exchange Rate</span>
+                      <span className="text-text-secondary-dark">Exchange Rate</span>
                       <span className="text-white">
                         1 {fromCurrency} = {calc.rate.toFixed(4)} {toCurrency}
                       </span>
                     </div>
-                    <div className="pt-3 border-t border-secondary/20 text-sm text-text-secondary-light">
+                    <div className="pt-3 border-t border-secondary/20 text-sm text-text-secondary-dark">
                       Note: This uses approximate rates. Actual conversions include fees and may vary.
                     </div>
                   </div>
@@ -487,7 +487,7 @@ export default function CurrencyConverterPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -497,7 +497,7 @@ export default function CurrencyConverterPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -505,7 +505,7 @@ export default function CurrencyConverterPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Travel Expenses with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Traveling abroad? Track all your expenses, including currency conversions, with Expenvisor's
                   AI-powered expense tracker.
                 </p>

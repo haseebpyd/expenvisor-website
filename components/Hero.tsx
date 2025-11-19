@@ -74,7 +74,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-6 text-base sm:text-lg lg:text-xl text-text-secondary-light max-w-2xl mx-auto lg:mx-0"
+              className="mt-6 text-base sm:text-lg lg:text-xl text-text-secondary-dark max-w-2xl mx-auto lg:mx-0"
             >
               Track expenses with voice, scan receipts with AI, get personalized
               financial insights. Your finances, flowing seamlessly.
@@ -134,12 +134,12 @@ export default function Hero() {
                     className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current"
                   />
                 ))}
-                <span className="ml-2 text-sm sm:text-base text-text-secondary-light">
+                <span className="ml-2 text-sm sm:text-base text-text-secondary-dark">
                   4.9/5 rating
                 </span>
               </div>
-              <div className="hidden sm:block text-text-secondary-light">•</div>
-              <div className="text-sm sm:text-base text-text-secondary-light">
+              <div className="hidden sm:block text-text-secondary-dark">•</div>
+              <div className="text-sm sm:text-base text-text-secondary-dark">
                 10,000+ downloads
               </div>
             </motion.div>
@@ -222,7 +222,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center text-text-secondary-light"
+            className="flex flex-col items-center text-text-secondary-dark"
           >
             <span className="text-sm mb-2">Scroll to explore</span>
             <ArrowDown className="w-5 h-5" />

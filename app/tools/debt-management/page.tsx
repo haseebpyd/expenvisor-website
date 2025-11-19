@@ -46,7 +46,7 @@ export default function DebtManagementPage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               <span className="gradient-text">Debt Management Tools</span>
             </h1>
-            <p className="text-text-secondary-light max-w-3xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-3xl mx-auto text-lg">
               Free calculators to help you manage debt, compare payoff strategies, and achieve financial freedom. No sign-up required.
             </p>
           </header>
@@ -57,9 +57,9 @@ export default function DebtManagementPage() {
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">About Debt Management</h2>
-            <div className="text-text-secondary-light text-base leading-relaxed space-y-4">
+            <div className="text-text-secondary-dark text-base leading-relaxed space-y-4">
               <p>
                 Effective debt management is crucial for financial health. Our free debt management tools help you understand
                 your debt situation, compare payoff strategies, and create a plan to become debt-free.

@@ -58,7 +58,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-text-secondary-light hover:text-accent transition-colors duration-200"
+                className="text-text-secondary-dark hover:text-accent transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-text-secondary-light hover:text-accent transition-colors duration-200"
+              className="text-text-secondary-dark hover:text-accent transition-colors duration-200"
             >
               {isOpen ? (
                 <X className="w-6 h-6" />
@@ -105,7 +105,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-text-secondary-light hover:text-accent transition-colors duration-200 px-4 py-2"
+                  className="text-text-secondary-dark hover:text-accent transition-colors duration-200 px-4 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

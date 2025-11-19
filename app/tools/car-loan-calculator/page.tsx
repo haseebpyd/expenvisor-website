@@ -144,7 +144,7 @@ export default function CarLoanCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Car Loan Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate auto loan payments, total interest, and compare loan options. Free and instant.
               </p>
             </header>
@@ -197,19 +197,19 @@ export default function CarLoanCalculatorPage() {
                 <ResultCard title="Loan Summary">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Loan Amount</span>
+                      <span className="text-text-secondary-dark">Loan Amount</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc.loanAmount)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Monthly Payment</span>
+                      <span className="text-text-secondary-dark">Monthly Payment</span>
                       <span className="text-2xl font-bold text-white">{toCurrency(calc.monthlyPayment)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Amount Paid</span>
+                      <span className="text-text-secondary-dark">Total Amount Paid</span>
                       <span className="text-white">{toCurrency(calc.totalPaid)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Interest</span>
+                      <span className="text-text-secondary-dark">Total Interest</span>
                       <span className="text-white">{toCurrency(calc.totalInterest)}</span>
                     </div>
                   </div>
@@ -313,7 +313,7 @@ export default function CarLoanCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -323,7 +323,7 @@ export default function CarLoanCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -331,7 +331,7 @@ export default function CarLoanCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Car Expenses with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Financing a car? Track all your expenses, loan payments, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

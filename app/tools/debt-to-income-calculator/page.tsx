@@ -117,7 +117,7 @@ export default function DebtToIncomeCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Debt-to-Income Ratio Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate your DTI ratio to assess financial health and loan eligibility. Free and instant.
               </p>
             </header>
@@ -154,15 +154,15 @@ export default function DebtToIncomeCalculatorPage() {
                 <ResultCard title="DTI Ratios">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Front-End DTI</span>
+                      <span className="text-text-secondary-dark">Front-End DTI</span>
                       <span className="text-2xl font-bold text-white">{calc.frontEndDTI.toFixed(1)}%</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Back-End DTI</span>
+                      <span className="text-text-secondary-dark">Back-End DTI</span>
                       <span className="text-2xl font-bold text-white">{calc.backEndDTI.toFixed(1)}%</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20">
-                      <div className="text-sm text-text-secondary-light">
+                      <div className="text-sm text-text-secondary-dark">
                         {calc.backEndDTI <= 36 ? (
                           <span className="text-green-400">✓ Excellent - Most lenders prefer this</span>
                         ) : calc.backEndDTI <= 43 ? (
@@ -266,7 +266,7 @@ export default function DebtToIncomeCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -276,7 +276,7 @@ export default function DebtToIncomeCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -284,7 +284,7 @@ export default function DebtToIncomeCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Debt and Income with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Calculated your DTI? Track all your expenses, income, and debt payments with Expenvisor's AI-powered
                   expense tracker.
                 </p>

@@ -35,7 +35,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <p>
                 As a freelancer or self-employed individual, you&apos;re responsible for managing your own taxes, which can
                 be complex and overwhelming. Unlike W-2 employees who have taxes withheld, you must estimate and pay taxes

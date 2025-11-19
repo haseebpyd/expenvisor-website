@@ -135,7 +135,7 @@ export default function NetWorthCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Net Worth Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate your net worth and assess your financial health. Free and instant.
               </p>
             </header>
@@ -223,22 +223,22 @@ export default function NetWorthCalculatorPage() {
                 <ResultCard title="Net Worth Summary">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Total Assets</span>
+                      <span className="text-text-secondary-dark">Total Assets</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc.totalAssets)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Total Liabilities</span>
+                      <span className="text-text-secondary-dark">Total Liabilities</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc.totalLiabilities)}</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-text-secondary-light">Net Worth</span>
+                        <span className="text-text-secondary-dark">Net Worth</span>
                         <span className={`text-3xl font-bold ${calc.netWorth >= 0 ? "text-accent" : "text-red-400"}`}>
                           {toCurrency(calc.netWorth)}
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-text-secondary-light">Debt-to-Asset Ratio</span>
+                        <span className="text-text-secondary-dark">Debt-to-Asset Ratio</span>
                         <span className="text-white">{calc.debtToAssetRatio.toFixed(1)}%</span>
                       </div>
                     </div>
@@ -341,7 +341,7 @@ export default function NetWorthCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -351,7 +351,7 @@ export default function NetWorthCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -359,7 +359,7 @@ export default function NetWorthCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Net Worth with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Calculating net worth? Track all your expenses, income, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

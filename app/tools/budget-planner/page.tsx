@@ -170,7 +170,7 @@ export default function BudgetPlannerPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Budget Planner</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Plan your budget using the 50/30/20 rule or create custom allocations. Free and instant.
               </p>
             </header>
@@ -187,7 +187,7 @@ export default function BudgetPlannerPage() {
               />
 
               <label className="block">
-                <span className="block text-sm text-text-secondary-light mb-2">Budget Method</span>
+                <span className="block text-sm text-text-secondary-dark mb-2">Budget Method</span>
                 <select
                   value={budgetMethod}
                   onChange={(e) => {
@@ -199,7 +199,7 @@ export default function BudgetPlannerPage() {
                       setSavings(calc502030.savings);
                     }
                   }}
-                  className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+                  className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
                 >
                   <option value="502030">50/30/20 Rule</option>
                   <option value="custom">Custom Budget</option>
@@ -241,19 +241,19 @@ export default function BudgetPlannerPage() {
                 <ResultCard title="50/30/20 Budget Allocation">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Needs (50%)</span>
+                      <span className="text-text-secondary-dark">Needs (50%)</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc502030.needs)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Wants (30%)</span>
+                      <span className="text-text-secondary-dark">Wants (30%)</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc502030.wants)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Savings (20%)</span>
+                      <span className="text-text-secondary-dark">Savings (20%)</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc502030.savings)}</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20 flex justify-between">
-                      <span className="text-text-secondary-light">Total Allocated</span>
+                      <span className="text-text-secondary-dark">Total Allocated</span>
                       <span className="text-white font-semibold">{toCurrency(monthlyIncome)}</span>
                     </div>
                   </div>
@@ -262,24 +262,24 @@ export default function BudgetPlannerPage() {
                 <ResultCard title="Custom Budget Summary">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Needs ({customPercentages.needs.toFixed(1)}%)</span>
+                      <span className="text-text-secondary-dark">Needs ({customPercentages.needs.toFixed(1)}%)</span>
                       <span className="text-xl font-bold text-white">{toCurrency(needs)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Wants ({customPercentages.wants.toFixed(1)}%)</span>
+                      <span className="text-text-secondary-dark">Wants ({customPercentages.wants.toFixed(1)}%)</span>
                       <span className="text-xl font-bold text-white">{toCurrency(wants)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Savings ({customPercentages.savings.toFixed(1)}%)</span>
+                      <span className="text-text-secondary-dark">Savings ({customPercentages.savings.toFixed(1)}%)</span>
                       <span className="text-xl font-bold text-white">{toCurrency(savings)}</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20">
                       <div className="flex justify-between mb-2">
-                        <span className="text-text-secondary-light">Total Allocated</span>
+                        <span className="text-text-secondary-dark">Total Allocated</span>
                         <span className="text-white">{toCurrency(customTotal)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-text-secondary-light">Remaining</span>
+                        <span className="text-text-secondary-dark">Remaining</span>
                         <span className={`font-semibold ${customRemaining >= 0 ? "text-accent" : "text-red-400"}`}>
                           {toCurrency(customRemaining)}
                         </span>
@@ -326,7 +326,7 @@ export default function BudgetPlannerPage() {
               The 50/30/20 rule is a simple, flexible budgeting framework popularized by Senator Elizabeth Warren:
             </p>
             <div className="bg-surface-dark rounded-lg p-4 my-4">
-              <div className="text-text-secondary-light space-y-2 text-sm">
+              <div className="text-text-secondary-dark space-y-2 text-sm">
                 <p>
                   <strong className="text-white">50% - Needs:</strong> Essential expenses you can't live without:
                   housing (rent/mortgage), utilities, groceries, transportation to work, insurance, minimum debt
@@ -403,7 +403,7 @@ export default function BudgetPlannerPage() {
             />
           </div>
 
-          <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+          <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedTools.map((tool) => (
@@ -413,7 +413,7 @@ export default function BudgetPlannerPage() {
                   className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                 >
                   <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                  <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                  <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                 </Link>
               ))}
             </div>
@@ -421,7 +421,7 @@ export default function BudgetPlannerPage() {
 
           <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Track Your Budget with Expenvisor</h3>
-            <p className="text-text-secondary-light mb-4">
+            <p className="text-text-secondary-dark mb-4">
               Created your budget? Track all your expenses automatically and stay on budget with Expenvisor's AI-powered
               expense tracker.
             </p>

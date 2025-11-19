@@ -48,8 +48,8 @@ export default function ShareButton({ title, url, description }: ShareButtonProp
   };
 
   return (
-    <div className="flex items-center gap-4 p-4 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl">
-      <span className="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">
+    <div className="flex items-center gap-4 p-4 bg-surface-elevated-dark rounded-xl">
+      <span className="text-sm font-medium text-text-primary-dark">
         Share this tool:
       </span>
       <div className="flex items-center gap-2">

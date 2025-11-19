@@ -162,7 +162,7 @@ export default function RetirementSavingsCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Retirement Savings Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Project your retirement savings and see if you're on track. Free and instant.
               </p>
             </header>
@@ -241,28 +241,28 @@ export default function RetirementSavingsCalculatorPage() {
                 <ResultCard title="Retirement Projection">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Retirement Savings</span>
+                      <span className="text-text-secondary-dark">Retirement Savings</span>
                       <span className="text-2xl font-bold text-white">{toCurrency(calc.futureValue)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Contributions</span>
+                      <span className="text-text-secondary-dark">Total Contributions</span>
                       <span className="text-white">{toCurrency(calc.totalContributions)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Interest Earned</span>
+                      <span className="text-text-secondary-dark">Interest Earned</span>
                       <span className="text-white">{toCurrency(calc.totalInterest)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Years to Retirement</span>
+                      <span className="text-text-secondary-dark">Years to Retirement</span>
                       <span className="text-white">{calc.yearsToRetirement} years</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20">
                       <div className="flex justify-between mb-1">
-                        <span className="text-text-secondary-light">Monthly Retirement Income (4% rule)</span>
+                        <span className="text-text-secondary-dark">Monthly Retirement Income (4% rule)</span>
                         <span className="text-accent font-semibold">{toCurrency(calc.monthlyRetirementIncome)}</span>
                       </div>
                       {calc.employerMatchAmount > 0 && (
-                        <div className="text-xs text-text-secondary-light mt-2">
+                        <div className="text-xs text-text-secondary-dark mt-2">
                           Employer match: {toCurrency(calc.employerMatchAmount)}/month
                         </div>
                       )}
@@ -305,7 +305,7 @@ export default function RetirementSavingsCalculatorPage() {
                   Financial experts recommend these savings milestones by age (as multiples of annual salary):
                 </p>
                 <div className="bg-surface-dark rounded-lg p-4 my-4">
-                  <div className="text-text-secondary-light space-y-2 text-sm">
+                  <div className="text-text-secondary-dark space-y-2 text-sm">
                     <p><strong className="text-white">Age 30:</strong> 1x annual salary saved</p>
                     <p><strong className="text-white">Age 40:</strong> 3x annual salary saved</p>
                     <p><strong className="text-white">Age 50:</strong> 6x annual salary saved</p>
@@ -366,7 +366,7 @@ export default function RetirementSavingsCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -376,7 +376,7 @@ export default function RetirementSavingsCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -384,7 +384,7 @@ export default function RetirementSavingsCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Retirement Savings with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Planning for retirement? Track all your expenses, savings, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

@@ -126,7 +126,7 @@ export default function Screenshots() {
             <br />
             <span className="gradient-text">Action</span>
           </h2>
-          <p className="text-xl text-text-secondary-light max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary-dark max-w-3xl mx-auto">
             Take a look at the beautiful interface and powerful features that
             make Expenvisor the best expense tracker.
           </p>
@@ -176,7 +176,7 @@ export default function Screenshots() {
                       <h3 className="text-2xl font-semibold text-white mb-2">
                         {screenshot.title}
                       </h3>
-                      <p className="text-base text-text-secondary-light">
+                      <p className="text-base text-text-secondary-dark">
                         {screenshot.description}
                       </p>
                     </div>

@@ -147,7 +147,7 @@ export default function RefinanceCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Refinance Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate refinance savings, break-even point, and compare refinancing vs. staying. Free and instant.
               </p>
             </header>
@@ -209,19 +209,19 @@ export default function RefinanceCalculatorPage() {
                 <ResultCard title="Refinance Analysis">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Current Payment</span>
+                      <span className="text-text-secondary-dark">Current Payment</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc.currentPayment)}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">New Payment</span>
+                      <span className="text-text-secondary-dark">New Payment</span>
                       <span className="text-xl font-bold text-white">{toCurrency(calc.newPayment)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Monthly Savings</span>
+                      <span className="text-text-secondary-dark">Monthly Savings</span>
                       <span className="text-accent font-semibold">{toCurrency(calc.monthlySavings)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Break-Even Point</span>
+                      <span className="text-text-secondary-dark">Break-Even Point</span>
                       <span className="text-white">
                         {calc.breakEvenMonths > 0
                           ? `${Math.floor(calc.breakEvenMonths / 12)} years ${calc.breakEvenMonths % 12} months`
@@ -229,7 +229,7 @@ export default function RefinanceCalculatorPage() {
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Savings</span>
+                      <span className="text-text-secondary-dark">Total Savings</span>
                       <span className={`font-semibold ${calc.totalSavings > 0 ? "text-accent" : "text-red-400"}`}>
                         {toCurrency(calc.totalSavings)}
                       </span>
@@ -326,7 +326,7 @@ export default function RefinanceCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -336,7 +336,7 @@ export default function RefinanceCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -344,7 +344,7 @@ export default function RefinanceCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Mortgage with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Refinancing? Track all your expenses, mortgage payments, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

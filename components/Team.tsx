@@ -91,7 +91,7 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-base sm:text-lg lg:text-xl text-text-secondary-light max-w-2xl mx-auto"
+            className="text-base sm:text-lg lg:text-xl text-text-secondary-dark max-w-2xl mx-auto"
           >
             A diverse, passionate team of developers, designers, and innovators
             working together to revolutionize expense tracking.

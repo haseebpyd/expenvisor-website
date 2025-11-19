@@ -89,23 +89,23 @@ export default function LoanCalculatorComparisonPage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Loan Calculator <span className="gradient-text">Comparison</span>
             </h1>
-            <p className="text-text-secondary-light max-w-3xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-3xl mx-auto text-lg">
               Compare Expenvisor's loan calculator with Bankrate and NerdWallet. See which tool offers the best features, accuracy, and user experience.
             </p>
           </header>
 
-          <div className="max-w-6xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8 overflow-x-auto">
+          <div className="max-w-6xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8 overflow-x-auto">
             <h2 className="text-2xl font-bold text-white mb-6">Feature-by-Feature Comparison</h2>
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-secondary/20">
                   <th className="pb-4 text-white font-semibold">Feature</th>
                   <th className="pb-4 text-white font-semibold text-center">Expenvisor</th>
-                  <th className="pb-4 text-text-secondary-light text-center">Bankrate</th>
-                  <th className="pb-4 text-text-secondary-light text-center">NerdWallet</th>
+                  <th className="pb-4 text-text-secondary-dark text-center">Bankrate</th>
+                  <th className="pb-4 text-text-secondary-dark text-center">NerdWallet</th>
                 </tr>
               </thead>
-              <tbody className="text-text-secondary-light">
+              <tbody className="text-text-secondary-dark">
                 {comparison.map((item, index) => (
                   <tr key={index} className="border-b border-secondary/10">
                     <td className="py-4 text-base font-medium">{item.feature}</td>
@@ -118,9 +118,9 @@ export default function LoanCalculatorComparisonPage() {
             </table>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">Why Expenvisor Stands Out</h2>
-            <div className="text-text-secondary-light text-base leading-relaxed space-y-4">
+            <div className="text-text-secondary-dark text-base leading-relaxed space-y-4">
               <p>
                 <strong>Privacy-First Approach:</strong> Unlike Bankrate and NerdWallet, Expenvisor doesn't require sign-ups
                 or track your data. Your calculations remain completely private.

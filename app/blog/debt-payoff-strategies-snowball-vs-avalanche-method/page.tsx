@@ -35,7 +35,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <p>
                 Getting out of debt is one of the most important financial goals you can achieve. But with multiple debts
                 and limited extra money, which strategy should you use? Two popular methods dominate the conversation: the

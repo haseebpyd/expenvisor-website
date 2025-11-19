@@ -34,7 +34,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <h2>The Evolution of Personal Finance Apps</h2>
               <p>
                 The landscape of personal finance management has undergone a

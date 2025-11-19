@@ -1,43 +1,47 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-  }
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    setIsSubmitted(true);
+    setIsSubmitting(false);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
-    }))
-  }
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
-    <div className="min-h-screen bg-surface-light dark:bg-surface-dark">
+    <div className="min-h-screen bg-surface-dark">
       <Navbar />
-      
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         {/* Header */}
         <motion.div
@@ -47,12 +51,12 @@ export default function ContactPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="text-text-primary-light dark:text-text-primary-dark">Get In</span>
+            <span className="text-text-primary-dark">Get In</span>
             <br />
             <span className="gradient-text">Touch</span>
           </h1>
-          <p className="text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto">
-            Have questions, feedback, or need help? We'd love to hear from you. 
+          <p className="text-xl text-text-secondary-dark max-w-3xl mx-auto">
+            Have questions, feedback, or need help? We'd love to hear from you.
             Our support team typically responds within 24 hours.
           </p>
         </motion.div>
@@ -64,8 +68,8 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 border border-border-light dark:border-border-dark">
-              <h2 className="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+            <div className="bg-surface-elevated-dark rounded-2xl p-8 border border-border-dark">
+              <h2 className="text-2xl font-bold text-text-primary-dark mb-6">
                 Send us a message
               </h2>
 
@@ -78,10 +82,10 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Mail className="w-8 h-8 text-accent" />
                   </div>
-                  <h3 className="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
+                  <h3 className="text-xl font-semibold text-text-primary-dark mb-2">
                     Message sent successfully!
                   </h3>
-                  <p className="text-text-secondary-light dark:text-text-secondary-dark">
+                  <p className="text-text-secondary-dark">
                     We'll get back to you within 24 hours.
                   </p>
                 </motion.div>
@@ -89,7 +93,10 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-text-primary-light dark:text-text-primary-dark mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-text-primary-dark mb-2"
+                      >
                         Name *
                       </label>
                       <input
@@ -99,12 +106,15 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border-light dark:border-border-dark rounded-lg bg-surface-light dark:bg-surface-dark text-text-primary-light dark:text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-border-dark rounded-lg bg-surface-dark text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-text-primary-light dark:text-text-primary-dark mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-text-primary-dark mb-2"
+                      >
                         Email *
                       </label>
                       <input
@@ -114,14 +124,17 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border-light dark:border-border-dark rounded-lg bg-surface-light dark:bg-surface-dark text-text-primary-light dark:text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-border-dark rounded-lg bg-surface-dark text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-text-primary-light dark:text-text-primary-dark mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-text-primary-dark mb-2"
+                    >
                       Subject *
                     </label>
                     <select
@@ -130,7 +143,7 @@ export default function ContactPage() {
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-border-light dark:border-border-dark rounded-lg bg-surface-light dark:bg-surface-dark text-text-primary-light dark:text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-border-dark rounded-lg bg-surface-dark text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
@@ -143,7 +156,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-text-primary-light dark:text-text-primary-dark mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-text-primary-dark mb-2"
+                    >
                       Message *
                     </label>
                     <textarea
@@ -153,7 +169,7 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-border-light dark:border-border-dark rounded-lg bg-surface-light dark:bg-surface-dark text-text-primary-light dark:text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none"
+                      className="w-full px-4 py-3 border border-border-dark rounded-lg bg-surface-dark text-text-primary-dark focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none"
                       placeholder="Tell us how we can help you..."
                     />
                   </div>
@@ -165,7 +181,7 @@ export default function ContactPage() {
                     whileTap={{ scale: 0.98 }}
                     className="w-full py-4 px-6 bg-gradient-to-r from-accent to-secondary text-white rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </motion.button>
                 </form>
               )}
@@ -180,23 +196,23 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark mb-6">
+              <h2 className="text-2xl font-bold text-text-primary-dark mb-6">
                 Other ways to reach us
               </h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">
+                    <h3 className="text-lg font-semibold text-text-primary-dark mb-1">
                       Email Support
                     </h3>
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark mb-2">
+                    <p className="text-text-secondary-dark mb-2">
                       support@expenvisor.com
                     </p>
-                    <p className="text-sm text-text-tertiary-light dark:text-text-tertiary-dark">
+                    <p className="text-sm text-text-tertiary-dark">
                       We typically respond within 24 hours
                     </p>
                   </div>
@@ -207,13 +223,13 @@ export default function ContactPage() {
                     <Clock className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">
+                    <h3 className="text-lg font-semibold text-text-primary-dark mb-1">
                       Business Hours
                     </h3>
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark mb-2">
+                    <p className="text-text-secondary-dark mb-2">
                       Monday - Friday, 9 AM - 6 PM EST
                     </p>
-                    <p className="text-sm text-text-tertiary-light dark:text-text-tertiary-dark">
+                    <p className="text-sm text-text-tertiary-dark">
                       For urgent issues, email support@expenvisor.com
                     </p>
                   </div>
@@ -224,13 +240,13 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">
+                    <h3 className="text-lg font-semibold text-text-primary-dark mb-1">
                       Office Location
                     </h3>
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark mb-2">
+                    <p className="text-text-secondary-dark mb-2">
                       [Your Business Address]
                     </p>
-                    <p className="text-sm text-text-tertiary-light dark:text-text-tertiary-dark">
+                    <p className="text-sm text-text-tertiary-dark">
                       Remote-first company
                     </p>
                   </div>
@@ -239,11 +255,11 @@ export default function ContactPage() {
             </div>
 
             {/* FAQ Link */}
-            <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 border border-border-light dark:border-border-dark">
-              <h3 className="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-3">
+            <div className="bg-surface-elevated-dark rounded-2xl p-6 border border-border-dark">
+              <h3 className="text-lg font-semibold text-text-primary-dark mb-3">
                 Before you contact us
               </h3>
-              <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4">
+              <p className="text-text-secondary-dark mb-4">
                 Check our FAQ section for quick answers to common questions.
               </p>
               <a
@@ -251,16 +267,26 @@ export default function ContactPage() {
                 className="inline-flex items-center text-accent hover:text-accent-dark transition-colors duration-200"
               >
                 View FAQ
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </a>
             </div>
           </motion.div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
-  )
+  );
 }

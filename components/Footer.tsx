@@ -111,7 +111,7 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="text-text-secondary-light mb-6 max-w-md">
+            <p className="text-text-secondary-dark mb-6 max-w-md">
               Your finances, flowing seamlessly. The smartest way to track
               expenses with AI-powered insights.
             </p>
@@ -126,7 +126,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-surface-elevated-dark rounded-lg flex items-center justify-center text-text-secondary-light hover:text-accent hover:bg-accent/10 transition-all duration-200"
+                  className="w-10 h-10 bg-surface-elevated-dark rounded-lg flex items-center justify-center text-text-secondary-dark hover:text-accent hover:bg-accent/10 transition-all duration-200"
                 >
                   {social.name === "X (Twitter)" || social.name === "TikTok" ? (
                     <social.icon className="w-5 h-5" />
@@ -151,7 +151,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary-light hover:text-accent transition-colors duration-200"
+                    className="text-text-secondary-dark hover:text-accent transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -173,7 +173,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary-light hover:text-accent transition-colors duration-200"
+                    className="text-text-secondary-dark hover:text-accent transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -195,7 +195,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary-light hover:text-accent transition-colors duration-200"
+                    className="text-text-secondary-dark hover:text-accent transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -217,7 +217,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary-light hover:text-accent transition-colors duration-200"
+                    className="text-text-secondary-dark hover:text-accent transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -236,20 +236,20 @@ export default function Footer() {
           className="mt-12 pt-8 border-t border-accent/20"
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-text-secondary-light text-sm">
+            <p className="text-text-secondary-dark text-sm">
               © 2024 Expenvisor. All rights reserved.
             </p>
 
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacy-policy"
-                className="text-text-secondary-light hover:text-accent text-sm transition-colors duration-200"
+                className="text-text-secondary-dark hover:text-accent text-sm transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms-of-service"
-                className="text-text-secondary-light hover:text-accent text-sm transition-colors duration-200"
+                className="text-text-secondary-dark hover:text-accent text-sm transition-colors duration-200"
               >
                 Terms of Service
               </Link>

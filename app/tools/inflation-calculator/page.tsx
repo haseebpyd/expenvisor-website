@@ -132,7 +132,7 @@ export default function InflationCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Inflation Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate purchasing power over time and see how inflation affects your money. Free and instant.
               </p>
             </header>
@@ -177,22 +177,22 @@ export default function InflationCalculatorPage() {
                 <ResultCard title="Inflation Impact">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Future Value Needed</span>
+                      <span className="text-text-secondary-dark">Future Value Needed</span>
                       <span className="text-2xl font-bold text-white">{toCurrency(calc.futureValue)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Original Purchasing Power</span>
+                      <span className="text-text-secondary-dark">Original Purchasing Power</span>
                       <span className="text-white">{toCurrency(calc.purchasingPower)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Value Change</span>
+                      <span className="text-text-secondary-dark">Value Change</span>
                       <span className="text-red-400 font-semibold">{toCurrency(calc.valueChange)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Percent Change</span>
+                      <span className="text-text-secondary-dark">Percent Change</span>
                       <span className="text-white">{calc.percentChange.toFixed(1)}%</span>
                     </div>
-                    <div className="pt-3 border-t border-secondary/20 text-sm text-text-secondary-light">
+                    <div className="pt-3 border-t border-secondary/20 text-sm text-text-secondary-dark">
                       Over {calc.years} {calc.years === 1 ? "year" : "years"}, you'd need {toCurrency(calc.futureValue)} to maintain the same purchasing power as {toCurrency(amount)} today.
                     </div>
                   </div>
@@ -298,7 +298,7 @@ export default function InflationCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -308,7 +308,7 @@ export default function InflationCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -316,7 +316,7 @@ export default function InflationCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Finances with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Planning for inflation? Track all your expenses, income, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

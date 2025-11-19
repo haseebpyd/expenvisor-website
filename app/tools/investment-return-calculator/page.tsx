@@ -136,7 +136,7 @@ export default function InvestmentReturnCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Investment Return Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate ROI, annualized returns, and investment performance. Free and instant.
               </p>
             </header>
@@ -180,21 +180,21 @@ export default function InvestmentReturnCalculatorPage() {
                 <ResultCard title="Investment Returns">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Total ROI</span>
+                      <span className="text-text-secondary-dark">Total ROI</span>
                       <span className="text-2xl font-bold text-white">{calc.roi.toFixed(2)}%</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Annualized Return</span>
+                      <span className="text-text-secondary-dark">Annualized Return</span>
                       <span className="text-white">{calc.annualizedReturn.toFixed(2)}%</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Gain</span>
+                      <span className="text-text-secondary-dark">Total Gain</span>
                       <span className={`font-semibold ${calc.gain >= 0 ? "text-accent" : "text-red-400"}`}>
                         {toCurrency(calc.gain)}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Total Contributions</span>
+                      <span className="text-text-secondary-dark">Total Contributions</span>
                       <span className="text-white">{toCurrency(calc.totalContributions)}</span>
                     </div>
                   </div>
@@ -289,7 +289,7 @@ export default function InvestmentReturnCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -299,7 +299,7 @@ export default function InvestmentReturnCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -307,7 +307,7 @@ export default function InvestmentReturnCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Investments with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Tracking investment returns? Track all your expenses, income, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

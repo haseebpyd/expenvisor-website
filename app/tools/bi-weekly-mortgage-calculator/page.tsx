@@ -159,7 +159,7 @@ export default function BiWeeklyMortgageCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Bi-Weekly Mortgage Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate savings from bi-weekly payments and see payoff time reduction. Free and instant.
               </p>
             </header>
@@ -196,20 +196,20 @@ export default function BiWeeklyMortgageCalculatorPage() {
                 <ResultCard title="Bi-Weekly vs. Monthly">
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Monthly Payment</span>
+                      <span className="text-text-secondary-dark">Monthly Payment</span>
                       <span className="text-white">{toCurrency(calc.monthlyPayment)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Bi-Weekly Payment</span>
+                      <span className="text-text-secondary-dark">Bi-Weekly Payment</span>
                       <span className="text-white">{toCurrency(calc.biWeeklyPayment)}</span>
                     </div>
                     <div className="pt-3 border-t border-secondary/20">
                       <div className="flex justify-between mb-2">
-                        <span className="text-text-secondary-light">Interest Savings</span>
+                        <span className="text-text-secondary-dark">Interest Savings</span>
                         <span className="text-2xl font-bold text-accent">{toCurrency(calc.savings)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-text-secondary-light">Time Saved</span>
+                        <span className="text-text-secondary-dark">Time Saved</span>
                         <span className="text-white">
                           {Math.floor(calc.timeSaved / 12)} years {Math.round(calc.timeSaved % 12)} months
                         </span>
@@ -310,7 +310,7 @@ export default function BiWeeklyMortgageCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -320,7 +320,7 @@ export default function BiWeeklyMortgageCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -328,7 +328,7 @@ export default function BiWeeklyMortgageCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Mortgage with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Paying bi-weekly? Track all your expenses, mortgage payments, and financial progress with Expenvisor's
                   AI-powered expense tracker.
                 </p>

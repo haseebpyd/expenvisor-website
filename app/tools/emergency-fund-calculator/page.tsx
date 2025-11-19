@@ -147,7 +147,7 @@ export default function EmergencyFundCalculatorPage() {
           <div className="max-w-5xl mx-auto">
             <header className="mb-10 text-center">
               <h1 className="text-4xl font-bold text-white mb-3">Emergency Fund Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Calculate how much to save for emergencies and plan your financial safety net. Free and instant.
               </p>
             </header>
@@ -200,15 +200,15 @@ export default function EmergencyFundCalculatorPage() {
                 <ResultCard title="Emergency Fund Plan">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-text-secondary-light">Target Amount</span>
+                      <span className="text-text-secondary-dark">Target Amount</span>
                       <span className="text-2xl font-bold text-white">{toCurrency(calc.targetAmount)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Still Needed</span>
+                      <span className="text-text-secondary-dark">Still Needed</span>
                       <span className="text-white">{toCurrency(calc.needed)}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-text-secondary-light">Time to Goal</span>
+                      <span className="text-text-secondary-dark">Time to Goal</span>
                       <span className="text-white">
                         {calc.months > 0
                           ? calc.years >= 1
@@ -320,7 +320,7 @@ export default function EmergencyFundCalculatorPage() {
                 />
               </div>
 
-              <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+              <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
                 <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {relatedTools.map((tool) => (
@@ -330,7 +330,7 @@ export default function EmergencyFundCalculatorPage() {
                       className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                     >
                       <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                      <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                      <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                     </Link>
                   ))}
                 </div>
@@ -338,7 +338,7 @@ export default function EmergencyFundCalculatorPage() {
 
               <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-3">Track Your Emergency Fund with Expenvisor</h3>
-                <p className="text-text-secondary-light mb-4">
+                <p className="text-text-secondary-dark mb-4">
                   Building your emergency fund? Track all your expenses, savings, and financial progress with
                   Expenvisor's AI-powered expense tracker.
                 </p>

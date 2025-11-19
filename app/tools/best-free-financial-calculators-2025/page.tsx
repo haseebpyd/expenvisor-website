@@ -40,14 +40,14 @@ export default function BestFreeFinancialCalculatorsPage() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Best Free Financial Calculators <span className="gradient-text">2025</span>
             </h1>
-            <p className="text-text-secondary-light max-w-3xl mx-auto text-lg">
+            <p className="text-text-secondary-dark max-w-3xl mx-auto text-lg">
               Compare the best free financial calculators. See how Expenvisor stacks up against Bankrate, NerdWallet, and other popular financial tools.
             </p>
           </header>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Why Choose Expenvisor's Financial Tools?</h2>
-            <div className="text-text-secondary-light text-base leading-relaxed space-y-4">
+            <div className="text-text-secondary-dark text-base leading-relaxed space-y-4">
               <p>
                 Expenvisor offers a comprehensive suite of 26+ free financial calculators with a focus on privacy, education,
                 and user experience. Unlike many competitors, we don't require sign-ups, don't track your data, and provide
@@ -61,17 +61,17 @@ export default function BestFreeFinancialCalculatorsPage() {
             </div>
           </div>
 
-          <div className="max-w-6xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8 overflow-x-auto">
+          <div className="max-w-6xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8 overflow-x-auto">
             <h2 className="text-2xl font-bold text-white mb-6">Feature Comparison</h2>
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-secondary/20">
                   <th className="pb-4 text-white font-semibold">Feature</th>
                   <th className="pb-4 text-white font-semibold text-center">Expenvisor</th>
-                  <th className="pb-4 text-text-secondary-light text-center">Competitors</th>
+                  <th className="pb-4 text-text-secondary-dark text-center">Competitors</th>
                 </tr>
               </thead>
-              <tbody className="text-text-secondary-light">
+              <tbody className="text-text-secondary-dark">
                 {features.map((item, index) => (
                   <tr key={index} className="border-b border-secondary/10">
                     <td className="py-4 text-base">{item.feature}</td>
@@ -95,12 +95,12 @@ export default function BestFreeFinancialCalculatorsPage() {
             </table>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-elevated-dark rounded-2xl p-8 shadow-2xl mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">Our Tool Categories</h2>
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Debt Management</h3>
-                <ul className="text-text-secondary-light text-base space-y-2">
+                <ul className="text-text-secondary-dark text-base space-y-2">
                   <li>• Debt Payoff Calculator</li>
                   <li>• Credit Card Payoff</li>
                   <li>• Debt-to-Income Ratio</li>
@@ -108,7 +108,7 @@ export default function BestFreeFinancialCalculatorsPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Loans & Mortgages</h3>
-                <ul className="text-text-secondary-light text-base space-y-2">
+                <ul className="text-text-secondary-dark text-base space-y-2">
                   <li>• Loan Calculator</li>
                   <li>• Mortgage Affordability</li>
                   <li>• Refinance Calculator</li>
@@ -117,7 +117,7 @@ export default function BestFreeFinancialCalculatorsPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Retirement Planning</h3>
-                <ul className="text-text-secondary-light text-base space-y-2">
+                <ul className="text-text-secondary-dark text-base space-y-2">
                   <li>• Retirement Savings</li>
                   <li>• 401(k) Calculator</li>
                   <li>• Investment Returns</li>
@@ -125,7 +125,7 @@ export default function BestFreeFinancialCalculatorsPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Budgeting & Savings</h3>
-                <ul className="text-text-secondary-light text-base space-y-2">
+                <ul className="text-text-secondary-dark text-base space-y-2">
                   <li>• Budget Planner</li>
                   <li>• Savings Goal Planner</li>
                   <li>• Emergency Fund</li>

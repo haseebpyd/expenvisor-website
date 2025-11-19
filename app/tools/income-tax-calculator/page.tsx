@@ -192,7 +192,7 @@ export default function IncomeTaxCalculatorPage() {
         <div className="max-w-5xl mx-auto">
           <header className="mb-10 text-center">
             <h1 className="text-4xl font-bold text-white mb-3">Income Tax Calculator</h1>
-              <p className="text-text-secondary-light">
+              <p className="text-text-secondary-dark">
                 Estimate federal income tax using 2024 tax brackets. Free and instant.
               </p>
           </header>
@@ -209,7 +209,7 @@ export default function IncomeTaxCalculatorPage() {
               />
 
               <label className="block">
-                <span className="block text-sm text-text-secondary-light mb-2">Filing Status</span>
+                <span className="block text-sm text-text-secondary-dark mb-2">Filing Status</span>
                 <select
                   value={filingStatus}
                   onChange={(e) => {
@@ -217,7 +217,7 @@ export default function IncomeTaxCalculatorPage() {
                     setFilingStatus(status);
                     setStandardDeduction(status === "married" ? STANDARD_DEDUCTION_MARRIED : STANDARD_DEDUCTION_SINGLE);
                   }}
-                  className="w-full rounded-xl bg-surface-elevated-light dark:bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
+                  className="w-full rounded-xl bg-surface-elevated-dark border border-secondary/20 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent/30"
                 >
                   <option value="single">Single</option>
                   <option value="married">Married Filing Jointly</option>
@@ -238,35 +238,35 @@ export default function IncomeTaxCalculatorPage() {
               <ResultCard title="Tax Estimate">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-text-secondary-light">Taxable Income</span>
+                    <span className="text-text-secondary-dark">Taxable Income</span>
                     <span className="text-xl font-bold text-white">{toCurrency(calc.taxableIncome)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-text-secondary-light">Federal Tax</span>
+                    <span className="text-text-secondary-dark">Federal Tax</span>
                     <span className="text-2xl font-bold text-white">{toCurrency(calc.tax)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">After-Tax Income</span>
+                    <span className="text-text-secondary-dark">After-Tax Income</span>
                     <span className="text-white">{toCurrency(calc.afterTax)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Effective Tax Rate</span>
+                    <span className="text-text-secondary-dark">Effective Tax Rate</span>
                     <span className="text-white">{calc.effectiveRate.toFixed(2)}%</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-text-secondary-light">Marginal Tax Rate</span>
+                    <span className="text-text-secondary-dark">Marginal Tax Rate</span>
                     <span className="text-white">{calc.marginalRate.toFixed(1)}%</span>
                   </div>
                 </div>
               </ResultCard>
 
               {calc.breakdown.length > 0 && (
-                <div className="bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl">
+                <div className="bg-surface-elevated-dark rounded-2xl p-4 shadow-2xl">
                   <h3 className="text-lg font-semibold text-white mb-3">Tax Breakdown by Bracket</h3>
                   <div className="space-y-2 text-sm">
                     {calc.breakdown.map((b, i) => (
                       <div key={i} className="flex justify-between border-b border-secondary/10 pb-2">
-                        <span className="text-text-secondary-light">{b.bracket}</span>
+                        <span className="text-text-secondary-dark">{b.bracket}</span>
                         <span className="text-white">{toCurrency(b.tax)}</span>
                       </div>
                     ))}
@@ -274,7 +274,7 @@ export default function IncomeTaxCalculatorPage() {
                 </div>
               )}
 
-            <p className="text-xs text-text-secondary-light mt-4">
+            <p className="text-xs text-text-secondary-dark mt-4">
               Disclaimer: This is a simplified estimate for educational purposes only. Does not include state/local taxes,
               FICA, itemized deductions, or credits. Consult a tax professional for accurate calculations.
             </p>
@@ -317,7 +317,7 @@ export default function IncomeTaxCalculatorPage() {
             </p>
             <div className="bg-surface-dark rounded-lg p-4 my-4">
               <p className="text-white mb-2 font-semibold">2024 Tax Brackets (Single Filer):</p>
-              <div className="text-text-secondary-light space-y-1 text-sm">
+              <div className="text-text-secondary-dark space-y-1 text-sm">
                 <p>10% on income from $0 to $11,000</p>
                 <p>12% on income from $11,001 to $44,725</p>
                 <p>22% on income from $44,726 to $95,375</p>
@@ -380,7 +380,7 @@ export default function IncomeTaxCalculatorPage() {
             />
           </div>
 
-          <div className="mt-8 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
+          <div className="mt-8 bg-surface-elevated-dark rounded-2xl p-6 shadow-2xl">
             <h3 className="text-xl font-bold text-white mb-4">Related Financial Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedTools.map((tool) => (
@@ -390,7 +390,7 @@ export default function IncomeTaxCalculatorPage() {
                   className="p-4 bg-surface-dark rounded-xl hover:bg-surface-dark/80 transition-colors border border-accent/20 hover:border-accent/40"
                 >
                   <h4 className="font-semibold text-white mb-1">{tool.name}</h4>
-                  <p className="text-sm text-text-secondary-light">Calculate related financial metrics</p>
+                  <p className="text-sm text-text-secondary-dark">Calculate related financial metrics</p>
                 </Link>
               ))}
             </div>
@@ -398,7 +398,7 @@ export default function IncomeTaxCalculatorPage() {
 
           <div className="mt-8 p-6 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-2xl border border-accent/30 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Track Your Income and Expenses with Expenvisor</h3>
-            <p className="text-text-secondary-light mb-4">
+            <p className="text-text-secondary-dark mb-4">
               Calculated your taxes? Track all your income, expenses, and financial transactions with Expenvisor's
               AI-powered expense tracker.
             </p>

@@ -66,8 +66,8 @@ export default function ShareButtons({
   };
 
   return (
-    <div className="flex items-center gap-4 p-6 bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl">
-      <span className="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">
+    <div className="flex items-center gap-4 p-6 bg-surface-elevated-dark rounded-xl">
+      <span className="text-sm font-medium text-text-primary-dark">
         Share this article:
       </span>
 
@@ -84,7 +84,7 @@ export default function ShareButtons({
           href={shareLinks.twitter}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-200"
+          className="p-2 text-gray-400 hover:text-blue-500 transition-colors duration-200"
           aria-label="Share on Twitter"
         >
           <Twitter className="w-5 h-5" />
@@ -94,7 +94,7 @@ export default function ShareButtons({
           href={shareLinks.facebook}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors duration-200"
+          className="p-2 text-gray-400 hover:text-blue-600 transition-colors duration-200"
           aria-label="Share on Facebook"
         >
           <Facebook className="w-5 h-5" />
@@ -104,7 +104,7 @@ export default function ShareButtons({
           href={shareLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 transition-colors duration-200"
+          className="p-2 text-gray-400 hover:text-blue-700 transition-colors duration-200"
           aria-label="Share on LinkedIn"
         >
           <Linkedin className="w-5 h-5" />
@@ -112,7 +112,7 @@ export default function ShareButtons({
 
         <button
           onClick={handleCopyLink}
-          className="p-2 text-gray-600 dark:text-gray-400 hover:text-accent transition-colors duration-200"
+          className="p-2 text-gray-400 hover:text-accent transition-colors duration-200"
           aria-label="Copy link"
         >
           {copied ? (
