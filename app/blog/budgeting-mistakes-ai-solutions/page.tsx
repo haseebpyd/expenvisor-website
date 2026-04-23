@@ -34,7 +34,7 @@ export default function BlogPostPage() {
 
         <article className="py-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="blog-content text-text-primary-light dark:text-text-primary-dark">
+            <div className="blog-content text-text-primary-dark">
               <h2>Introduction</h2>
               <p>
                 Budgeting should be the cornerstone of financial stability, yet
@@ -444,6 +444,46 @@ export default function BlogPostPage() {
                   should be a tool for achieving financial freedom. AI makes
                   that possible.
                 </strong>
+              </p>
+
+              <h2>Plan Your Budget with Free Tools</h2>
+              <p>Ready to create a budget? Use our free budget planner:</p>
+              <ul>
+                <li>
+                  <a
+                    href="/tools/budget-planner"
+                    className="text-accent hover:underline"
+                  >
+                    Budget Planner
+                  </a>{" "}
+                  - Create a budget using the 50/30/20 rule or custom categories
+                </li>
+                <li>
+                  <a
+                    href="/tools/savings-goal-planner"
+                    className="text-accent hover:underline"
+                  >
+                    Savings Goal Planner
+                  </a>{" "}
+                  - Calculate how much to save monthly to reach your goals
+                </li>
+                <li>
+                  <a
+                    href="/tools/compound-interest"
+                    className="text-accent hover:underline"
+                  >
+                    Compound Interest Calculator
+                  </a>{" "}
+                  - See how your savings grow over time
+                </li>
+              </ul>
+              <p>
+                <a
+                  href="/tools"
+                  className="blog-button inline-flex items-center gap-2 mt-4 px-6 py-3 bg-gradient-to-r from-accent to-secondary text-slate-900 rounded-xl font-semibold hover:shadow-lg transition-all"
+                >
+                  Try Financial Tools →
+                </a>
               </p>
             </div>
 

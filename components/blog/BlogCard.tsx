@@ -9,7 +9,7 @@ interface BlogCardProps {
 
 export default function BlogCard({ post }: BlogCardProps) {
   return (
-    <article className="group bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+    <article className="group bg-surface-elevated-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
       <Link href={`/blog/${post.slug}`} className="block">
         <div className="relative h-48 overflow-hidden">
           <Image
@@ -22,7 +22,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
 
         <div className="p-6">
-          <div className="flex items-center gap-4 text-sm text-text-secondary-light dark:text-text-secondary-dark mb-3">
+          <div className="flex items-center gap-4 text-sm text-text-secondary-dark mb-3">
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
@@ -33,11 +33,11 @@ export default function BlogCard({ post }: BlogCardProps) {
             </div>
           </div>
 
-          <h2 className="text-xl font-bold text-text-primary-light dark:text-text-primary-dark mb-3 group-hover:text-accent transition-colors duration-200">
+          <h2 className="text-xl font-bold text-text-primary-dark mb-3 group-hover:text-accent transition-colors duration-200">
             {post.title}
           </h2>
 
-          <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4 line-clamp-3">
+          <p className="text-text-secondary-dark mb-4 line-clamp-3">
             {post.description}
           </p>
 

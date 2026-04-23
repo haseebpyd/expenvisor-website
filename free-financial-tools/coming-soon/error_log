@@ -1,0 +1,6 @@
+[08-Jul-2025 01:39:35 UTC] PHP Warning:  include(navbar.php): Failed to open stream: No such file or directory in /home/haseebz/public_html/freefintools/coming-soon/index.php on line 378
+[08-Jul-2025 01:39:35 UTC] PHP Warning:  include(): Failed opening 'navbar.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/haseebz/public_html/freefintools/coming-soon/index.php on line 378
+[08-Jul-2025 01:40:08 UTC] PHP Warning:  include(navbar.php): Failed to open stream: No such file or directory in /home/haseebz/public_html/freefintools/coming-soon/index.php on line 378
+[08-Jul-2025 01:40:08 UTC] PHP Warning:  include(): Failed opening 'navbar.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/haseebz/public_html/freefintools/coming-soon/index.php on line 378
+[08-Jul-2025 01:40:30 UTC] PHP Warning:  include(navbar.php): Failed to open stream: No such file or directory in /home/haseebz/public_html/freefintools/coming-soon/index.php on line 378
+[08-Jul-2025 01:40:30 UTC] PHP Warning:  include(): Failed opening 'navbar.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/haseebz/public_html/freefintools/coming-soon/index.php on line 378

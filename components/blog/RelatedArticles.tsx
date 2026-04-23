@@ -13,7 +13,7 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
   return (
     <section className="mt-16">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-bold text-text-primary-light dark:text-text-primary-dark">
+        <h2 className="text-2xl font-bold text-text-primary-dark">
           Related Articles
         </h2>
         <Link
@@ -29,7 +29,7 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
         {posts.map((post) => (
           <article
             key={post.slug}
-            className="group bg-surface-elevated-light dark:bg-surface-elevated-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            className="group bg-surface-elevated-dark rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
           >
             <Link href={`/blog/${post.slug}`} className="block">
               <div className="relative h-48 overflow-hidden">
@@ -43,11 +43,11 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-bold text-text-primary-light dark:text-text-primary-dark mb-3 group-hover:text-accent transition-colors duration-200 line-clamp-2">
+                <h3 className="text-lg font-bold text-text-primary-dark mb-3 group-hover:text-accent transition-colors duration-200 line-clamp-2">
                   {post.title}
                 </h3>
 
-                <p className="text-text-secondary-light dark:text-text-secondary-dark mb-4 line-clamp-2">
+                <p className="text-text-secondary-dark mb-4 line-clamp-2">
                   {post.description}
                 </p>
 
@@ -63,7 +63,7 @@ export default function RelatedArticles({ posts }: RelatedArticlesProps) {
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-1 text-sm text-text-secondary-light dark:text-text-secondary-dark">
+                  <div className="flex items-center gap-1 text-sm text-text-secondary-dark">
                     <span>{post.readingTime} min</span>
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>

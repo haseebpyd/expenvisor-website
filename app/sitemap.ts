@@ -31,34 +31,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/pricing`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/download`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/compare`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/help`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/support`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/privacy-policy`,
@@ -81,5 +75,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  const toolPages = [
+    { url: `${baseUrl}/tools`, priority: 0.9 },
+    { url: `${baseUrl}/tools/loan-calculator`, priority: 0.8 },
+    { url: `${baseUrl}/tools/mortgage-affordability`, priority: 0.8 },
+    { url: `${baseUrl}/tools/compound-interest`, priority: 0.8 },
+    { url: `${baseUrl}/tools/savings-goal-planner`, priority: 0.8 },
+    { url: `${baseUrl}/tools/income-tax-calculator`, priority: 0.8 },
+    { url: `${baseUrl}/tools/budget-planner`, priority: 0.8 },
+  ].map((tool) => ({
+    url: tool.url,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: tool.priority,
+  }));
+
+  return [...staticPages, ...blogPages, ...toolPages];
 }
