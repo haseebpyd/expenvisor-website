@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Star } from "lucide-react";
+import { ArrowDown, Apple } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -13,39 +13,18 @@ export default function Hero() {
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          animate={{
-            y: [0, -20, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-20 left-10 w-20 h-20 bg-accent/20 rounded-full blur-xl"
         />
         <motion.div
-          animate={{
-            y: [0, 20, 0],
-            rotate: [0, -5, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-40 right-20 w-32 h-32 bg-secondary/20 rounded-full blur-xl"
         />
         <motion.div
-          animate={{
-            y: [0, -15, 0],
-            rotate: [0, 3, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          animate={{ y: [0, -15, 0], rotate: [0, 3, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-40 left-1/4 w-24 h-24 bg-accent/15 rounded-full blur-xl"
         />
       </div>
@@ -59,15 +38,26 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
+            {/* Indie badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full text-sm text-accent font-medium mb-6"
+            >
+              <span className="w-2 h-2 bg-accent rounded-full" />
+              Indie-built for iOS
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             >
-              <span className="text-white">Smart AI-Powered</span>
+              <span className="text-white">Track Every Dollar.</span>
               <br />
-              <span className="gradient-text">Expense Tracking</span>
+              <span className="gradient-text">Understand Your Money.</span>
             </motion.h1>
 
             <motion.p
@@ -76,11 +66,12 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-6 text-base sm:text-lg lg:text-xl text-text-secondary-dark max-w-2xl mx-auto lg:mx-0"
             >
-              Track expenses with voice, scan receipts with AI, get personalized
-              financial insights. Your finances, flowing seamlessly.
+              Log expenses by voice or photo, scan receipts, track income and
+              savings, manage ledgers, and get AI-powered insights — in any
+              language or currency.
             </motion.p>
 
-            {/* Download Buttons */}
+            {/* Download Button — iOS only */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -88,59 +79,48 @@ export default function Hero() {
               className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
-                href="https://apps.apple.com/pk/app/expenvisor-ai-expense-tracker/id6754627757"
+                href="https://apps.apple.com/us/app/expenvisor-ai-expense-tracker/id6754627757"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-accent to-secondary text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gradient-button"
-                  style={{
-                    background: "linear-gradient(to right, #00FFA3, #A78BFA)",
-                    WebkitBackgroundClip: "padding-box",
-                  }}
+                  className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-black rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gap-3"
                 >
-                  <Download className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span>Download for iOS</span>
+                  <Apple className="w-6 h-6 flex-shrink-0" />
+                  <div className="text-left">
+                    <div className="text-xs font-normal leading-tight">Download on the</div>
+                    <div className="text-base font-bold leading-tight">App Store</div>
+                  </div>
                 </motion.button>
               </a>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-secondary to-accent text-white rounded-xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[44px] gradient-button"
-                style={{
-                  background: "linear-gradient(to right, #A78BFA, #00FFA3)",
-                  WebkitBackgroundClip: "padding-box",
-                }}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="flex items-center justify-center px-6 py-3.5 bg-white/5 border border-white/10 rounded-xl text-text-secondary-dark text-sm"
               >
-                <Download className="w-5 h-5 mr-2 flex-shrink-0" />
-                <span>Download for Android</span>
-              </motion.button>
+                Free to download · 14-day Pro trial
+              </motion.div>
             </motion.div>
 
-            {/* Social Proof */}
+            {/* Real trust signals */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-6"
+              className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4"
             >
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current"
-                  />
-                ))}
-                <span className="ml-2 text-sm sm:text-base text-text-secondary-dark">
-                  4.9/5 rating
-                </span>
+              <div className="flex items-center gap-1.5 text-sm text-text-secondary-dark">
+                <span className="text-yellow-400">★★★★★</span>
+                <span>5.0 on App Store</span>
+                <span className="opacity-40">·</span>
+                <span>4 reviews</span>
               </div>
-              <div className="hidden sm:block text-text-secondary-dark">•</div>
-              <div className="text-sm sm:text-base text-text-secondary-dark">
-                10,000+ downloads
+              <div className="hidden sm:flex items-center gap-3 text-sm text-text-secondary-dark">
+                <span>✓ iOS 15+</span>
+                <span>✓ Works offline</span>
+                <span>✓ No ads</span>
               </div>
             </motion.div>
           </motion.div>
@@ -153,15 +133,8 @@ export default function Hero() {
             className="relative hidden sm:flex justify-center lg:justify-end"
           >
             <motion.div
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 2, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              animate={{ y: [0, -20, 0], rotate: [0, 2, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
               {/* Phone Frame */}
@@ -169,7 +142,7 @@ export default function Hero() {
                 <div className="w-full h-full bg-gradient-to-b from-primary to-secondary rounded-[2.5rem] overflow-hidden relative">
                   <Image
                     src="/screenshots/hero.PNG"
-                    alt="Expenvisor App Hero"
+                    alt="Expenvisor App"
                     fill
                     className="object-cover"
                     priority
@@ -178,32 +151,18 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating Elements around phone */}
+              {/* Feature badges */}
               <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                  x: [0, 5, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-4 -right-4 w-12 h-12 bg-accent/80 rounded-full flex items-center justify-center text-white text-xl"
               >
                 🎤
               </motion.div>
 
               <motion.div
-                animate={{
-                  y: [0, 10, 0],
-                  x: [0, -5, 0],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                animate={{ y: [0, 10, 0], x: [0, -5, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-4 -left-4 w-12 h-12 bg-secondary/80 rounded-full flex items-center justify-center text-white text-xl"
               >
                 📷

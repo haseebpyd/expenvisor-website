@@ -7,35 +7,39 @@ import { ChevronDown } from 'lucide-react'
 const faqs = [
   {
     question: 'Is my data secure?',
-    answer: 'Yes, absolutely. We use bank-level encryption (AES-256) to protect your data. All data is encrypted both in transit and at rest. We never sell your personal information and follow strict privacy guidelines.',
+    answer: 'Your data is stored locally on your device by default — it never leaves your phone unless you turn on cloud sync. When cloud sync is enabled, data is encrypted in transit and at rest via Firebase. We never sell your data, period.',
   },
   {
-    question: 'How does AI work in the app?',
-    answer: 'Our AI uses advanced natural language processing to understand your voice commands and text inputs. It learns from your spending patterns to provide personalized insights and automatically categorize your expenses.',
-  },
-  {
-    question: 'Can I cancel anytime?',
-    answer: 'Yes, you can cancel your subscription at any time through your account settings or the app store. You\'ll continue to have access to premium features until the end of your current billing period.',
-  },
-  {
-    question: 'What\'s the difference between Free and Premium?',
-    answer: 'Free includes unlimited manual transactions, basic charts, and limited AI features (50 chat messages, 30 voice inputs, 5 receipt scans per month). Premium includes unlimited AI features, cloud sync, export capabilities, and advanced insights.',
-  },
-  {
-    question: 'Do you sell my data?',
-    answer: 'No, we never sell your personal or financial data. We only use your data to provide the service and improve our AI. We\'re committed to protecting your privacy and being transparent about data usage.',
+    question: 'How does the AI actually work?',
+    answer: 'The AI chat is powered by Groq (llama-3.3-70b). Voice input uses Whisper for transcription. When you ask a question like "how much did I spend on food last month?", it reads your local transaction data and answers based on your real numbers — not generic advice.',
   },
   {
     question: 'Which devices are supported?',
-    answer: 'Expenvisor is available for iOS (iPhone/iPad) and Android devices. We also have a web version for desktop access. All your data syncs seamlessly across devices.',
+    answer: 'Expenvisor is an iOS app for iPhone. It requires iOS 15 or later. There is no Android version currently.',
   },
   {
-    question: 'Is there a free trial?',
-    answer: 'Yes! Premium comes with a 7-day free trial. You can try all premium features without any commitment. No credit card required to start the trial.',
+    question: 'Is there a free trial for Pro?',
+    answer: 'Yes — Pro comes with a 14-day free trial. No payment until the trial ends, and you can cancel any time from your iPhone\'s subscription settings.',
+  },
+  {
+    question: 'What\'s the difference between Free and Pro?',
+    answer: 'Free gives you unlimited manual transactions, basic charts, and a monthly allowance of AI features (voice entries, receipt scans, AI chat messages). Pro removes all limits: unlimited AI usage, cloud sync and backup, data export (CSV/PDF), and advanced analytics.',
+  },
+  {
+    question: 'Can I cancel anytime?',
+    answer: 'Yes. Subscriptions are managed through your Apple ID. Cancel anytime in Settings → Apple ID → Subscriptions. You\'ll keep Pro access until the current billing period ends.',
+  },
+  {
+    question: 'Do you have an Android or web version?',
+    answer: 'No — Expenvisor is currently iOS only. An Android version is on the roadmap but no release date yet.',
   },
   {
     question: 'How do refunds work?',
-    answer: 'Refunds are handled through the App Store or Google Play Store according to their policies. For subscription refunds, contact Apple or Google support directly.',
+    answer: 'Refunds go through Apple. Open the App Store, tap your profile, go to Purchases, find Expenvisor, and request a refund. Apple typically processes these within a few days.',
+  },
+  {
+    question: 'Who built this?',
+    answer: 'Expenvisor is an indie app built by one developer — Muhammad Haseeb. If you email support, you\'re emailing him directly.',
   },
 ]
 
@@ -58,12 +62,12 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="text-white">Frequently Asked</span>
+            <span className="text-white">Honest Answers to</span>
             <br />
-            <span className="gradient-text">Questions</span>
+            <span className="gradient-text">Common Questions</span>
           </h2>
           <p className="text-xl text-text-secondary-dark max-w-3xl mx-auto">
-            Got questions? We've got answers. If you don't see your question here, feel free to contact us.
+            Straight answers — no marketing fluff.
           </p>
         </motion.div>
 
@@ -74,7 +78,7 @@ export default function FAQ() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
               className="bg-surface-dark/50 backdrop-blur-sm rounded-xl border border-accent/20 overflow-hidden"
             >
@@ -92,7 +96,7 @@ export default function FAQ() {
                   <ChevronDown className="w-5 h-5 text-accent flex-shrink-0" />
                 </motion.div>
               </button>
-              
+
               <motion.div
                 initial={false}
                 animate={{
@@ -125,15 +129,16 @@ export default function FAQ() {
               Still have questions?
             </h3>
             <p className="text-text-secondary-dark mb-6">
-              Our support team is here to help you get the most out of Expenvisor.
+              Email directly — you'll get a reply from the developer, not a bot.
             </p>
-            <motion.button
+            <motion.a
+              href="mailto:haseeb@alrighttech.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent to-secondary text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
-              Contact Support
-            </motion.button>
+              haseeb@alrighttech.com
+            </motion.a>
           </div>
         </motion.div>
       </div>
