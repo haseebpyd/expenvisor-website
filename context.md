@@ -114,7 +114,7 @@ All under `/blog/`. SEO content targeting finance and expense tracker keywords.
 
 ## Pricing (must match StoreKit exactly)
 
-- **Free**: unlimited manual transactions, basic charts, 50 AI chats/mo, 30 voice entries/mo, 5 receipt scans/mo, local storage only
+- **Free**: unlimited manual transactions, basic charts, 10 AI chats/day, 2 voice entries/day, 1 receipt scan/day, local storage only
 - **Pro Monthly**: $6.99/month
 - **Pro Yearly**: $49.99/year (save ~40%)
 - **Trial**: 14 days free

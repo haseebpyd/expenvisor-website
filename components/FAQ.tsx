@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: 'What\'s the difference between Free and Pro?',
-    answer: 'Free gives you unlimited manual transactions, basic charts, and a monthly allowance of AI features (voice entries, receipt scans, AI chat messages). Pro removes all limits: unlimited AI usage, cloud sync and backup, data export (CSV/PDF), and advanced analytics.',
+    answer: 'Free gives you unlimited manual transactions and basic charts, plus daily AI allowances: 10 chat messages, 2 voice entries, and 1 receipt scan per day. Pro removes all limits: unlimited AI usage, cloud sync and backup, data export (CSV/PDF), and advanced analytics.',
   },
   {
     question: 'Can I cancel anytime?',

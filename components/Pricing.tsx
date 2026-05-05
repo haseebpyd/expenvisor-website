@@ -13,9 +13,9 @@ const plans = [
       "Unlimited manual transactions",
       "Income & expense tracking",
       "Basic charts & history",
-      "50 AI chat messages / month",
-      "30 voice entries / month",
-      "5 receipt scans / month",
+      "10 AI chat messages / day",
+      "2 voice entries / day",
+      "1 receipt scan / day",
       "Works offline, local storage",
     ],
     limitations: [
